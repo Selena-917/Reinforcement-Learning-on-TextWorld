@@ -55,8 +55,8 @@ if __name__ == '__main__':
     nlp_agent = agents.NLPAgent()
     nlp_agent.train()
     play_game(nlp_agent, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 500) 
-    os.makedirs('checkpoints', exist_ok=True)
-    torch.save(nlp_agent, 'checkpoints/agent_trained_on_single_game.pt')
+    # os.makedirs('models', exist_ok=True)
+    # torch.save(nlp_agent, 'models/nlp_agent_trained.pt')
     
     print("NLP Agent (test the model) ------------------------------------------")
     nlp_agent.test()
