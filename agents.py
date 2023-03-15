@@ -82,7 +82,7 @@ class NLPAgent:
         self.run_mode = "train"
         self.agent_model.init_hidden(1)
         
-        self.stats = {"max": defaultdict(list), "mean": defaultdict(list)}
+        self.stats = {"scores": [], "rewards": [], "policy": [], "values": [], "entropy": [], "confidence": []}
         self.infos_per_update = []
         self.last_score = 0
         self.num_step_train = 0
@@ -91,7 +91,7 @@ class NLPAgent:
         return textworld.EnvInfos(admissible_commands=True, max_score = True, description=True, inventory=True, won=True, lost=True)
     
     def _tokenize_text(self, texts):
-        texts = re.sub("[^a-zA-Z0-9\- ]", " ", texts)
+        texts = re.sub(r"[^a-zA-Z0-9\- ]", " ", texts)
         words_list = texts.split()
         words_idx = []
         for word in words_list:
@@ -161,7 +161,7 @@ class NLPAgent:
                 
             self.infos_per_update[-1][0] = reward
         
-        self.stats["max"]["score"].append(score)
+        self.stats["scores"].append(score)
         
         # Update agent_model
         if self.num_step_train % self.update_freq == 0:
@@ -180,15 +180,15 @@ class NLPAgent:
                 entropy     = (-probs * log_probs).sum()
                 loss += policy_loss + 0.5 * value_loss - 0.1 * entropy
                 
-                self.stats["mean"]["reward"].append(reward)
-                self.stats["mean"]["policy"].append(policy_loss.item())
-                self.stats["mean"]["value"].append(value_loss.item())
-                self.stats["mean"]["entropy"].append(entropy.item())
-                self.stats["mean"]["confidence"].append(torch.exp(log_action_probs).item())
+                self.stats["rewards"].append(reward)
+                self.stats["policy"].append(policy_loss.item())
+                self.stats["values"].append(value_loss.item())
+                self.stats["entropy"].append(entropy.item())
+                self.stats["confidence"].append(torch.exp(log_action_probs).item())
             
             if self.num_step_train % self.log_freq == 0:
-                print("Total step: {:6d}  reward: {:3.3f}  value: {:3.3f}  entropy: {:3.3f}  max_score: {:3d}  num_vocab: {}".format(self.num_step_train, np.mean(self.stats["mean"]["reward"]), np.mean(self.stats["mean"]["value"]), np.mean(self.stats["mean"]["entropy"]), np.max(self.stats["max"]["score"]), len(self.idx2word)))
-                self.stats = {"max": defaultdict(list), "mean": defaultdict(list)}
+                print("Total step: {:6d}  reward: {:3.3f}  value: {:3.3f}  entropy: {:3.3f}  max_score: {:3d}  num_vocab: {}".format(self.num_step_train, np.mean(self.stats["rewards"]), np.mean(self.stats["values"]), np.mean(self.stats["entropy"]), np.max(self.stats["scores"]), len(self.idx2word)))
+                self.stats = {"scores": [], "rewards": [], "policy": [], "values": [], "entropy": [], "confidence": []}
             
             loss.backward()
             torch.nn.utils.clip_grad_norm_(self.agent_model.parameters(), 40)

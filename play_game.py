@@ -6,7 +6,10 @@ import numpy as np
 import agents
 import torch
 
-def play_game(agent, game_path, max_steps=100, num_episodes=10):
+def play_game(agent, game_path, max_steps=100, num_episodes=10, seed=None):
+    
+    if seed:
+        torch.manual_seed(seed)
     
     if os.path.isdir(game_path):
         game_files = glob.glob(os.path.join(game_path, "*.z8"))
@@ -45,22 +48,19 @@ def play_game(agent, game_path, max_steps=100, num_episodes=10):
         
 if __name__ == '__main__': 
     print("Random Agent (do random action) --------------------------------------")
-    random_agent = agents.SimpleAgent("random", 66)
+    random_agent = agents.SimpleAgent("random")
     play_game(random_agent, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
     
     print("----------------------------------------------------------------------")
     
     print("NLP Agent (train the model) ------------------------------------------")
     
-    nlp_agent = agents.NLPAgent()
+    nlp_agent = agents.NLPAgent(lr=0.00003)
     nlp_agent.train()
     play_game(nlp_agent, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 500) 
-    # os.makedirs('models', exist_ok=True)
-    # torch.save(nlp_agent, 'models/nlp_agent_trained.pt')
+    os.makedirs('models', exist_ok=True)
+    torch.save(nlp_agent, 'models/nlp_agent_trained.pt')
     
     print("NLP Agent (test the model) ------------------------------------------")
     nlp_agent.test()
     play_game(nlp_agent, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
-        
-    
-    

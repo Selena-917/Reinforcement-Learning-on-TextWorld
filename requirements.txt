@@ -1,0 +1,4 @@
+torch torchvision torchaudio
+textworld
+gym==0.23.1
+transformers
