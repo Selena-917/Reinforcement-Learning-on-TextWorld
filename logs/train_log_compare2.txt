@@ -1,0 +1,113 @@
+lr=0.00005
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+Average steps used: 100.00; Average score: 3.10/10
+
+NLP Agent GRU (start training) -------------------------------------------
+Total step:   1000  reward: 0.043  value: 0.074  entropy: 2.398  max_score:   6  num_vocab: 250
+Total step:   2000  reward: 0.052  value: 0.091  entropy: 2.399  max_score:   9  num_vocab: 300
+Total step:   3000  reward: -0.062  value: 23.834  entropy: 2.356  max_score:   9  num_vocab: 318
+Total step:   4000  reward: 0.042  value: 0.082  entropy: 2.350  max_score:   5  num_vocab: 318
+Total step:   5000  reward: 0.050  value: 0.078  entropy: 2.430  max_score:   9  num_vocab: 318
+Total step:   6000  reward: 0.051  value: 0.076  entropy: 2.355  max_score:   6  num_vocab: 318
+Total step:   7000  reward: 0.050  value: 0.083  entropy: 2.401  max_score:   6  num_vocab: 318
+Total step:   8000  reward: 0.058  value: 0.088  entropy: 2.424  max_score:   8  num_vocab: 319
+Total step:   9000  reward: 0.059  value: 0.083  entropy: 2.412  max_score:   8  num_vocab: 319
+Total step:  10000  reward: 0.054  value: 0.083  entropy: 2.361  max_score:   8  num_vocab: 319
+Total step:  11000  reward: 0.056  value: 0.093  entropy: 2.401  max_score:   7  num_vocab: 319
+Total step:  12000  reward: -0.029  value: 13.267  entropy: 2.553  max_score:   9  num_vocab: 320
+Total step:  13000  reward: -0.144  value: 49.928  entropy: 2.405  max_score:   9  num_vocab: 322
+Total step:  14000  reward: -0.022  value: 24.751  entropy: 2.499  max_score:   9  num_vocab: 322
+Total step:  15000  reward: -0.140  value: 30.755  entropy: 2.339  max_score:   9  num_vocab: 325
+Total step:  16000  reward: -0.454  value: 103.717  entropy: 2.323  max_score:   9  num_vocab: 330
+Total step:  17000  reward: -0.227  value: 51.631  entropy: 2.284  max_score:   9  num_vocab: 333
+Total step:  18000  reward: -0.442  value: 86.296  entropy: 2.312  max_score:   9  num_vocab: 338
+Total step:  19000  reward: -0.217  value: 51.816  entropy: 2.171  max_score:   9  num_vocab: 340
+Total step:  20000  reward: -0.339  value: 72.752  entropy: 2.245  max_score:   9  num_vocab: 344
+Total step:  21000  reward: -0.323  value: 84.358  entropy: 2.302  max_score:   9  num_vocab: 346
+Total step:  22000  reward: -0.331  value: 85.845  entropy: 2.261  max_score:   9  num_vocab: 348
+Total step:  23000  reward: -0.329  value: 59.148  entropy: 2.235  max_score:   9  num_vocab: 353
+Total step:  24000  reward: -0.531  value: 110.824  entropy: 2.210  max_score:   9  num_vocab: 356
+Total step:  25000  reward: -0.324  value: 89.932  entropy: 2.185  max_score:  10  num_vocab: 359
+Total step:  26000  reward: -0.001  value: 63.664  entropy: 2.212  max_score:  10  num_vocab: 360
+Total step:  27000  reward: -0.647  value: 138.993  entropy: 2.213  max_score:   9  num_vocab: 364
+Total step:  28000  reward: -0.121  value: 36.054  entropy: 2.166  max_score:   9  num_vocab: 364
+Total step:  29000  reward: -0.447  value: 84.662  entropy: 2.299  max_score:   9  num_vocab: 368
+Total step:  30000  reward: -0.338  value: 71.267  entropy: 2.290  max_score:   9  num_vocab: 369
+Total step:  31000  reward: -0.540  value: 107.166  entropy: 2.211  max_score:   9  num_vocab: 370
+Total step:  32000  reward: -0.121  value: 18.866  entropy: 2.335  max_score:   9  num_vocab: 372
+Total step:  33000  reward: -0.347  value: 63.481  entropy: 2.337  max_score:   9  num_vocab: 373
+Total step:  34000  reward: -0.530  value: 77.261  entropy: 2.311  max_score:   9  num_vocab: 374
+Total step:  35000  reward: -0.337  value: 75.726  entropy: 2.285  max_score:   9  num_vocab: 375
+Total step:  36000  reward: -0.120  value: 40.939  entropy: 2.394  max_score:   9  num_vocab: 378
+Total step:  37000  reward: 0.094  value: 0.294  entropy: 2.298  max_score:  10  num_vocab: 380
+Total step:  38000  reward: -0.226  value: 41.487  entropy: 2.398  max_score:   9  num_vocab: 381
+Total step:  39000  reward: -0.339  value: 91.808  entropy: 2.310  max_score:   9  num_vocab: 383
+Total step:  40000  reward: 0.227  value: 47.499  entropy: 2.380  max_score:  10  num_vocab: 385
+Total step:  41000  reward: -0.230  value: 41.720  entropy: 2.336  max_score:   9  num_vocab: 386
+Total step:  42000  reward: 0.091  value: 0.306  entropy: 2.466  max_score:   9  num_vocab: 386
+Total step:  43000  reward: -0.326  value: 66.557  entropy: 2.360  max_score:   9  num_vocab: 387
+Total step:  44000  reward: 0.010  value: 88.675  entropy: 2.319  max_score:  10  num_vocab: 388
+Total step:  45000  reward: -0.014  value: 5.400  entropy: 2.318  max_score:   9  num_vocab: 388
+Average steps used: 89.71; Average score: 7.70/10
+Total training time: 939.6305251121521s
+
+NLP Agent GRU (test the model) ------------------------------------------
+Average steps used: 71.20; Average score: 8.90/10
+
+NLP Agent GPT (train the model) ------------------------------------------
+
+NLP Agent GPT (acc before training) --------------------------------------
+Average steps used: 100.00; Average score: 3.40/10
+
+NLP Agent GPT (start training) -------------------------------------------
+Total step:   1000  reward: 0.057  value: 0.155  entropy: 2.485  max_score:   9  num_vocab: 300
+Total step:   2000  reward: 0.050  value: 0.092  entropy: 2.415  max_score:   7  num_vocab: 301
+Total step:   3000  reward: 0.057  value: 0.092  entropy: 2.440  max_score:   7  num_vocab: 302
+Total step:   4000  reward: 0.044  value: 0.086  entropy: 2.412  max_score:   6  num_vocab: 302
+Total step:   5000  reward: 0.048  value: 0.119  entropy: 2.452  max_score:   6  num_vocab: 302
+Total step:   6000  reward: 0.049  value: 0.097  entropy: 2.425  max_score:   6  num_vocab: 302
+Total step:   7000  reward: 0.056  value: 0.108  entropy: 2.476  max_score:   6  num_vocab: 302
+Total step:   8000  reward: 0.039  value: 0.084  entropy: 2.359  max_score:   7  num_vocab: 302
+Total step:   9000  reward: -0.050  value: 16.051  entropy: 2.477  max_score:   9  num_vocab: 319
+Total step:  10000  reward: 0.048  value: 0.114  entropy: 2.373  max_score:   8  num_vocab: 319
+Total step:  11000  reward: -0.148  value: 43.349  entropy: 2.483  max_score:   9  num_vocab: 321
+Total step:  12000  reward: 0.046  value: 0.083  entropy: 2.378  max_score:   7  num_vocab: 321
+Total step:  13000  reward: -0.042  value: 24.709  entropy: 2.461  max_score:   9  num_vocab: 322
+Total step:  14000  reward: -0.054  value: 19.807  entropy: 2.343  max_score:   9  num_vocab: 323
+Total step:  15000  reward: -0.047  value: 13.192  entropy: 2.415  max_score:   9  num_vocab: 324
+Total step:  16000  reward: -0.049  value: 20.123  entropy: 2.466  max_score:   9  num_vocab: 325
+Total step:  17000  reward: -0.049  value: 9.723  entropy: 2.450  max_score:   9  num_vocab: 325
+Total step:  18000  reward: -0.042  value: 12.887  entropy: 2.404  max_score:   9  num_vocab: 326
+Total step:  19000  reward: -0.018  value: 20.652  entropy: 2.446  max_score:   9  num_vocab: 327
+Total step:  20000  reward: -0.122  value: 89.403  entropy: 2.376  max_score:  10  num_vocab: 331
+Total step:  21000  reward: -0.554  value: 116.612  entropy: 2.308  max_score:   9  num_vocab: 337
+Total step:  22000  reward: -0.540  value: 101.330  entropy: 2.302  max_score:   9  num_vocab: 342
+Total step:  23000  reward: -0.547  value: 113.813  entropy: 2.281  max_score:   9  num_vocab: 345
+Total step:  24000  reward: -0.867  value: 146.234  entropy: 2.315  max_score:   9  num_vocab: 353
+Total step:  25000  reward: -0.432  value: 97.168  entropy: 2.332  max_score:  10  num_vocab: 358
+Total step:  26000  reward: -0.011  value: 18.356  entropy: 2.330  max_score:   9  num_vocab: 358
+Total step:  27000  reward: -0.327  value: 64.807  entropy: 2.272  max_score:   9  num_vocab: 360
+Total step:  28000  reward: -0.648  value: 129.390  entropy: 2.368  max_score:   9  num_vocab: 366
+Total step:  29000  reward: -0.326  value: 70.585  entropy: 2.267  max_score:   9  num_vocab: 367
+Total step:  30000  reward: -0.629  value: 153.492  entropy: 2.226  max_score:  10  num_vocab: 369
+Total step:  31000  reward: -0.112  value: 47.361  entropy: 2.265  max_score:   9  num_vocab: 370
+Total step:  32000  reward: -0.117  value: 42.802  entropy: 2.284  max_score:   9  num_vocab: 371
+Total step:  33000  reward: -0.211  value: 33.661  entropy: 2.295  max_score:   9  num_vocab: 372
+Total step:  34000  reward: -0.631  value: 125.629  entropy: 2.243  max_score:   9  num_vocab: 375
+Total step:  35000  reward: -0.223  value: 43.584  entropy: 2.239  max_score:   9  num_vocab: 375
+Total step:  36000  reward: -0.759  value: 148.356  entropy: 2.274  max_score:   9  num_vocab: 379
+Total step:  37000  reward: -0.426  value: 92.662  entropy: 2.157  max_score:   9  num_vocab: 383
+Total step:  38000  reward: -0.224  value: 30.891  entropy: 2.237  max_score:   9  num_vocab: 385
+Total step:  39000  reward: -0.097  value: 40.573  entropy: 2.308  max_score:   9  num_vocab: 388
+Total step:  40000  reward: -0.223  value: 19.887  entropy: 2.312  max_score:   9  num_vocab: 389
+Total step:  41000  reward: -0.326  value: 73.793  entropy: 2.330  max_score:   9  num_vocab: 391
+Total step:  42000  reward: -0.750  value: 121.851  entropy: 2.221  max_score:   9  num_vocab: 393
+Total step:  43000  reward: -0.216  value: 45.041  entropy: 2.195  max_score:   9  num_vocab: 393
+Total step:  44000  reward: -0.327  value: 56.701  entropy: 2.214  max_score:   9  num_vocab: 394
+Average steps used: 87.52; Average score: 7.49/10
+Total training time: 1675.6362731456757
+
+NLP Agent GPT (test the model) ------------------------------------------
+Average steps used: 92.10; Average score: 8.90/10
