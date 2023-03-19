@@ -5,6 +5,7 @@ import torch.nn.functional as F
 from torch import optim
 import re
 from collections import defaultdict
+from transformers import GPT2Model, GPT2Tokenizer, GPT2Config
 
 class SimpleAgent(textworld.gym.Agent):
     def __init__(self, agent_mode = "random", seed=None):
@@ -41,7 +42,6 @@ class AgentNetwork(torch.nn.Module):
         
     def forward(self, observations, commands):
         batch_size, num_commands = observations.shape[1], commands.shape[1]
-
         embed_obs = self.embedding(observations)
         output_encoder, hidden_encoder = self.gru_input(embed_obs)
         output_state, self.hidden_state = self.gru_state(hidden_encoder, self.hidden_state)
@@ -59,8 +59,49 @@ class AgentNetwork(torch.nn.Module):
         
         return scores, index, value
     
+    
+class GPTNetwork(torch.nn.Module):
+    def __init__(self, input_size, hidden_size, device="cuda"):
+        super(GPTNetwork, self).__init__()
+        self.hidden_size  = hidden_size
+        self.device = device
+        self.embedding    = torch.nn.Embedding(input_size, hidden_size)
+        
+        self.gpt_config = GPT2Config(vocab_size=input_size, max_length=32, dropout=0.0, n_embd=hidden_size, n_layer=8, n_head=8)
+        self.gpt2 = GPT2Model(self.gpt_config)
+        self.linear = torch.nn.Linear(hidden_size, 1)
+        
+        
+        self.gru_command  = torch.nn.GRU(hidden_size, hidden_size, batch_first=True)
+        self.linear_command = torch.nn.Linear(hidden_size * 2, 1)
+
+        
+        
+    def forward(self, observations, commands):
+        observations = observations.permute(1,0)
+        commands = commands.permute(1,0)
+        batch_size, num_commands = observations.shape[0], commands.shape[0]
+
+        embed_obs = self.embedding(observations)
+        gpt2_output = self.gpt2(inputs_embeds=embed_obs)[0][:,-1,:].unsqueeze(1)
+        value = self.linear(gpt2_output)
+
+        embed_commands = self.embedding.forward(commands)
+        output_commands, hidden_commands = self.gru_command.forward(embed_commands) 
+        input_commands = torch.stack([gpt2_output] * num_commands, 2)
+        hidden_commands = torch.stack([hidden_commands] * batch_size, 1) 
+        input_commands = torch.cat([input_commands, hidden_commands], dim=-1)
+
+        scores = F.relu(self.linear_command(input_commands)).squeeze(-1)  
+        probs = F.softmax(scores, dim=2) 
+        index = probs[0].multinomial(num_samples=1).unsqueeze(0)
+        
+        return scores, index, value
+    
+    
 class NLPAgent:
-    def __init__(self, max_vocab_num=1000, update_freq=10, log_freq=1000, gamma=0.9, lr=1e-5, device="cuda"):
+    def __init__(self, model_type="gpt-2", max_vocab_num=1000, update_freq=10, log_freq=1000, gamma=0.9, lr=1e-5, device="cuda"):
+        self.model_type = model_type
         self.max_vocab_num = max_vocab_num
         self.update_freq = update_freq
         self.log_freq = log_freq
@@ -71,16 +112,21 @@ class NLPAgent:
         self.idx2word = ["<PAD>", "<UNK>"]
         self.word2idx = {self.idx2word[i]:i for i in range(len(self.idx2word))}
         
-        self.agent_model = AgentNetwork(self.max_vocab_num, 128, self.device).to(device)
+        if self.model_type == "gru":
+            self.agent_model = AgentNetwork(self.max_vocab_num, 128, self.device).to(device)
+        elif self.model_type == "gpt-2":
+            self.agent_model = GPTNetwork(self.max_vocab_num, 128, self.device).to(device)
         self.optimizer = optim.Adam(self.agent_model.parameters(), lr=self.lr)
         
     def test(self):
         self.run_mode = "test"
-        self.agent_model.init_hidden(1)
+        if self.model_type == "gru":
+            self.agent_model.init_hidden(1)
         
     def train(self):
         self.run_mode = "train"
-        self.agent_model.init_hidden(1)
+        if self.model_type == "gru":
+            self.agent_model.init_hidden(1)
         
         self.stats = {"scores": [], "rewards": [], "policy": [], "values": [], "entropy": [], "confidence": []}
         self.infos_per_update = []
@@ -144,7 +190,7 @@ class NLPAgent:
         
         # Test Mode, return action_step directly
         if self.run_mode == "test":
-            if done:
+            if done and self.model_type == "gru":
                 self.agent_model.init_hidden(1)
             return action_step
         
@@ -196,7 +242,8 @@ class NLPAgent:
             self.optimizer.zero_grad()
         
             self.infos_per_update = []
-            self.agent_model.init_hidden(1)
+            if self.model_type == "gru":
+                self.agent_model.init_hidden(1)
         else:
             self.infos_per_update.append([None, index, output, value])
         

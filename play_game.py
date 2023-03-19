@@ -5,6 +5,7 @@ import os
 import numpy as np
 import agents
 import torch
+import time
 
 def play_game(agent, game_path, max_steps=100, num_episodes=10, seed=None):
     
@@ -52,15 +53,43 @@ if __name__ == '__main__':
     play_game(random_agent, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
     
     print("----------------------------------------------------------------------")
+
+    print("\nNLP Agent GRU (train the model) ------------------------------------------\n")
     
-    print("NLP Agent (train the model) ------------------------------------------")
+    nlp_agent_gru = agents.NLPAgent(model_type="gru", lr=0.00005)
+    print("NLP Agent GRU (acc before training) --------------------------------------")
+    nlp_agent_gru.test()
+    play_game(nlp_agent_gru, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
     
-    nlp_agent = agents.NLPAgent(lr=0.00003)
-    nlp_agent.train()
-    play_game(nlp_agent, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 500) 
+    start_time = time.time()
+    print("\nNLP Agent GRU (start training) -------------------------------------------")
+    nlp_agent_gru.train()
+    play_game(nlp_agent_gru, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 500) 
     os.makedirs('models', exist_ok=True)
-    torch.save(nlp_agent, 'models/nlp_agent_trained.pt')
+    torch.save(nlp_agent_gru, 'models/nlp_agent_trained_gru2.pt')
+    print("Total training time:", time.time()-start_time)
     
-    print("NLP Agent (test the model) ------------------------------------------")
-    nlp_agent.test()
-    play_game(nlp_agent, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
+    print("\nNLP Agent GRU (test the model) ------------------------------------------")
+    nlp_agent_gru.test()
+    play_game(nlp_agent_gru, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
+    
+    print("----------------------------------------------------------------------")
+    
+    
+    print("\nNLP Agent GPT (train the model) ------------------------------------------\n")
+    nlp_agent_gpt = agents.NLPAgent(model_type="gpt-2", lr=0.00005)
+    print("NLP Agent GPT (acc before training) --------------------------------------")
+    nlp_agent_gpt.test()
+    play_game(nlp_agent_gpt, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
+    
+    start_time = time.time()
+    print("\nNLP Agent GPT (start training) -------------------------------------------")
+    nlp_agent_gpt.train()
+    play_game(nlp_agent_gpt, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 500) 
+    os.makedirs('models', exist_ok=True)
+    torch.save(nlp_agent_gpt, 'models/nlp_agent_trained_gpt2.pt')
+    print("Total training time:", time.time()-start_time)
+    
+    print("\nNLP Agent GPT (test the model) ------------------------------------------")
+    nlp_agent_gpt.test()
+    play_game(nlp_agent_gpt, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
