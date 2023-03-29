@@ -121,8 +121,8 @@ def main(args):
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser(description='Parameter Processing')
     parser.add_argument('--play_method', type=str, default="single", help='choose from [human, single, multiple]')
-    parser.add_argument('--single_gamefile', type=str, default="./tw_games/tw-rewardsDense_goalDetailed.z8", help='File Name of the single game')
-    parser.add_argument('--multiple_games_folder', type=str, default="tw-games/", help='Folder Name containing multiple games')
+    parser.add_argument('--single_gamefile', type=str, default="./tw_games/tw-rewardsDense_goalDetailed.z8", help='File name of the single game')
+    parser.add_argument('--multiple_games_folder', type=str, default="tw-simple_games/", help='Name of the folder containing multiple games')
     
     args = parser.parse_args()
 
