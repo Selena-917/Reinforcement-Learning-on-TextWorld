@@ -6,6 +6,7 @@ from torch import optim
 import re
 from collections import defaultdict
 from transformers import GPT2Model, GPT2Tokenizer, GPT2Config
+from transformers import DistilBertModel, DistilBertTokenizer, DistilBertConfig
 
 class SimpleAgent(textworld.gym.Agent):
     def __init__(self, agent_mode = "random", seed=None):
@@ -97,6 +98,59 @@ class GPTNetwork(torch.nn.Module):
         index = probs[0].multinomial(num_samples=1).unsqueeze(0)
         
         return scores, index, value
+
+class 4GRU_BERT(torch.nn.Module):
+    def __init__(self, input_size, hidden_size, device="cuda"):
+        super(4GRU_BERT, self).__init__()
+        self.hidden_size  = hidden_size
+        self.device = device
+        self.embedding = torch.nn.Embedding(input_size, hidden_size)
+        
+        #self.distilBERT_config = DistilBertConfig(vocab_size=input_size, hidden_dim=hidden_size)
+        #self.distilBERT = DistilBertModel(self.distilBERT_config)
+        self.distilBERT = DistilBertModel.from_pretrained('distilbert-base-uncased')
+        self.observation_gru = torch.nn.GRU(3072, hidden_size, batch_first=True)
+        self.descriptions_gru = torch.nn.GRU(3072, hidden_size, batch_first=True)
+        self.inventory_gru = torch.nn.GRU(3072, hidden_size, batch_first=True)
+        self.commands_gru = torch.nn.GRU(3072, hidden_size, batch_first=True)
+        
+        self.linear_value = torch.nn.Linear(hidden_size * 4, 1)
+        
+        self.linear1_command = torch.nn.Linear(hidden_size * 4, 100)
+        self.linear2_command = torch.nn.Linear(100, )
+        
+        
+    def forward(self, observations, descriptions, inventory, commands):
+        observations = observations.permute(1,0)
+        descriptions = descriptions.permute(1,0)
+        inventory = inventory.permute(1,0)
+        commands = commands.permute(1,0)
+        batch_size, num_commands = observations.shape[0], commands.shape[0]
+
+        #generate encodings
+        observations = self.distilBERT(observations)
+        observations = self.observation_gru(observations)[0] #using output state not sure if should use hidden state
+        
+        descriptions = self.distilBERT(descriptions)
+        descriptions = self.descriptions_gru(descriptions)[0]
+        
+        inventory = self.distilBERT(inventory)
+        inventory = self.inventory_gru(inventory)[0]
+        
+        commands = self.distilBERT(commands)
+        commands = self.commands_gru(commands)[0]
+        
+        state_encoding = torch.cat((observations, descriptions, inventory), 0)
+        
+        #compute estimated state value
+        value = self.linear_value(state_encoding)
+        
+        
+        
+        
+        #TO DO: compute scores and index
+        
+        return scores, index, value
     
     
 class NLPAgent:
@@ -181,12 +235,29 @@ class NLPAgent:
     
     def action(self, observations, score, done, infos):
         
-        agent_input = "{}\n{}\n{}".format(observations, infos["description"], infos["inventory"])
-        agent_input_tensor = self._preprocess_texts([agent_input]).to(self.device)
-        commands_tensor = self._preprocess_texts(infos["admissible_commands"]).to(self.device)
+        #If using 4GRU_BERT model, observations, descriptions, inventory, and commands are processed seperately
+        if self.model == '4GRU_BERT':
+            tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
+            
+            observations_input = tokenizer(observations, return_tensors='pt').to(self.device)
+            descriptions_input = tokenizer(infos['description'], return_tensors='pt').to(self.device)
+            inventory_input = tokenizer(infos['inventory'], return_tensors='pt').to(self.device)
+            commands_input = tokenizer(infos["admissible_commands"], return_tensors='pt').to(self.device)
+            
+            output, index, value = self.agent_model(observations_input,
+                                                    descriptions_input,
+                                                    inventory_input,
+                                                    commands_input)
+            
+            action_step = infos["admissible_commands"][index[0]]
         
-        output, index, value = self.agent_model(agent_input_tensor, commands_tensor)
-        action_step = infos["admissible_commands"][index[0]]
+        else:
+            agent_input = "{}\n{}\n{}".format(observations, infos["description"], infos["inventory"])
+            agent_input_tensor = self._preprocess_texts([agent_input]).to(self.device)
+            commands_tensor = self._preprocess_texts(infos["admissible_commands"]).to(self.device)
+            
+            output, index, value = self.agent_model(agent_input_tensor, commands_tensor)
+            action_step = infos["admissible_commands"][index[0]]
         
         # Test Mode, return action_step directly
         if self.run_mode == "test":
@@ -251,3 +322,12 @@ class NLPAgent:
             self.last_score = 0 
         
         return action_step
+    
+
+    
+    
+    
+    
+    
+    
+    
