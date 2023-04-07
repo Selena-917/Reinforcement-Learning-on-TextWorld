@@ -100,14 +100,12 @@ class GPTNetwork(torch.nn.Module):
         return scores, index, value
 
 class BERT_GRU(torch.nn.Module):
-    def __init__(self, input_size, hidden_size, device="cpu"):
+    def __init__(self, input_size, hidden_size, device="cuda"):
         super(BERT_GRU, self).__init__()
         self.hidden_size  = hidden_size
         self.device = device
-        self.embedding = torch.nn.Embedding(input_size, hidden_size)
+        #self.embedding = torch.nn.Embedding(input_size, hidden_size)
         
-        #self.distilBERT_config = DistilBertConfig(vocab_size=input_size, hidden_dim=hidden_size)
-        #self.distilBERT = DistilBertModel(self.distilBERT_config)
         self.distilBERT = DistilBertModel.from_pretrained('distilbert-base-uncased')
         
         self.observation_gru = torch.nn.GRU(768, hidden_size, batch_first=True)
@@ -115,77 +113,77 @@ class BERT_GRU(torch.nn.Module):
         self.inventory_gru = torch.nn.GRU(768, hidden_size, batch_first=True)
         self.commands_gru = torch.nn.GRU(768, hidden_size, batch_first=True)
         
-        self.linear_value = torch.nn.Linear(hidden_size, 1)
+        self.linear_value = torch.nn.Linear(hidden_size * 3, 1)
         
-        self.linear1_command = torch.nn.Linear(hidden_size * 4, 100)
+        self.linear1_command = torch.nn.Linear(hidden_size * 4, 50)
+        self.linear2_command = torch.nn.Linear(50, 1)
         
-        #figure out output dim size
-        #self.linear2_command = torch.nn.Linear(100, )
+        #freeze distilBERT parameters
+        for param in self.distilBERT.parameters():
+            param.requires_grad = False
         
         
     def forward(self, observations, descriptions, inventory, commands):
-        print('observations size: ', observations['input_ids'].shape)
-        print('descriptions size: ', descriptions['input_ids'].shape)
-        print('inventory size: ', inventory['input_ids'].shape)
-        print('commands size: ', commands['input_ids'].shape)
-        
-        #observations = observations.permute(1,0)
-        #descriptions = descriptions.permute(1,0)
-        #inventory = inventory.permute(1,0)
-        #commands = commands.permute(1,0)
-        
-        #print('observations permute size: ', observations.shape)
-        #print('descriptions permute size: ', descriptions.shape)
-        #print('inventory permute size: ', inventory.shape)
-        #print('commands permute size: ', commands.shape)
+        #print('observations size: ', observations['input_ids'].shape)
+        #print('descriptions size: ', descriptions['input_ids'].shape)
+        #print('inventory size: ', inventory['input_ids'].shape)
+        #print('commands size: ', commands['input_ids'].shape)
         
         batch_size, num_commands = observations['input_ids'].shape[0], commands['input_ids'].shape[0]
-        print('batch size: ', batch_size)
-        print('num_commands: ', num_commands)
+        #print('batch size: ', batch_size)
+        #print('num_commands: ', num_commands)
 
         #generate encodings
-        observations = self.distilBERT(input_ids=observations['input_ids'], attention_mask=observations['attention_mask'])[0]
-        print('bert observations: ', observations)
-        print('observations bert size: ', observations.shape)
+        observations = self.distilBERT(input_ids=observations['input_ids'], attention_mask=observations['attention_mask'])[0][:,0,:]
+        #print('bert observations: ', observations)
+        #print('observations bert size: ', observations.shape)
         observations = self.observation_gru(observations)[0] #using output state not sure if should use hidden state
-        print('observations gru size: ', observations.shape)
+        #print('observations gru size: ', observations.shape)
         
-        descriptions = self.distilBERT(input_ids=descriptions['input_ids'], attention_mask=descriptions['attention_mask'])[0]
-        print('descriptions bert size: ', descriptions.shape)
+        descriptions = self.distilBERT(input_ids=descriptions['input_ids'], attention_mask=descriptions['attention_mask'])[0][:,0,:]
+        #print('descriptions bert size: ', descriptions.shape)
         descriptions = self.descriptions_gru(descriptions)[0]
-        print('descriptions gru size: ', descriptions.shape)
+        #print('descriptions gru size: ', descriptions.shape)
         
-        inventory = self.distilBERT(input_ids=inventory['input_ids'], attention_mask=inventory['attention_mask'])[0]
-        print('inventory bert size: ', inventory.shape)
+        inventory = self.distilBERT(input_ids=inventory['input_ids'], attention_mask=inventory['attention_mask'])[0][:,0,:]
+        #print('inventory bert size: ', inventory.shape)
         inventory = self.inventory_gru(inventory)[0]
-        print('inventory gru size: ', inventory.shape)
+        #print('inventory gru size: ', inventory.shape)
         
-        commands = self.distilBERT(input_ids=commands['input_ids'], attention_mask=commands['attention_mask'])[0]
-        print('commands bert size: ', commands.shape)
+        commands = self.distilBERT(input_ids=commands['input_ids'], attention_mask=commands['attention_mask'])[0][:,0,:]
+        #print('commands bert size: ', commands.shape)
         commands = self.commands_gru(commands)[0]
-        print('commands gru size: ', commands.shape)
+        #print('commands gru size: ', commands.shape)
         
         state_encoding = torch.cat((observations, descriptions, inventory), 1)
-        print('state encoding size: ', state_encoding.shape)
+        #print('state encoding size: ', state_encoding.shape)
         
         #compute estimated state value
         value = self.linear_value(state_encoding)
         
         #state_action_encodings
         state_encoding_stack = torch.stack([state_encoding]*num_commands, dim=0)
-        print('state encoding stack size: ', state_encoding_stack.shape)
+        #print('state encoding stack size: ', state_encoding_stack.shape)
         commands = commands.unsqueeze(1)
-        print('commands size: ', commands.shape)
+        #print('commands size: ', commands.shape)
         state_action_encodings = torch.cat((state_encoding_stack, commands), dim=2)
-        print('state_action_encodings size: ', state_action_encodings.shape)
+        #print('state_action_encodings size: ', state_action_encodings.shape)
         
-        #TO DO: compute scores and index
+        scores = self.linear1_command(state_action_encodings)
+        scores = F.relu(scores)
+        scores = self.linear2_command(scores).squeeze()
+        #print('scores size: ', scores.shape)
+        #print('scores: ', scores)
+        probs = F.softmax(scores)
+        #print('probs size: ', probs.shape)
+        #print('probs: ', probs)
+        index = probs.multinomial(num_samples=1)
         
         return scores, index, value
     
     
 class NLPAgent:
-    def __init__(self, model_type="bert_gru", max_vocab_num=1000, update_freq=10, log_freq=1000, gamma=0.9, lr=1e-5, device="cpu"):
+    def __init__(self, model_type="bert_gru", max_vocab_num=1000, update_freq=10, log_freq=1000, gamma=0.9, lr=1e-5, device="cuda"):
         self.model_type = model_type
         self.max_vocab_num = max_vocab_num
         self.update_freq = update_freq
@@ -271,10 +269,10 @@ class NLPAgent:
         #If using GRU_BERT model, observations, descriptions, inventory, and commands are processed seperately
         if self.model_type == 'bert_gru':
             tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
-            print('raw_observations: ', observations)
-            print('raw_description: ', infos['description'])
-            print('raw inventory: ', infos['inventory'])
-            print('raw commands: ', infos['admissible_commands'])
+            #print('raw_observations: ', observations)
+            #print('raw_description: ', infos['description'])
+            #print('raw inventory: ', infos['inventory'])
+            #print('raw commands: ', infos['admissible_commands'])
             
             ############ NOTE: distilBERT can only accept 512 tokens at a time. We are truncating all inputs to adhere to that length.
             ############ If inputs are significantly longer, performance may suffer
@@ -296,7 +294,7 @@ class NLPAgent:
             commands_input = tokenizer(infos["admissible_commands"],
                                        return_tensors='pt', 
                                        truncation=True,
-                                       max_length=50,
+                                       max_length=512,
                                        padding='max_length').to(self.device)
             #print('commands input: ', commands_input)
             output, index, value = self.agent_model(observations_input,
