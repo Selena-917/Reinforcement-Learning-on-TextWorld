@@ -8,6 +8,8 @@ import torch
 import time
 import argparse
 
+import sys
+
 def play_game(agent, game_path, max_steps=100, num_episodes=10, seed=None):
     
     if seed:
@@ -63,7 +65,7 @@ def main(args):
         play_game(random_agent, args.single_gamefile, 100, 10) 
         
         print("----------------------------------------------------------------------")
-
+        
         print("\nNLP Agent GRU (train the model) ------------------------------------------\n")
         
         nlp_agent_gru = agents.NLPAgent(model_type="gru", lr=0.00005)
@@ -103,6 +105,29 @@ def main(args):
         print("\nNLP Agent GPT (test the model) ------------------------------------------")
         nlp_agent_gpt.test()
         play_game(nlp_agent_gpt, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
+        
+        print("----------------------------------------------------------------------")
+
+        print("\nNLP Agent BERT GRU (train the model) ------------------------------------------\n")
+        
+        nlp_agent_bert_gru = agents.NLPAgent(model_type="bert_gru", lr=0.00005)
+        print("NLP Agent BERT GRU (acc before training) --------------------------------------")
+        nlp_agent_bert_gru.test()
+        play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
+        
+        start_time = time.time()
+        print("\nNLP Agent BERT GRU (start training) -------------------------------------------")
+        nlp_agent_bert_gru.train()
+        play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 100) 
+        os.makedirs('models', exist_ok=True)
+        torch.save(nlp_agent_bert_gru, 'models/nlp_agent_trained_bert_gru.pt')
+        print("Total training time:", time.time()-start_time)
+        
+        print("\nNLP Agent BERT GRU (test the model) ------------------------------------------")
+        nlp_agent_bert_gru.test()
+        play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
+        
+        print("----------------------------------------------------------------------")
     
     # Train the agent to play multiple games
     elif args.play_method == "multiple":
@@ -125,6 +150,10 @@ if __name__ == '__main__':
     parser.add_argument('--multiple_games_folder', type=str, default="tw-simple_games/", help='Name of the folder containing multiple games')
     
     args = parser.parse_args()
-
+    
     print(args)
     main(args)
+    
+    
+    
+    
