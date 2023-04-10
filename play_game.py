@@ -56,7 +56,7 @@ def main(args):
     if args.play_method == "human":
         print("Human Agent (play by yourself) --------------------------------------")
         random_agent = agents.SimpleAgent("human")
-        play_game(random_agent, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 1)
+        play_game(random_agent, args.single_gamefile, 100, 1)
     
     # Train the agent to play a single game
     elif args.play_method == "single":
@@ -104,7 +104,7 @@ def main(args):
         
         print("\nNLP Agent GPT (test the model) ------------------------------------------")
         nlp_agent_gpt.test()
-        play_game(nlp_agent_gpt, "./tw_games/tw-rewardsDense_goalDetailed.z8", 100, 10) 
+        play_game(nlp_agent_gpt, args.single_gamefile, 100, 10) 
         
         print("----------------------------------------------------------------------")
 
