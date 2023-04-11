@@ -66,68 +66,71 @@ def main(args):
         
         print("----------------------------------------------------------------------")
         
-        print("\nNLP Agent GRU (train the model) ------------------------------------------\n")
+        if args.model_type == "gru":
         
-        nlp_agent_gru = agents.NLPAgent(model_type="gru", lr=0.00005)
-        print("NLP Agent GRU (acc before training) --------------------------------------")
-        nlp_agent_gru.test()
-        play_game(nlp_agent_gru, args.single_gamefile, 100, 10) 
+            print("\nNLP Agent GRU (train the model) ------------------------------------------\n")
+            
+            nlp_agent_gru = agents.NLPAgent(model_type="gru", lr=0.0005)
+            print("NLP Agent GRU (acc before training) --------------------------------------")
+            nlp_agent_gru.test()
+            play_game(nlp_agent_gru, args.single_gamefile, 100, 10) 
+            
+            start_time = time.time()
+            print("\nNLP Agent GRU (start training) -------------------------------------------")
+            nlp_agent_gru.train()
+            play_game(nlp_agent_gru, args.single_gamefile, 100, 100) 
+            os.makedirs('models', exist_ok=True)
+            torch.save(nlp_agent_gru, 'models/nlp_agent_trained_gru.pt')
+            print("Total training time:", time.time()-start_time)
+            
+            print("\nNLP Agent GRU (test the model) ------------------------------------------")
+            nlp_agent_gru.test()
+            play_game(nlp_agent_gru, args.single_gamefile, 100, 10) 
+            
+            print("----------------------------------------------------------------------")
         
-        start_time = time.time()
-        print("\nNLP Agent GRU (start training) -------------------------------------------")
-        nlp_agent_gru.train()
-        play_game(nlp_agent_gru, args.single_gamefile, 100, 500) 
-        os.makedirs('models', exist_ok=True)
-        torch.save(nlp_agent_gru, 'models/nlp_agent_trained_gru2.pt')
-        print("Total training time:", time.time()-start_time)
-        
-        print("\nNLP Agent GRU (test the model) ------------------------------------------")
-        nlp_agent_gru.test()
-        play_game(nlp_agent_gru, args.single_gamefile, 100, 10) 
-        
-        print("----------------------------------------------------------------------")
-        
-        
-        print("\nNLP Agent GPT (train the model) ------------------------------------------\n")
-        nlp_agent_gpt = agents.NLPAgent(model_type="gpt-2", lr=0.00005)
-        print("NLP Agent GPT (acc before training) --------------------------------------")
-        nlp_agent_gpt.test()
-        play_game(nlp_agent_gpt, args.single_gamefile, 100, 10) 
-        
-        start_time = time.time()
-        print("\nNLP Agent GPT (start training) -------------------------------------------")
-        nlp_agent_gpt.train()
-        play_game(nlp_agent_gpt, args.single_gamefile, 100, 500) 
-        os.makedirs('models', exist_ok=True)
-        torch.save(nlp_agent_gpt, 'models/nlp_agent_trained_gpt2.pt')
-        print("Total training time:", time.time()-start_time)
-        
-        print("\nNLP Agent GPT (test the model) ------------------------------------------")
-        nlp_agent_gpt.test()
-        play_game(nlp_agent_gpt, args.single_gamefile, 100, 10) 
-        
-        print("----------------------------------------------------------------------")
+        elif args.model_type == "gpt-2":
+            print("\nNLP Agent GPT (train the model) ------------------------------------------\n")
+            nlp_agent_gpt = agents.NLPAgent(model_type="gpt-2", lr=0.0001)
+            print("NLP Agent GPT (acc before training) --------------------------------------")
+            nlp_agent_gpt.test()
+            play_game(nlp_agent_gpt, args.single_gamefile, 100, 10) 
+            
+            start_time = time.time()
+            print("\nNLP Agent GPT (start training) -------------------------------------------")
+            nlp_agent_gpt.train()
+            play_game(nlp_agent_gpt, args.single_gamefile, 100, 200) 
+            os.makedirs('models', exist_ok=True)
+            torch.save(nlp_agent_gpt, 'models/nlp_agent_trained_gpt.pt')
+            print("Total training time:", time.time()-start_time)
+            
+            print("\nNLP Agent GPT (test the model) ------------------------------------------")
+            nlp_agent_gpt.test()
+            play_game(nlp_agent_gpt, args.single_gamefile, 100, 10) 
+            
+            print("----------------------------------------------------------------------")
 
-        print("\nNLP Agent BERT GRU (train the model) ------------------------------------------\n")
-        
-        nlp_agent_bert_gru = agents.NLPAgent(model_type="bert_gru", lr=0.00005)
-        print("NLP Agent BERT GRU (acc before training) --------------------------------------")
-        nlp_agent_bert_gru.test()
-        play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
-        
-        start_time = time.time()
-        print("\nNLP Agent BERT GRU (start training) -------------------------------------------")
-        nlp_agent_bert_gru.train()
-        play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 100) 
-        os.makedirs('models', exist_ok=True)
-        torch.save(nlp_agent_bert_gru, 'models/nlp_agent_trained_bert_gru.pt')
-        print("Total training time:", time.time()-start_time)
-        
-        print("\nNLP Agent BERT GRU (test the model) ------------------------------------------")
-        nlp_agent_bert_gru.test()
-        play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
-        
-        print("----------------------------------------------------------------------")
+        elif args.model_type == "bert_gru": 
+            print("\nNLP Agent BERT GRU (train the model) ------------------------------------------\n")
+            
+            nlp_agent_bert_gru = agents.NLPAgent(model_type="bert_gru", lr=0.00005)
+            print("NLP Agent BERT GRU (acc before training) --------------------------------------")
+            nlp_agent_bert_gru.test()
+            play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
+            
+            start_time = time.time()
+            print("\nNLP Agent BERT GRU (start training) -------------------------------------------")
+            nlp_agent_bert_gru.train()
+            play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 100) 
+            os.makedirs('models', exist_ok=True)
+            torch.save(nlp_agent_bert_gru, 'models/nlp_agent_trained_bert_gru.pt')
+            print("Total training time:", time.time()-start_time)
+            
+            print("\nNLP Agent BERT GRU (test the model) ------------------------------------------")
+            nlp_agent_bert_gru.test()
+            play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
+            
+            print("----------------------------------------------------------------------")
     
     # Train the agent to play multiple games
     elif args.play_method == "multiple":
@@ -145,6 +148,7 @@ def main(args):
         
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser(description='Parameter Processing')
+    parser.add_argument('--model_type', type=str, default="gru", help='choose from [gru, gpt-2, bert_gru]')
     parser.add_argument('--play_method', type=str, default="single", help='choose from [human, single, multiple]')
     parser.add_argument('--single_gamefile', type=str, default="./tw_games/tw-rewardsDense_goalDetailed.z8", help='File name of the single game')
     parser.add_argument('--multiple_games_folder', type=str, default="tw-simple_games/", help='Name of the folder containing multiple games')
@@ -153,7 +157,5 @@ if __name__ == '__main__':
     
     print(args)
     main(args)
-    
-    
     
     

@@ -7,6 +7,52 @@ import re
 from collections import defaultdict
 from transformers import GPT2Model, GPT2Tokenizer, GPT2Config
 from transformers import DistilBertModel, DistilBertTokenizer, DistilBertConfig
+from typing import Iterable
+
+class PretrainedEmbed:
+
+    def __init__(self, words: Iterable[str], vectors: np.ndarray):
+        """
+        Initializes an Embeddings object directly from a list of words
+        and their embeddings.
+
+        :param words: A list of words
+        :param vectors: A 2D array of shape (len(words), embedding_size)
+            where for each i, vectors[i] is the embedding for words[i]
+        """
+        self.words = list(words)
+        self.indices = {w: i for i, w in enumerate(words)}
+        self.vectors = vectors
+
+    def __len__(self):
+        return len(self.words)
+
+    def __contains__(self, word: str):
+        return word in self.words
+
+    def __getitem__(self, words: Iterable[str]):
+        """
+        Retrieves embeddings for a list of words.
+
+        :param words: A list of words
+        :return: A 2D array of shape (len(words), embedding_size) where
+            for each i, the ith row is the embedding for words[i]
+        """
+        return self.vectors[[self.indices[w] for w in words]]
+
+    @classmethod
+    def from_file(cls, filename: str):
+        """
+        Initializes an Embeddings object from a .txt file containing
+        word embeddings in GloVe format.
+
+        :param filename: The name of the file containing the embeddings
+        :return: An Embeddings object containing the loaded embeddings
+        """
+        with open(filename, "r") as f:
+            all_lines = [line.strip().split(" ", 1) for line in f]
+        words, vecs = zip(*all_lines)
+        return cls(words, np.array([np.fromstring(v, sep=" ") for v in vecs]))
 
 class SimpleAgent(textworld.gym.Agent):
     def __init__(self, agent_mode = "random", seed=None):
@@ -26,17 +72,20 @@ class SimpleAgent(textworld.gym.Agent):
             return input()
         
 class AgentNetwork(torch.nn.Module):
-    def __init__(self, input_size, hidden_size, device="cuda"):
+    def __init__(self, input_size, embedding_size, hidden_size, device="cuda"):
         super(AgentNetwork, self).__init__()
         self.hidden_size  = hidden_size
         self.device = device
-        self.embedding    = torch.nn.Embedding(input_size, hidden_size)
-        self.gru_input  = torch.nn.GRU(hidden_size, hidden_size)
-        self.gru_command  = torch.nn.GRU(hidden_size, hidden_size)
+        self.embedding    = torch.nn.Embedding(input_size, embedding_size)
+        self.gru_input  = torch.nn.GRU(embedding_size, hidden_size)
+        self.gru_command  = torch.nn.GRU(embedding_size, hidden_size)
         self.gru_state    = torch.nn.GRU(hidden_size, hidden_size)
         self.hidden_state = self.init_hidden(1)
         self.linear       = torch.nn.Linear(hidden_size, 1)
         self.linear_command = torch.nn.Linear(hidden_size * 2, 1)
+
+    def load_pretrained_embeddings(self, embeddings):
+        self.embedding.weight.data[:-2, :] = torch.tensor(embeddings.vectors)
     
     def init_hidden(self, batch_size):
         self.hidden_state = torch.zeros(1, batch_size, self.hidden_size, device=self.device)
@@ -62,21 +111,24 @@ class AgentNetwork(torch.nn.Module):
     
     
 class GPTNetwork(torch.nn.Module):
-    def __init__(self, input_size, hidden_size, device="cuda"):
+    def __init__(self, input_size, embedding_size, hidden_size, device="cuda"):
         super(GPTNetwork, self).__init__()
         self.hidden_size  = hidden_size
         self.device = device
-        self.embedding    = torch.nn.Embedding(input_size, hidden_size)
+        self.embedding    = torch.nn.Embedding(input_size, embedding_size)
         
-        self.gpt_config = GPT2Config(vocab_size=input_size, max_length=32, dropout=0.0, n_embd=hidden_size, n_layer=8, n_head=8)
+        self.gpt_config = GPT2Config(vocab_size=input_size, max_length=32, dropout=0.0, n_embd=embedding_size, n_layer=10, n_head=10)
         self.gpt2 = GPT2Model(self.gpt_config)
+        self.gpt_linear = torch.nn.Linear(embedding_size, hidden_size)
         self.linear = torch.nn.Linear(hidden_size, 1)
         
         
-        self.gru_command  = torch.nn.GRU(hidden_size, hidden_size, batch_first=True)
+        self.gru_command  = torch.nn.GRU(embedding_size, hidden_size, batch_first=True)
         self.linear_command = torch.nn.Linear(hidden_size * 2, 1)
 
-        
+    
+    def load_pretrained_embeddings(self, embeddings):
+        self.embedding.weight.data[:-2, :] = torch.tensor(embeddings.vectors)
         
     def forward(self, observations, commands):
         observations = observations.permute(1,0)
@@ -85,12 +137,13 @@ class GPTNetwork(torch.nn.Module):
 
         embed_obs = self.embedding(observations)
         gpt2_output = self.gpt2(inputs_embeds=embed_obs)[0][:,-1,:].unsqueeze(1)
+        gpt2_output = self.gpt_linear(gpt2_output)
         value = self.linear(gpt2_output)
 
         embed_commands = self.embedding.forward(commands)
         output_commands, hidden_commands = self.gru_command.forward(embed_commands) 
         input_commands = torch.stack([gpt2_output] * num_commands, 2)
-        hidden_commands = torch.stack([hidden_commands] * batch_size, 1) 
+        hidden_commands = torch.stack([hidden_commands] * batch_size, 1)
         input_commands = torch.cat([input_commands, hidden_commands], dim=-1)
 
         scores = F.relu(self.linear_command(input_commands)).squeeze(-1)  
@@ -185,13 +238,14 @@ class NLPAgent:
             
         self.device = device
         
-        self.idx2word = ["<PAD>", "<UNK>"]
-        self.word2idx = {self.idx2word[i]:i for i in range(len(self.idx2word))}
+        self.glove = PretrainedEmbed.from_file("glove_300d.txt")
+        self.idx2word = self.glove.words+["<PAD>", "<UNK>"]
+        self.word2idx = {w: i for i, w in enumerate(self.idx2word)}
         
         if self.model_type == "gru":
-            self.agent_model = AgentNetwork(self.max_vocab_num, 128, self.device).to(device)
+            self.agent_model = AgentNetwork(len(self.idx2word), 300, 128, self.device).to(device)
         elif self.model_type == "gpt-2":
-            self.agent_model = GPTNetwork(self.max_vocab_num, 128, self.device).to(device)
+            self.agent_model = GPTNetwork(len(self.idx2word), 300, 128, self.device).to(device)
         elif self.model_type == 'bert_gru':
             self.agent_model = BERT_GRU(self.max_vocab_num, 128, self.device).to(device)
         self.optimizer = optim.Adam(self.agent_model.parameters(), lr=self.lr)
@@ -202,6 +256,7 @@ class NLPAgent:
             self.agent_model.init_hidden(1)
         
     def train(self):
+        self.agent_model.load_pretrained_embeddings(self.glove)
         self.run_mode = "train"
         if self.model_type == "gru":
             self.agent_model.init_hidden(1)
@@ -219,12 +274,9 @@ class NLPAgent:
         words_list = texts.split()
         words_idx = []
         for word in words_list:
-            if len(self.word2idx) >= self.max_vocab_num:
+            if word not in self.word2idx:
                 words_idx.append(self.word2idx["<UNK>"])
             else:
-                if word not in self.word2idx:
-                    self.idx2word.append(word)
-                    self.word2idx[word] = len(self.word2idx)
                 words_idx.append(self.word2idx[word])         
             
         return words_idx
@@ -365,12 +417,3 @@ class NLPAgent:
             self.last_score = 0 
         
         return action_step
-    
-
-    
-    
-    
-    
-    
-    
-    
