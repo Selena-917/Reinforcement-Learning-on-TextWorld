@@ -99,7 +99,7 @@ def main(args):
             start_time = time.time()
             print("\nNLP Agent GPT (start training) -------------------------------------------")
             nlp_agent_gpt.train()
-            play_game(nlp_agent_gpt, args.single_gamefile, 100, 200) 
+            play_game(nlp_agent_gpt, args.single_gamefile, 100, 300) 
             os.makedirs('models', exist_ok=True)
             torch.save(nlp_agent_gpt, 'models/nlp_agent_trained_gpt.pt')
             print("Total training time:", time.time()-start_time)
