@@ -1,3 +1,4 @@
 textworld_env/
 make_tw_games.sh
 models/
+checkpoints/
