@@ -1,0 +1,88 @@
+[lr=0.0001; eposides=300]
+Random Agent (do random action) --------------------------------------
+game_files: ['./tw_games/tw-rewardsDense_goalDetailed.z8']
+Average steps used: 100.00; Average score: 4.10/10
+----------------------------------------------------------------------
+
+NLP Agent GPT (train the model) ------------------------------------------
+
+NLP Agent GPT (acc before training) --------------------------------------
+game_files: ['./tw_games/tw-rewardsDense_goalDetailed.z8']
+Average steps used: 100.00; Average score: 4.40/10
+
+NLP Agent GPT (start training) -------------------------------------------
+game_files: ['./tw_games/tw-rewardsDense_goalDetailed.z8']
+Total step:   1000  reward: 0.051  value: 0.127  entropy: 2.403  max_score:   7  num_vocab: 30002
+Total step:   2000  reward: -0.048  value: 5.478  entropy: 2.403  max_score:   9  num_vocab: 30002
+Total step:   3000  reward: 0.044  value: 0.084  entropy: 2.373  max_score:   6  num_vocab: 30002
+Total step:   4000  reward: 0.057  value: 0.093  entropy: 2.429  max_score:   9  num_vocab: 30002
+Total step:   5000  reward: 0.057  value: 0.088  entropy: 2.441  max_score:   7  num_vocab: 30002
+Total step:   6000  reward: 0.052  value: 0.103  entropy: 2.454  max_score:   7  num_vocab: 30002
+Total step:   7000  reward: 0.070  value: 0.130  entropy: 2.464  max_score:   9  num_vocab: 30002
+Total step:   8000  reward: 0.061  value: 0.091  entropy: 2.444  max_score:   8  num_vocab: 30002
+Total step:   9000  reward: -0.346  value: 77.445  entropy: 2.397  max_score:   9  num_vocab: 30002
+Total step:  10000  reward: -0.239  value: 43.716  entropy: 2.354  max_score:   9  num_vocab: 30002
+Total step:  11000  reward: -0.009  value: 23.614  entropy: 2.297  max_score:   9  num_vocab: 30002
+Total step:  12000  reward: -0.227  value: 55.562  entropy: 2.309  max_score:   9  num_vocab: 30002
+Total step:  13000  reward: -0.316  value: 85.936  entropy: 2.224  max_score:  10  num_vocab: 30002
+Total step:  14000  reward: -0.227  value: 41.458  entropy: 2.222  max_score:   9  num_vocab: 30002
+Total step:  15000  reward: -0.109  value: 34.351  entropy: 2.386  max_score:   9  num_vocab: 30002
+Total step:  16000  reward: -0.537  value: 113.522  entropy: 2.265  max_score:   9  num_vocab: 30002
+Total step:  17000  reward: -0.548  value: 102.197  entropy: 2.387  max_score:   9  num_vocab: 30002
+Total step:  18000  reward: -0.439  value: 99.984  entropy: 2.432  max_score:   9  num_vocab: 30002
+Total step:  19000  reward: -0.027  value: 24.963  entropy: 2.428  max_score:   9  num_vocab: 30002
+Total step:  20000  reward: -0.331  value: 85.706  entropy: 2.278  max_score:   9  num_vocab: 30002
+Total step:  21000  reward: -0.446  value: 88.414  entropy: 2.310  max_score:   9  num_vocab: 30002
+Total step:  22000  reward: -0.232  value: 67.988  entropy: 2.419  max_score:   9  num_vocab: 30002
+Total step:  23000  reward: -0.761  value: 141.694  entropy: 2.339  max_score:   9  num_vocab: 30002
+Total step:  24000  reward: 0.096  value: 0.257  entropy: 2.455  max_score:   9  num_vocab: 30002
+Total step:  25000  reward: -0.632  value: 155.043  entropy: 2.380  max_score:  10  num_vocab: 30002
+Total step:  26000  reward: -0.651  value: 101.261  entropy: 2.364  max_score:   9  num_vocab: 30002
+Average steps used: 87.64; Average score: 7.67/10
+Total training time: 1150.8478891849518
+
+NLP Agent GPT (test the model) ------------------------------------------
+game_files: ['./tw_games/tw-rewardsDense_goalDetailed.z8']
+Average steps used: 56.90; Average score: 9.00/10
+----------------------------------------------------------------------
+
+
+[lr=0.0001; eposides=200]
+Random Agent (do random action) --------------------------------------
+game_files: ['./tw_games/tw-rewardsDense_goalDetailed.z8']
+Average steps used: 100.00; Average score: 4.20/10
+----------------------------------------------------------------------
+
+NLP Agent GPT (train the model) ------------------------------------------
+
+NLP Agent GPT (acc before training) --------------------------------------
+game_files: ['./tw_games/tw-rewardsDense_goalDetailed.z8']
+Average steps used: 100.00; Average score: 4.70/10
+
+NLP Agent GPT (start training) -------------------------------------------
+game_files: ['./tw_games/tw-rewardsDense_goalDetailed.z8']
+Total step:   1000  reward: 0.044  value: 0.096  entropy: 2.349  max_score:   7  num_vocab: 30002
+Total step:   2000  reward: 0.044  value: 0.075  entropy: 2.364  max_score:   6  num_vocab: 30002
+Total step:   3000  reward: 0.047  value: 0.084  entropy: 2.361  max_score:   6  num_vocab: 30002
+Total step:   4000  reward: 0.047  value: 0.093  entropy: 2.352  max_score:   9  num_vocab: 30002
+Total step:   5000  reward: 0.047  value: 0.071  entropy: 2.333  max_score:   7  num_vocab: 30002
+Total step:   6000  reward: 0.053  value: 0.093  entropy: 2.410  max_score:   7  num_vocab: 30002
+Total step:   7000  reward: -0.050  value: 13.710  entropy: 2.319  max_score:   9  num_vocab: 30002
+Total step:   8000  reward: 0.062  value: 0.110  entropy: 2.436  max_score:   8  num_vocab: 30002
+Total step:   9000  reward: 0.069  value: 0.119  entropy: 2.482  max_score:   9  num_vocab: 30002
+Total step:  10000  reward: -0.033  value: 25.154  entropy: 2.424  max_score:   9  num_vocab: 30002
+Total step:  11000  reward: -0.126  value: 23.602  entropy: 2.369  max_score:   9  num_vocab: 30002
+Total step:  12000  reward: -0.127  value: 15.229  entropy: 2.369  max_score:   9  num_vocab: 30002
+Total step:  13000  reward: -0.116  value: 26.394  entropy: 2.257  max_score:   9  num_vocab: 30002
+Total step:  14000  reward: -0.018  value: 22.546  entropy: 2.475  max_score:   9  num_vocab: 30002
+Total step:  15000  reward: -0.007  value: 27.348  entropy: 2.393  max_score:  10  num_vocab: 30002
+Total step:  16000  reward: -0.541  value: 73.210  entropy: 2.372  max_score:   9  num_vocab: 30002
+Total step:  17000  reward: -0.547  value: 99.576  entropy: 2.341  max_score:   9  num_vocab: 30002
+Total step:  18000  reward: -0.211  value: 59.851  entropy: 2.340  max_score:   9  num_vocab: 30002
+Average steps used: 93.35; Average score: 6.82/10
+Total training time: 800.1941668987274
+
+NLP Agent GPT (test the model) ------------------------------------------
+game_files: ['./tw_games/tw-rewardsDense_goalDetailed.z8']
+Average steps used: 80.40; Average score: 8.90/10
+----------------------------------------------------------------------

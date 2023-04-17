@@ -1,0 +1,444 @@
+Seed of creating single games: 1
+
+** tw-simple games **
+
+1. Rewards: Dense; Goal: Detailed [lr=0.0005; num_episodes=100]
+
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 4.20/8
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Average steps used: 94.30; Average score: 4.50/8
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Total step:   1000  reward: 0.053  value: 0.103  entropy: 2.435  max_score:   7  num_vocab: 30002
+Total step:   2000  reward: 0.057  value: 0.105  entropy: 2.510  max_score:   7  num_vocab: 30002
+Total step:   3000  reward: 0.057  value: 0.111  entropy: 2.447  max_score:   7  num_vocab: 30002
+Total step:   4000  reward: -0.050  value: 13.208  entropy: 2.468  max_score:   7  num_vocab: 30002
+Total step:   5000  reward: -0.036  value: 13.589  entropy: 2.431  max_score:   7  num_vocab: 30002
+Total step:   6000  reward: 0.067  value: 0.136  entropy: 2.518  max_score:   7  num_vocab: 30002
+Total step:   7000  reward: 0.081  value: 40.147  entropy: 2.470  max_score:   8  num_vocab: 30002
+Total step:   8000  reward: 0.182  value: 23.818  entropy: 2.418  max_score:   8  num_vocab: 30002
+Total step:   9000  reward: -0.361  value: 76.970  entropy: 2.425  max_score:   7  num_vocab: 30002
+Average steps used: 95.45; Average score: 5.87/8
+Total training time: 212.98589062690735
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Average steps used: 87.40; Average score: 6.90/8
+----------------------------------------------------------------------
+
+[lr=0.0005; num_episodes=200]
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Average steps used: 98.10; Average score: 4.30/8
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 3.70/8
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Total step:   1000  reward: 0.057  value: 0.096  entropy: 2.453  max_score:   7  num_vocab: 30002
+Total step:   2000  reward: -0.050  value: 24.548  entropy: 2.418  max_score:   7  num_vocab: 30002
+Total step:   3000  reward: 0.059  value: 0.122  entropy: 2.482  max_score:   7  num_vocab: 30002
+Total step:   4000  reward: 0.063  value: 0.133  entropy: 2.473  max_score:   7  num_vocab: 30002
+Total step:   5000  reward: -0.148  value: 28.876  entropy: 2.481  max_score:   7  num_vocab: 30002
+Total step:   6000  reward: 0.076  value: 0.157  entropy: 2.519  max_score:   7  num_vocab: 30002
+Total step:   7000  reward: -0.149  value: 25.416  entropy: 2.445  max_score:   7  num_vocab: 30002
+Total step:   8000  reward: -0.370  value: 82.268  entropy: 2.411  max_score:   7  num_vocab: 30002
+Total step:   9000  reward: -0.259  value: 32.220  entropy: 2.486  max_score:   7  num_vocab: 30002
+Total step:  10000  reward: 0.069  value: 0.165  entropy: 2.474  max_score:   7  num_vocab: 30002
+Total step:  11000  reward: 0.070  value: 0.148  entropy: 2.470  max_score:   7  num_vocab: 30002
+Total step:  12000  reward: 0.060  value: 0.123  entropy: 2.408  max_score:   7  num_vocab: 30002
+Total step:  13000  reward: -0.249  value: 91.231  entropy: 2.480  max_score:   8  num_vocab: 30002
+Total step:  14000  reward: -0.038  value: 21.732  entropy: 2.518  max_score:   7  num_vocab: 30002
+Total step:  15000  reward: -0.042  value: 19.901  entropy: 2.479  max_score:   7  num_vocab: 30002
+Total step:  16000  reward: -0.046  value: 9.416  entropy: 2.480  max_score:   7  num_vocab: 30002
+Total step:  17000  reward: -0.140  value: 37.424  entropy: 2.560  max_score:   7  num_vocab: 30002
+Total step:  18000  reward: 0.071  value: 0.198  entropy: 2.430  max_score:   7  num_vocab: 30002
+Total step:  19000  reward: -0.256  value: 60.004  entropy: 2.510  max_score:   7  num_vocab: 30002
+Average steps used: 94.34; Average score: 6.04/8
+Total training time: 414.3392810821533
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Average steps used: 99.30; Average score: 6.80/8
+----------------------------------------------------------------------
+
+
+2. Rewards: Balanced; Goal: Detailed [lr=0.0005; num_episodes=200]
+
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 0.50/3
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 0.60/3
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalDetailed-1.z8']
+Total step:   1000  reward: 0.003  value: 0.005  entropy: 2.346  max_score:   1  num_vocab: 30002
+Total step:   2000  reward: -0.217  value: 44.061  entropy: 2.388  max_score:   2  num_vocab: 30002
+Total step:   3000  reward: -0.100  value: 18.696  entropy: 2.334  max_score:   2  num_vocab: 30002
+Total step:   4000  reward: 0.009  value: 0.011  entropy: 2.432  max_score:   2  num_vocab: 30002
+Total step:   5000  reward: -0.107  value: 18.730  entropy: 2.321  max_score:   2  num_vocab: 30002
+Total step:   6000  reward: -0.104  value: 24.538  entropy: 2.399  max_score:   2  num_vocab: 30002
+Total step:   7000  reward: 0.004  value: 0.011  entropy: 2.398  max_score:   1  num_vocab: 30002
+Total step:   8000  reward: -0.103  value: 20.812  entropy: 2.362  max_score:   2  num_vocab: 30002
+Total step:   9000  reward: 0.008  value: 0.010  entropy: 2.404  max_score:   1  num_vocab: 30002
+Total step:  10000  reward: -0.103  value: 23.769  entropy: 2.344  max_score:   2  num_vocab: 30002
+Total step:  11000  reward: 0.008  value: 0.016  entropy: 2.394  max_score:   2  num_vocab: 30002
+Total step:  12000  reward: -0.106  value: 16.347  entropy: 2.369  max_score:   2  num_vocab: 30002
+Total step:  13000  reward: -0.103  value: 18.743  entropy: 2.395  max_score:   2  num_vocab: 30002
+Total step:  14000  reward: 0.001  value: 0.002  entropy: 2.279  max_score:   1  num_vocab: 30002
+Total step:  15000  reward: 0.006  value: 0.009  entropy: 2.399  max_score:   2  num_vocab: 30002
+Total step:  16000  reward: 0.006  value: 0.009  entropy: 2.407  max_score:   1  num_vocab: 30002
+Total step:  17000  reward: 0.009  value: 0.012  entropy: 2.418  max_score:   2  num_vocab: 30002
+Total step:  18000  reward: 0.008  value: 0.009  entropy: 2.408  max_score:   2  num_vocab: 30002
+Total step:  19000  reward: 0.009  value: 0.012  entropy: 2.383  max_score:   2  num_vocab: 30002
+Average steps used: 98.66; Average score: 0.61/3
+Total training time: 416.8746919631958
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 0.80/3
+----------------------------------------------------------------------
+
+
+3. Rewards: Sparse; Goal: Detailed [lr=0.0005; num_episodes=100]
+
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalDetailed-1.z8']
+Average steps used: 98.40; Average score: 0.00/1
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 0.00/1
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalDetailed-1.z8']
+Total step:   1000  reward: -0.111  value: 23.843  entropy: 2.373  max_score:   0  num_vocab: 30002
+Total step:   2000  reward: 0.000  value: 0.000  entropy: 2.313  max_score:   0  num_vocab: 30002
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 2.368  max_score:   0  num_vocab: 30002
+Total step:   4000  reward: 0.000  value: 0.001  entropy: 2.369  max_score:   0  num_vocab: 30002
+Total step:   5000  reward: -0.111  value: 22.535  entropy: 2.359  max_score:   0  num_vocab: 30002
+Total step:   6000  reward: 0.000  value: 0.002  entropy: 2.388  max_score:   0  num_vocab: 30002
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 2.349  max_score:   0  num_vocab: 30002
+Total step:   8000  reward: 0.000  value: 0.001  entropy: 2.378  max_score:   0  num_vocab: 30002
+Total step:   9000  reward: -0.111  value: 5.533  entropy: 2.392  max_score:   0  num_vocab: 30002
+Total step:  10000  reward: -0.111  value: 5.558  entropy: 2.338  max_score:   0  num_vocab: 30002
+Average steps used: 99.24; Average score: 0.00/1
+Total training time: 212.8264238834381
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 0.00/1
+----------------------------------------------------------------------
+
+
+4. Rewards: Dense; Goal: Brief [lr=0.0005; num_episodes=200]
+
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
+Average steps used: 97.00; Average score: 3.80/8
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
+Average steps used: 100.00; Average score: 4.20/8
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
+Total step:   1000  reward: -0.059  value: 24.688  entropy: 2.403  max_score:   7  num_vocab: 30002
+Total step:   2000  reward: 0.056  value: 0.089  entropy: 2.392  max_score:   7  num_vocab: 30002
+Total step:   3000  reward: 0.061  value: 0.102  entropy: 2.438  max_score:   7  num_vocab: 30002
+Total step:   4000  reward: -0.043  value: 18.450  entropy: 2.439  max_score:   7  num_vocab: 30002
+Total step:   5000  reward: -0.049  value: 5.538  entropy: 2.445  max_score:   7  num_vocab: 30002
+Total step:   6000  reward: 0.069  value: 0.136  entropy: 2.492  max_score:   7  num_vocab: 30002
+Total step:   7000  reward: -0.151  value: 57.331  entropy: 2.447  max_score:   8  num_vocab: 30002
+Total step:   8000  reward: 0.181  value: 6.184  entropy: 2.462  max_score:   8  num_vocab: 30002
+Total step:   9000  reward: -0.040  value: 18.502  entropy: 2.486  max_score:   7  num_vocab: 30002
+Total step:  10000  reward: -0.031  value: 40.143  entropy: 2.424  max_score:   8  num_vocab: 30002
+Total step:  11000  reward: 0.071  value: 40.715  entropy: 2.530  max_score:   8  num_vocab: 30002
+Total step:  12000  reward: 0.090  value: 36.082  entropy: 2.479  max_score:   8  num_vocab: 30002
+Total step:  13000  reward: 0.202  value: 70.982  entropy: 2.419  max_score:   8  num_vocab: 30002
+Total step:  14000  reward: 0.659  value: 139.198  entropy: 2.235  max_score:   8  num_vocab: 30002
+Total step:  15000  reward: -0.113  value: 91.768  entropy: 2.151  max_score:   8  num_vocab: 30002
+Total step:  16000  reward: 1.847  value: 311.618  entropy: 1.983  max_score:   8  num_vocab: 30002
+Total step:  17000  reward: 0.783  value: 143.557  entropy: 2.409  max_score:   8  num_vocab: 30002
+Total step:  18000  reward: 3.463  value: 649.906  entropy: 1.527  max_score:   8  num_vocab: 30002
+Average steps used: 61.68; Average score: 6.91/8
+Total training time: 421.40386033058167
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
+Average steps used: 10.70; Average score: 8.00/8
+----------------------------------------------------------------------
+
+[lr=0.0005; num_episodes=100]
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
+Average steps used: 100.00; Average score: 3.70/8
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
+Average steps used: 100.00; Average score: 4.10/8
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
+Total step:   1000  reward: 0.041  value: 0.069  entropy: 2.346  max_score:   6  num_vocab: 30002
+Total step:   2000  reward: -0.064  value: 23.623  entropy: 2.365  max_score:   7  num_vocab: 30002
+Total step:   3000  reward: -0.068  value: 20.932  entropy: 2.357  max_score:   7  num_vocab: 30002
+Total step:   4000  reward: 0.039  value: 0.050  entropy: 2.376  max_score:   6  num_vocab: 30002
+Total step:   5000  reward: 0.039  value: 0.072  entropy: 2.345  max_score:   7  num_vocab: 30002
+Total step:   6000  reward: 0.046  value: 0.056  entropy: 2.385  max_score:   7  num_vocab: 30002
+Total step:   7000  reward: 0.048  value: 0.085  entropy: 2.311  max_score:   7  num_vocab: 30002
+Total step:   8000  reward: 0.076  value: 19.300  entropy: 2.395  max_score:   8  num_vocab: 30002
+Total step:   9000  reward: -0.041  value: 23.785  entropy: 2.555  max_score:   7  num_vocab: 30002
+Average steps used: 97.52; Average score: 4.57/8
+Total training time: 210.92301082611084
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
+Average steps used: 88.70; Average score: 6.90/8
+----------------------------------------------------------------------
+
+
+5. Rewards: Balanced; Goal: Brief [lr=0.0005; num_episodes=200]
+
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalBrief-1.z8']
+Average steps used: 94.60; Average score: 0.50/3
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalBrief-1.z8']
+Average steps used: 100.00; Average score: 0.30/3
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalBrief-1.z8']
+Total step:   1000  reward: 0.006  value: 0.011  entropy: 2.362  max_score:   2  num_vocab: 30002
+Total step:   2000  reward: 0.003  value: 0.007  entropy: 2.334  max_score:   1  num_vocab: 30002
+Total step:   3000  reward: 0.003  value: 0.006  entropy: 2.340  max_score:   1  num_vocab: 30002
+Total step:   4000  reward: 0.008  value: 0.016  entropy: 2.402  max_score:   2  num_vocab: 30002
+Total step:   5000  reward: -0.104  value: 24.569  entropy: 2.398  max_score:   2  num_vocab: 30002
+Total step:   6000  reward: 0.006  value: 0.010  entropy: 2.387  max_score:   1  num_vocab: 30002
+Total step:   7000  reward: 0.008  value: 0.008  entropy: 2.350  max_score:   2  num_vocab: 30002
+Total step:   8000  reward: 0.004  value: 0.006  entropy: 2.374  max_score:   1  num_vocab: 30002
+Total step:   9000  reward: -0.106  value: 10.053  entropy: 2.381  max_score:   2  num_vocab: 30002
+Total step:  10000  reward: 0.008  value: 0.012  entropy: 2.370  max_score:   2  num_vocab: 30002
+Total step:  11000  reward: 0.004  value: 0.008  entropy: 2.394  max_score:   1  num_vocab: 30002
+Total step:  12000  reward: 0.002  value: 0.001  entropy: 2.322  max_score:   1  num_vocab: 30002
+Total step:  13000  reward: -0.101  value: 23.728  entropy: 2.435  max_score:   2  num_vocab: 30002
+Total step:  14000  reward: 0.004  value: 0.008  entropy: 2.363  max_score:   1  num_vocab: 30002
+Total step:  15000  reward: -0.107  value: 5.461  entropy: 2.327  max_score:   2  num_vocab: 30002
+Total step:  16000  reward: 0.007  value: 0.015  entropy: 2.363  max_score:   2  num_vocab: 30002
+Total step:  17000  reward: 0.004  value: 0.014  entropy: 2.344  max_score:   2  num_vocab: 30002
+Total step:  18000  reward: 0.004  value: 0.010  entropy: 2.372  max_score:   1  num_vocab: 30002
+Total step:  19000  reward: 0.002  value: 0.002  entropy: 2.313  max_score:   1  num_vocab: 30002
+Total step:  20000  reward: -0.104  value: 13.448  entropy: 2.374  max_score:   2  num_vocab: 30002
+Average steps used: 99.25; Average score: 0.49/3
+Total training time: 400.490980386734
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalBrief-1.z8']
+Average steps used: 98.90; Average score: 0.50/3
+----------------------------------------------------------------------
+
+
+6. Rewards: Sparse; Goal: Brief [lr=0.0005; num_episodes=200]
+
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalBrief-1.z8']
+Average steps used: 97.10; Average score: 0.00/1
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalBrief-1.z8']
+Average steps used: 100.00; Average score: 0.00/1
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalBrief-1.z8']
+Total step:   1000  reward: 0.000  value: 0.000  entropy: 2.385  max_score:   0  num_vocab: 30002
+Total step:   2000  reward: 0.000  value: 0.000  entropy: 2.362  max_score:   0  num_vocab: 30002
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 2.383  max_score:   0  num_vocab: 30002
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 2.433  max_score:   0  num_vocab: 30002
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 2.344  max_score:   0  num_vocab: 30002
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 2.358  max_score:   0  num_vocab: 30002
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 2.408  max_score:   0  num_vocab: 30002
+Total step:   8000  reward: 0.000  value: 0.000  entropy: 2.415  max_score:   0  num_vocab: 30002
+Total step:   9000  reward: 0.001  value: 19.453  entropy: 2.410  max_score:   1  num_vocab: 30002
+Total step:  10000  reward: 0.000  value: 0.005  entropy: 2.394  max_score:   0  num_vocab: 30002
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 2.362  max_score:   0  num_vocab: 30002
+Total step:  12000  reward: -0.111  value: 5.532  entropy: 2.330  max_score:   0  num_vocab: 30002
+Total step:  13000  reward: 0.000  value: 0.003  entropy: 2.327  max_score:   0  num_vocab: 30002
+Total step:  14000  reward: 0.000  value: 0.001  entropy: 2.359  max_score:   0  num_vocab: 30002
+Total step:  15000  reward: 0.000  value: 0.001  entropy: 2.416  max_score:   0  num_vocab: 30002
+Total step:  16000  reward: 0.000  value: 0.000  entropy: 2.357  max_score:   0  num_vocab: 30002
+Total step:  17000  reward: -0.111  value: 23.742  entropy: 2.362  max_score:   0  num_vocab: 30002
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 2.305  max_score:   0  num_vocab: 30002
+Total step:  19000  reward: 0.000  value: 0.001  entropy: 2.362  max_score:   0  num_vocab: 30002
+Total step:  20000  reward: -0.111  value: 13.589  entropy: 2.382  max_score:   0  num_vocab: 30002
+Average steps used: 99.34; Average score: 0.01/1
+Total training time: 408.45142936706543
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalBrief-1.z8']
+Average steps used: 97.30; Average score: 0.00/1
+----------------------------------------------------------------------
+
+
+7. Rewards: Dense; Goal: None [lr=0.0005; num_episodes=200]
+
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalNone-1.z8']
+Average steps used: 99.00; Average score: 4.50/8
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalNone-1.z8']
+Average steps used: 100.00; Average score: 3.80/8
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalNone-1.z8']
+Total step:   1000  reward: 0.051  value: 0.081  entropy: 2.419  max_score:   6  num_vocab: 30002
+Total step:   2000  reward: 0.053  value: 0.084  entropy: 2.428  max_score:   7  num_vocab: 30002
+Total step:   3000  reward: -0.053  value: 23.674  entropy: 2.461  max_score:   7  num_vocab: 30002
+Total step:   4000  reward: -0.043  value: 5.646  entropy: 2.495  max_score:   7  num_vocab: 30002
+Total step:   5000  reward: 0.066  value: 0.145  entropy: 2.456  max_score:   7  num_vocab: 30002
+Total step:   6000  reward: -0.247  value: 69.205  entropy: 2.550  max_score:   7  num_vocab: 30002
+Total step:   7000  reward: -0.046  value: 25.152  entropy: 2.471  max_score:   7  num_vocab: 30002
+Total step:   8000  reward: -0.151  value: 21.369  entropy: 2.486  max_score:   7  num_vocab: 30002
+Total step:   9000  reward: 0.064  value: 0.125  entropy: 2.466  max_score:   7  num_vocab: 30002
+Total step:  10000  reward: 0.062  value: 0.138  entropy: 2.497  max_score:   7  num_vocab: 30002
+Total step:  11000  reward: -0.257  value: 62.889  entropy: 2.483  max_score:   7  num_vocab: 30002
+Total step:  12000  reward: -0.049  value: 13.167  entropy: 2.489  max_score:   7  num_vocab: 30002
+Total step:  13000  reward: -0.368  value: 77.223  entropy: 2.434  max_score:   7  num_vocab: 30002
+Total step:  14000  reward: 0.068  value: 0.160  entropy: 2.454  max_score:   7  num_vocab: 30002
+Total step:  15000  reward: -0.044  value: 15.972  entropy: 2.518  max_score:   7  num_vocab: 30002
+Total step:  16000  reward: 0.079  value: 33.982  entropy: 2.513  max_score:   8  num_vocab: 30002
+Total step:  17000  reward: 0.066  value: 0.145  entropy: 2.548  max_score:   7  num_vocab: 30002
+Total step:  18000  reward: -0.043  value: 18.407  entropy: 2.478  max_score:   7  num_vocab: 30002
+Total step:  19000  reward: 0.063  value: 0.177  entropy: 2.489  max_score:   7  num_vocab: 30002
+Average steps used: 95.47; Average score: 5.80/8
+Total training time: 412.6846044063568
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsDense_goalNone-1.z8']
+Average steps used: 85.30; Average score: 6.10/8
+----------------------------------------------------------------------
+
+
+8. Rewards: Balanced; Goal: None [lr=0.0005; num_episodes=200]
+
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalNone-1.z8']
+Average steps used: 97.90; Average score: 0.30/3
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalNone-1.z8']
+Average steps used: 99.20; Average score: 0.50/3
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalNone-1.z8']
+Total step:   1000  reward: 0.004  value: 0.007  entropy: 2.357  max_score:   1  num_vocab: 30002
+Total step:   2000  reward: 0.010  value: 0.008  entropy: 2.432  max_score:   2  num_vocab: 30002
+Total step:   3000  reward: 0.002  value: 0.004  entropy: 2.309  max_score:   2  num_vocab: 30002
+Total step:   4000  reward: -0.099  value: 10.084  entropy: 2.459  max_score:   2  num_vocab: 30002
+Total step:   5000  reward: 0.010  value: 0.012  entropy: 2.359  max_score:   2  num_vocab: 30002
+Total step:   6000  reward: 0.004  value: 0.008  entropy: 2.360  max_score:   1  num_vocab: 30002
+Total step:   7000  reward: 0.006  value: 0.007  entropy: 2.403  max_score:   1  num_vocab: 30002
+Total step:   8000  reward: -0.102  value: 5.451  entropy: 2.432  max_score:   2  num_vocab: 30002
+Total step:   9000  reward: 0.006  value: 0.013  entropy: 2.399  max_score:   2  num_vocab: 30002
+Total step:  10000  reward: 0.011  value: 41.304  entropy: 2.443  max_score:   3  num_vocab: 30002
+Total step:  11000  reward: 0.004  value: 0.007  entropy: 2.380  max_score:   2  num_vocab: 30002
+Total step:  12000  reward: 0.008  value: 0.009  entropy: 2.397  max_score:   2  num_vocab: 30002
+Total step:  13000  reward: 0.003  value: 0.004  entropy: 2.357  max_score:   1  num_vocab: 30002
+Total step:  14000  reward: 0.008  value: 19.580  entropy: 2.355  max_score:   3  num_vocab: 30002
+Total step:  15000  reward: 0.006  value: 0.007  entropy: 2.361  max_score:   2  num_vocab: 30002
+Total step:  16000  reward: 0.003  value: 0.006  entropy: 2.347  max_score:   1  num_vocab: 30002
+Total step:  17000  reward: 0.004  value: 0.007  entropy: 2.363  max_score:   2  num_vocab: 30002
+Total step:  18000  reward: 0.009  value: 0.014  entropy: 2.407  max_score:   2  num_vocab: 30002
+Total step:  19000  reward: -0.100  value: 13.556  entropy: 2.375  max_score:   2  num_vocab: 30002
+Total step:  20000  reward: 0.006  value: 0.009  entropy: 2.388  max_score:   2  num_vocab: 30002
+Average steps used: 99.30; Average score: 0.61/3
+Total training time: 412.2124147415161
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsBalanced_goalNone-1.z8']
+Average steps used: 100.00; Average score: 0.40/3
+----------------------------------------------------------------------
+
+
+9. Rewards: Sparse; Goal: None [lr=0.0005; num_episodes=200]
+
+Random Agent (do random action) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalNone-1.z8']
+Average steps used: 100.00; Average score: 0.00/1
+----------------------------------------------------------------------
+
+NLP Agent GRU (train the model) ------------------------------------------
+
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalNone-1.z8']
+Average steps used: 100.00; Average score: 0.00/1
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalNone-1.z8']
+Total step:   1000  reward: 0.000  value: 0.000  entropy: 2.352  max_score:   0  num_vocab: 30002
+Total step:   2000  reward: 0.000  value: 0.000  entropy: 2.390  max_score:   0  num_vocab: 30002
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 2.328  max_score:   0  num_vocab: 30002
+Total step:   4000  reward: -0.111  value: 13.702  entropy: 2.344  max_score:   0  num_vocab: 30002
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 2.385  max_score:   0  num_vocab: 30002
+Total step:   6000  reward: -0.111  value: 10.063  entropy: 2.329  max_score:   0  num_vocab: 30002
+Total step:   7000  reward: 0.000  value: 0.001  entropy: 2.385  max_score:   0  num_vocab: 30002
+Total step:   8000  reward: 0.000  value: 0.001  entropy: 2.400  max_score:   0  num_vocab: 30002
+Total step:   9000  reward: 0.112  value: 14.011  entropy: 2.368  max_score:   1  num_vocab: 30002
+Total step:  10000  reward: 0.000  value: 0.004  entropy: 2.343  max_score:   0  num_vocab: 30002
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 2.310  max_score:   0  num_vocab: 30002
+Total step:  12000  reward: 0.000  value: 0.001  entropy: 2.375  max_score:   0  num_vocab: 30002
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 2.307  max_score:   0  num_vocab: 30002
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 2.342  max_score:   0  num_vocab: 30002
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 2.275  max_score:   0  num_vocab: 30002
+Total step:  16000  reward: -0.111  value: 19.078  entropy: 2.459  max_score:   0  num_vocab: 30002
+Total step:  17000  reward: -0.222  value: 43.882  entropy: 2.392  max_score:   0  num_vocab: 30002
+Total step:  18000  reward: 0.000  value: 0.002  entropy: 2.342  max_score:   0  num_vocab: 30002
+Total step:  19000  reward: -0.111  value: 24.830  entropy: 2.379  max_score:   0  num_vocab: 30002
+Average steps used: 98.86; Average score: 0.01/1
+Total training time: 399.63346433639526
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['tw_single_games/tw-rewardsSparse_goalNone-1.z8']
+Average steps used: 100.00; Average score: 0.00/1
+----------------------------------------------------------------------
