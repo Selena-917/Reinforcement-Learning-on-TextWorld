@@ -8,6 +8,8 @@ from collections import defaultdict
 from transformers import GPT2Model, GPT2Tokenizer, GPT2Config
 from transformers import DistilBertModel, DistilBertTokenizer, DistilBertConfig
 from typing import Iterable
+import random
+from collections import namedtuple, deque
 
 class PretrainedEmbed:
 
@@ -221,6 +223,24 @@ class BERT_GRU(torch.nn.Module):
         
         return scores, index, value
     
+Transition = namedtuple('Transition',('observation', 'commands', 'action', 'next_observation', 'next_commands', 'reward'))
+
+class ReplayMemory(object):
+    
+    def __init__(self, capacity):
+        super(ReplayMemory, self).__init__()
+        self.memory = deque([], maxlen=capacity)
+
+    def push(self, *args):
+        """Save a transition"""
+        self.memory.append(Transition(*args))
+
+    def sample(self, batch_size):
+        return random.sample(self.memory, batch_size)
+
+    def __len__(self):
+        return len(self.memory)
+    
     
 class NLPAgent:
     def __init__(self, model_type="bert_gru", max_vocab_num=1000, update_freq=10, log_freq=1000, gamma=0.9, lr=1e-5):
@@ -244,6 +264,9 @@ class NLPAgent:
         
         if self.model_type == "gru":
             self.agent_model = AgentNetwork(len(self.idx2word), 300, 128, self.device).to(device)
+            self.target_model = AgentNetwork(len(self.idx2word), 300, 128, self.device).to(device)
+            self.target_model.load_state_dict(self.agent_model.state_dict())
+            self.memory = ReplayMemory(10000)
         elif self.model_type == "gpt-2":
             self.agent_model = GPTNetwork(len(self.idx2word), 300, 128, self.device).to(device)
         elif self.model_type == 'bert_gru':
@@ -262,7 +285,7 @@ class NLPAgent:
             self.agent_model.init_hidden(1)
         
         self.stats = {"scores": [], "rewards": [], "policy": [], "values": [], "entropy": [], "confidence": []}
-        self.infos_per_update = []
+        self.replay_buffer = []
         self.last_score = 0
         self.num_step_train = 0
         
@@ -301,8 +324,8 @@ class NLPAgent:
     def _discount_rewards(self, last_values):
         returns, advantages = [], []
         r = last_values.data
-        for i in reversed(range(len(self.infos_per_update))):
-            rewards, _, _, values = self.infos_per_update[i]
+        for i in reversed(range(len(self.replay_buffer))):
+            rewards, _, _, values = self.replay_buffer[i]
             r = rewards + self.gamma * r
             returns.append(r)
             advantages.append(r - values)
@@ -363,7 +386,7 @@ class NLPAgent:
         # Train Mode
         self.num_step_train += 1
         
-        if self.infos_per_update:
+        if self.replay_buffer:
             reward = score - self.last_score 
             self.last_score = score
             if infos["won"]:
@@ -371,7 +394,7 @@ class NLPAgent:
             if infos["lost"]:
                 reward -= 100
                 
-            self.infos_per_update[-1][0] = reward
+            self.replay_buffer[-1][0] = reward
         
         self.stats["scores"].append(score)
         
@@ -380,7 +403,7 @@ class NLPAgent:
             returns, advantages = self._discount_rewards(value)
             
             loss = 0
-            for infos_update, r, advantage in zip(self.infos_per_update, returns, advantages):
+            for infos_update, r, advantage in zip(self.replay_buffer, returns, advantages):
                 reward, indexes, outputs, values = infos_update
                 
                 advantage        = advantage.detach()
@@ -407,13 +430,64 @@ class NLPAgent:
             self.optimizer.step()
             self.optimizer.zero_grad()
         
-            self.infos_per_update = []
+            self.replay_buffer = []
             if self.model_type == "gru":
                 self.agent_model.init_hidden(1)
         else:
-            self.infos_per_update.append([None, index, output, value])
+            self.replay_buffer.append([None, index, output, value])
         
         if done:
             self.last_score = 0 
         
         return action_step
+    
+    def epsilon_greedy_action_selection(self, epsilon, agent_input_tensor, commands_tensor, infos, done):
+        
+        if np.random.random() > epsilon or self.run_mode == "test":
+            agent_input_tensor = agent_input_tensor.to(self.device)
+            commands_tensor = commands_tensor.to(self.device)
+            
+            output, index, value = self.agent_model(agent_input_tensor, commands_tensor)
+            action_step = infos["admissible_commands"][index[0]]
+            if self.run_mode == "test" and done and self.model_type == "gru":
+                self.agent_model.init_hidden(1)
+            
+        else:
+            action_step = np.random.choice(infos["admissible_commands"]) # Select random action with probability epsilon
+        return action_step
+    
+    def replay(self, batch_size, gamma=0.5):
+        if len(self.replay_buffer) < batch_size: 
+            return
+        transitions = self.memory.sample(batch_size)
+        batch = Transition(*zip(*transitions))
+        non_final_mask = torch.tensor(tuple(map(lambda s: s is not None, batch.next_observation)), device=self.device, dtype=torch.bool)
+        non_final_next_observations = torch.cat([s for s in batch.next_observation if s is not None])
+        non_final_next_commands = torch.cat([s for s in batch.next_commands if s is not None])
+        
+        observation_batch = torch.cat(batch.observation)
+        commands_batch = torch.cat(batch.commands)
+        action_batch = torch.cat(batch.action)
+        reward_batch = torch.cat(batch.reward) 
+        
+        state_action_values = self.agent_model(observation_batch, commands_batch)[0].gather(1, action_batch)
+        
+        next_state_values = torch.zeros(batch_size, device=self.device)
+        
+        with torch.no_grad():
+            next_state_values[non_final_mask] = self.target_model(non_final_next_observations, non_final_next_commands)[0].max(1)[0]
+        
+        expected_state_action_values = (next_state_values * gamma) + reward_batch
+        criterion = torch.nn.SmoothL1Loss()
+        loss = criterion(state_action_values, expected_state_action_values.unsqueeze(1))
+        
+        self.optimizer.zero_grad()
+        loss.backward()
+        
+        torch.nn.utils.clip_grad_value_(self.agent_model.parameters(), 100)
+        self.optimizer.step()
+        
+    
+    def update_model_handler(self, epoch, update_target_model):
+        if epoch > 0 and epoch % update_target_model == 0:
+            self.target_model.load_state_dict(self.agent_model.state_dict())
