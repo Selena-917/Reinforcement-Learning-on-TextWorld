@@ -270,7 +270,7 @@ class ReplayMemory(object):
     
     
 class NLPAgent:
-    def __init__(self, model_type="bert_gru", max_vocab_num=1000, update_freq=10, log_freq=1000, gamma=0.9, lr=1e-5):
+    def __init__(self, model_type="bert_gru", max_vocab_num=1000, update_freq=10, log_freq=1000, gamma=0.9, lr=1e-5, dqn=False):
         """
         NLPAgent which is used to train the model
 
@@ -301,9 +301,10 @@ class NLPAgent:
         
         if self.model_type == "gru":
             self.agent_model = GRUNetwork(len(self.idx2word), 300, 128, self.device).to(device)
-            self.target_model = GRUNetwork(len(self.idx2word), 300, 128, self.device).to(device)
-            self.target_model.load_state_dict(self.agent_model.state_dict())
-            self.memory = ReplayMemory(10000)
+            if dqn:
+                self.target_model = GRUNetwork(len(self.idx2word), 300, 128, self.device).to(device)
+                self.target_model.load_state_dict(self.agent_model.state_dict())
+                self.memory = ReplayMemory(10000)
         elif self.model_type == "gpt-2":
             self.agent_model = GPTNetwork(len(self.idx2word), 300, 128, self.device).to(device)
         elif self.model_type == 'bert_gru':

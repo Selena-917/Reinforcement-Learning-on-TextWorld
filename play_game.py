@@ -165,9 +165,8 @@ def main(args):
         save_model_name = args.single_gamefile[args.single_gamefile.rfind("/")+1:args.single_gamefile.rfind(".")]
         if args.model_type == "gru":
         
-            print("\nNLP Agent GRU (train the model) ------------------------------------------\n")
-            
-            nlp_agent_gru = agents.NLPAgent(model_type="gru", lr=0.00005) # May need to tune this lr
+            # Calculate accuracy of the model before training 
+            nlp_agent_gru = agents.NLPAgent(model_type="gru", lr=0.00005, dqn=args.dqn) # May need to tune this lr
             print("NLP Agent GRU (acc before training) --------------------------------------")
             nlp_agent_gru.test()
             if not args.dqn:
@@ -176,6 +175,7 @@ def main(args):
                 save_model_name = "DQN-" + save_model_name
                 play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 
             
+            # Start training the model
             start_time = time.time()
             print("\nNLP Agent GRU (start training) -------------------------------------------")
             nlp_agent_gru.train()
@@ -184,10 +184,12 @@ def main(args):
             else:
                 play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, num_episodes=300)
                 
+            # Traning finished, save the model
             os.makedirs('checkpoints', exist_ok=True) 
             torch.save(nlp_agent_gru, "checkpoints/GRU-"+save_model_name+".pt")
             print("Total training time:", time.time()-start_time)
             
+            # Test the model on the game
             print("\nNLP Agent GRU (test the model) ------------------------------------------")
             nlp_agent_gru.test()
             if not args.dqn:
@@ -198,62 +200,51 @@ def main(args):
             print("----------------------------------------------------------------------")
         
         elif args.model_type == "gpt-2":
-            print("\nNLP Agent GPT (train the model) ------------------------------------------\n")
+            
+            # Calculate accuracy of the model before training 
             nlp_agent_gpt = agents.NLPAgent(model_type="gpt-2", lr=0.0001)
             print("NLP Agent GPT (acc before training) --------------------------------------")
             nlp_agent_gpt.test()
-            if not args.dqn:
-                play_game(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
-            else:
-                save_model_name = "DQN-" + save_model_name
-                play_game_dqn(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
+            play_game(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
             
+            # Start training the model
             start_time = time.time()
             print("\nNLP Agent GPT (start training) -------------------------------------------")
             nlp_agent_gpt.train()
-            if not args.dqn:
-                play_game(nlp_agent_gpt, args.single_gamefile, 100, num_episodes=300) # May need to tune num_episodes
-            else:
-                play_game_dqn(nlp_agent_gpt, args.single_gamefile, 100, num_episodes=300) 
+            play_game(nlp_agent_gpt, args.single_gamefile, 100, num_episodes=300) # May need to tune num_episodes
                 
+            # Traning finished, save the model
             os.makedirs('checkpoints', exist_ok=True)
             torch.save(nlp_agent_gpt, "checkpoints/GPT-"+save_model_name+".pt")
             print("Total training time:", time.time()-start_time)
             
+            # Test the model on the game
             print("\nNLP Agent GPT (test the model) ------------------------------------------")
             nlp_agent_gpt.test()
-            if not args.dqn:
-                play_game(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
-            else:
-                play_game_dqn(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
+            play_game(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
             
             print("----------------------------------------------------------------------")
 
         elif args.model_type == "bert_gru": 
-            print("\nNLP Agent BERT GRU (train the model) ------------------------------------------\n")
             
+            # Calculate accuracy of the model before training
             nlp_agent_bert_gru = agents.NLPAgent(model_type="bert_gru", lr=0.00005)
             print("NLP Agent BERT GRU (acc before training) --------------------------------------")
             nlp_agent_bert_gru.test()
+            play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10, 1) 
             
-            if not args.dqn:
-                play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10, 1) 
-            else:
-                save_model_name = "DQN-" + save_model_name
-                play_game_dqn(nlp_agent_bert_gru, args.single_gamefile, 100, 10, 1) 
-            
+            # Start training the model
             start_time = time.time()
             print("\nNLP Agent BERT GRU (start training) -------------------------------------------")
             nlp_agent_bert_gru.train()
-            if not args.dqn:
-                play_game(nlp_agent_bert_gru, args.single_gamefile, 100, num_episodes=300) # May need to tune num_episodes
-            else:
-                play_game_dqn(nlp_agent_bert_gru, args.single_gamefile, 100, num_episodes=300) 
+            play_game(nlp_agent_bert_gru, args.single_gamefile, 100, num_episodes=300) # May need to tune num_episodes
                 
+            # Traning finished, save the model
             os.makedirs('checkpoints', exist_ok=True)
             torch.save(nlp_agent_bert_gru, "checkpoints/BERT-GRU-"+save_model_name+".pt")
             print("Total training time:", time.time()-start_time)
             
+            # Test the model on the game
             print("\nNLP Agent BERT GRU (test the model) ------------------------------------------")
             nlp_agent_bert_gru.test()
             play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
@@ -278,6 +269,16 @@ def main(args):
         os.makedirs('checkpoints', exist_ok=True)
         torch.save(nlp_agent, 'checkpoints/'+model_name)
         
+def test_model(model_path):
+    '''
+    If you want to test your saved model directly, just call this function
+    
+    :param model_path: The path to your model, like "checkpoints/GRU-tw-rewardsDense_goalDetailed.pt"
+    '''
+    nlp_agent_gru = torch.load(model_path)
+    nlp_agent_gru.test()
+    play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 
+    
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser(description='Parameter Processing')
     parser.add_argument('--model_type', type=str, default="gru", help='choose from [gru, gpt-2, bert_gru]')
@@ -290,8 +291,3 @@ if __name__ == '__main__':
     
     print(args)
     main(args)
-    
-    # save_model_name = args.single_gamefile[args.single_gamefile.rfind("/")+1:args.single_gamefile.rfind(".")]
-    # nlp_agent_gru = torch.load("checkpoints/GRU-"+save_model_name+".pt")
-    # nlp_agent_gru.test()
-    # play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 
