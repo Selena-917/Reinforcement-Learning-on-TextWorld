@@ -67,9 +67,13 @@ def play_game_dqn(agent, game_path, max_steps=100, num_episodes=10, seed=None):
 
     num_moves = []
     scores = []
+    temp_scores = []
+    rewards = []
     normalized_scores = []
     epsilon = 1.0
     epsilon_decay = 0.995
+    log_freq = 1000
+    total_step = 0
     for episode in range(num_episodes):
         observations, infos = env.reset()
         
@@ -89,6 +93,7 @@ def play_game_dqn(agent, game_path, max_steps=100, num_episodes=10, seed=None):
             next_commands_tensor = agent._preprocess_texts(infos["admissible_commands"])
             
             if agent.run_mode == "train":
+                rewards.append(score-last_score)
                 agent.memory.push(agent_input_tensor, commands_tensor, agent_command, next_agent_input_tensor, next_commands_tensor, score-last_score)
                 agent.replay(32)
                 
@@ -97,13 +102,20 @@ def play_game_dqn(agent, game_path, max_steps=100, num_episodes=10, seed=None):
             last_score = score
                 
             num_moves_per_episode += 1
+            total_step += 1
+            
+            if total_step%log_freq == 0 and agent.run_mode == "train":
+                print("Total step: {:6d}  reward: {:3.3f}  max_score: {:3d}".format(total_step, np.mean(rewards), np.max(temp_scores)))
+                rewards = []
+                temp_scores = []
         
         if agent.run_mode == "train":
             epsilon *= epsilon_decay
             agent.update_model_handler(episode, 10)
-        
+        agent.epsilon_greedy_action_selection(epsilon, agent_input_tensor, commands_tensor, infos, done)
         num_moves.append(num_moves_per_episode)
         scores.append(score)
+        temp_scores.append(score)
         normalized_scores.append(score / infos["max_score"])
     env.close()
     
@@ -124,7 +136,7 @@ def main(args):
     elif args.play_method == "single":
         print("Random Agent (do random action) --------------------------------------")
         random_agent = agents.SimpleAgent("random")
-        play_game(random_agent, args.single_gamefile, 100, 10) 
+        play_game(random_agent, args.single_gamefile, 100, 10, 1) 
         
         print("----------------------------------------------------------------------")
         
@@ -137,9 +149,10 @@ def main(args):
             print("NLP Agent GRU (acc before training) --------------------------------------")
             nlp_agent_gru.test()
             if not args.dqn:
-                play_game(nlp_agent_gru, args.single_gamefile, 100, 10) 
+                play_game(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 
             else:
-                play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, 10) 
+                save_model_name = "DQN-" + save_model_name
+                play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 
             
             start_time = time.time()
             print("\nNLP Agent GRU (start training) -------------------------------------------")
@@ -156,9 +169,9 @@ def main(args):
             print("\nNLP Agent GRU (test the model) ------------------------------------------")
             nlp_agent_gru.test()
             if not args.dqn:
-                play_game(nlp_agent_gru, args.single_gamefile, 100, 10) 
+                play_game(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 
             else:
-                play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, 10) 
+                play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 
             
             print("----------------------------------------------------------------------")
         
@@ -167,19 +180,30 @@ def main(args):
             nlp_agent_gpt = agents.NLPAgent(model_type="gpt-2", lr=0.0001)
             print("NLP Agent GPT (acc before training) --------------------------------------")
             nlp_agent_gpt.test()
-            play_game(nlp_agent_gpt, args.single_gamefile, 100, 10) 
+            if not args.dqn:
+                play_game(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
+            else:
+                save_model_name = "DQN-" + save_model_name
+                play_game_dqn(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
             
             start_time = time.time()
             print("\nNLP Agent GPT (start training) -------------------------------------------")
             nlp_agent_gpt.train()
-            play_game(nlp_agent_gpt, args.single_gamefile, 100, num_episodes=300) 
+            if not args.dqn:
+                play_game(nlp_agent_gpt, args.single_gamefile, 100, num_episodes=300) # May need to tune num_episodes
+            else:
+                play_game_dqn(nlp_agent_gpt, args.single_gamefile, 100, num_episodes=300) 
+                
             os.makedirs('checkpoints', exist_ok=True)
             torch.save(nlp_agent_gpt, "checkpoints/GPT-"+save_model_name+".pt")
             print("Total training time:", time.time()-start_time)
             
             print("\nNLP Agent GPT (test the model) ------------------------------------------")
             nlp_agent_gpt.test()
-            play_game(nlp_agent_gpt, args.single_gamefile, 100, 10) 
+            if not args.dqn:
+                play_game(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
+            else:
+                play_game_dqn(nlp_agent_gpt, args.single_gamefile, 100, 10, 1) 
             
             print("----------------------------------------------------------------------")
 
@@ -189,35 +213,51 @@ def main(args):
             nlp_agent_bert_gru = agents.NLPAgent(model_type="bert_gru", lr=0.00005)
             print("NLP Agent BERT GRU (acc before training) --------------------------------------")
             nlp_agent_bert_gru.test()
-            play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
+            
+            if not args.dqn:
+                play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10, 1) 
+            else:
+                save_model_name = "DQN-" + save_model_name
+                play_game_dqn(nlp_agent_bert_gru, args.single_gamefile, 100, 10, 1) 
             
             start_time = time.time()
             print("\nNLP Agent BERT GRU (start training) -------------------------------------------")
             nlp_agent_bert_gru.train()
-            play_game(nlp_agent_bert_gru, args.single_gamefile, 100, num_episodes=100) 
+            if not args.dqn:
+                play_game(nlp_agent_bert_gru, args.single_gamefile, 100, num_episodes=300) # May need to tune num_episodes
+            else:
+                play_game_dqn(nlp_agent_bert_gru, args.single_gamefile, 100, num_episodes=300) 
+                
             os.makedirs('checkpoints', exist_ok=True)
             torch.save(nlp_agent_bert_gru, "checkpoints/BERT-GRU-"+save_model_name+".pt")
             print("Total training time:", time.time()-start_time)
             
             print("\nNLP Agent BERT GRU (test the model) ------------------------------------------")
             nlp_agent_bert_gru.test()
-            play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
+            if not args.dqn:
+                play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
+            else:
+                play_game_dqn(nlp_agent_bert_gru, args.single_gamefile, 100, 10, 1)
             
             print("----------------------------------------------------------------------")
     
     # Train the agent to play multiple games
     elif args.play_method == "multiple":
-    
+        
         print("Training on multiple games------------------------------------------")
-        nlp_agent_gru = agents.NLPAgent(model_type="gru", lr=0.00005)
+        if args.model_type == "gru":
+            nlp_agent = agents.NLPAgent(model_type="gru", lr=0.00005)
+        elif args.model_type == "gpt-2":
+            nlp_agent = agents.NLPAgent(model_type="gpt-2", lr=0.00001)
 
-        nlp_agent_gru.train() 
+        model_name = "GRU-multiple_games-tw_simple_rewardBalanced2.pt"
+        nlp_agent.train() 
         start_time = time.time()
-        play_game(nlp_agent_gru, args.multiple_games_folder, 100, num_episodes=100 * 10)  # 100 games, each game will be played 10 episodes
+        play_game(nlp_agent, args.multiple_games_folder, 100, num_episodes=100 * 10)  # 100 games, each game will be played 10 episodes
         print("Total training time:", time.time()-start_time)
 
         os.makedirs('checkpoints', exist_ok=True)
-        torch.save(nlp_agent_gru, 'checkpoints/agent_trained_on_multiple_games.pt')
+        torch.save(nlp_agent, 'checkpoints/'+model_name)
         
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser(description='Parameter Processing')
@@ -232,5 +272,8 @@ if __name__ == '__main__':
     print(args)
     main(args)
     
-    # nlp_agent_gru = torch.load('checkpoints/GRU-tw-coin_collector_level-7.pt')
-    # play_game(nlp_agent_gru, args.single_gamefile, 100, 10) 
+    
+    # save_model_name = args.single_gamefile[args.single_gamefile.rfind("/")+1:args.single_gamefile.rfind(".")]
+    # nlp_agent_gru = torch.load("checkpoints/GRU-"+save_model_name+".pt")
+    # nlp_agent_gru.test()
+    # play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 

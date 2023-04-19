@@ -54,6 +54,9 @@ game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
 Average steps used: 89.20; Average score: 6.80/8
 ----------------------------------------------------------------------
 
+Random seed = 1
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Average steps used: 87.00; Average score: 6.70/8
 
 2. Rewards: Balanced; Goal: Detailed [lr=0.0001; num_episodes=300]
 
@@ -106,6 +109,10 @@ NLP Agent GPT (test the model) ------------------------------------------
 game_files: ['tw_single_games/tw-rewardsBalanced_goalDetailed-1.z8']
 Average steps used: 100.00; Average score: 0.80/3
 ----------------------------------------------------------------------
+
+Random seed = 1
+game_files: ['tw_single_games/tw-rewardsBalanced_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 0.30/3
 
 3. Rewards: Sparse; Goal: Detailed [lr=0.0001; num_episodes=300]
 
@@ -209,6 +216,11 @@ game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
 Average steps used: 87.20; Average score: 6.90/8
 ----------------------------------------------------------------------
 
+Random seed = 1
+game_files: ['tw_single_games/tw-rewardsDense_goalBrief-1.z8']
+Average steps used: 97.10; Average score: 6.70/8
+
+
 5. Rewards: Balanced; Goal: Brief [lr=0.0001; num_episodes=300]
 
 Random Agent (do random action) --------------------------------------
@@ -260,6 +272,10 @@ NLP Agent GPT (test the model) ------------------------------------------
 game_files: ['tw_single_games/tw-rewardsBalanced_goalBrief-1.z8']
 Average steps used: 96.80; Average score: 0.90/3
 ----------------------------------------------------------------------
+
+Random seed = 1
+game_files: ['tw_single_games/tw-rewardsBalanced_goalBrief-1.z8']
+Average steps used: 100.00; Average score: 0.30/3
 
 6. Rewards: Sparse; Goal: Brief [lr=0.0001; num_episodes=300]
 
@@ -365,6 +381,10 @@ game_files: ['tw_single_games/tw-rewardsDense_goalNone-1.z8']
 Average steps used: 82.60; Average score: 7.10/8
 ----------------------------------------------------------------------
 
+Random seed = 1
+game_files: ['tw_single_games/tw-rewardsDense_goalNone-1.z8']
+Average steps used: 85.80; Average score: 6.70/8
+
 
 8. Rewards: Balanced; Goal: None [lr=0.0001; num_episodes=300]
 
@@ -418,6 +438,10 @@ game_files: ['tw_single_games/tw-rewardsBalanced_goalNone-1.z8']
 Average steps used: 100.00; Average score: 0.60/3
 ----------------------------------------------------------------------
 
+
+Random seed = 1
+game_files: ['tw_single_games/tw-rewardsBalanced_goalNone-1.z8']
+Average steps used: 100.00; Average score: 0.30/3
 
 
 9. Rewards: Sparse; Goal: None [lr=0.0001; num_episodes=300]
