@@ -279,7 +279,8 @@ class NLPAgent:
             self.agent_model.init_hidden(1)
         
     def train(self):
-        self.agent_model.load_pretrained_embeddings(self.glove)
+        if self.model_type == "gru" or self.model_type == "gpt-2":
+            self.agent_model.load_pretrained_embeddings(self.glove)
         self.run_mode = "train"
         if self.model_type == "gru":
             self.agent_model.init_hidden(1)
