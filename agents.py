@@ -4,8 +4,7 @@ import torch
 import torch.nn.functional as F
 from torch import optim
 import re
-from collections import defaultdict
-from transformers import GPT2Model, GPT2Tokenizer, GPT2Config
+from transformers import GPT2Model, GPT2Config
 from transformers import DistilBertModel, DistilBertTokenizer, DistilBertConfig
 from typing import Iterable
 import random
@@ -56,8 +55,15 @@ class PretrainedEmbed:
         words, vecs = zip(*all_lines)
         return cls(words, np.array([np.fromstring(v, sep=" ") for v in vecs]))
 
+
 class SimpleAgent(textworld.gym.Agent):
     def __init__(self, agent_mode = "random", seed=None):
+        """
+        Simple Agent which plays game by random action or by human (players themselves)
+
+        :param agent_mode: random or human
+        :param seed: random seed
+        """
         self.agent_mode = agent_mode
         self.seed = seed
     
@@ -73,9 +79,17 @@ class SimpleAgent(textworld.gym.Agent):
             print(observations)
             return input()
         
-class AgentNetwork(torch.nn.Module):
+class GRUNetwork(torch.nn.Module):
     def __init__(self, input_size, embedding_size, hidden_size, device="cuda"):
-        super(AgentNetwork, self).__init__()
+        """
+        GRU Agent Network which contains a "gru_input" and "gru_state" network to process observation, "gru_command" to process commands, and two linear networks to calculates the values
+
+        :param input_size: nums of input words
+        :param embedding_size: embedding dimension
+        :param hidden_size: hidden size of gru network
+        :param device: cuda or cpu
+        """
+        super(GRUNetwork, self).__init__()
         self.hidden_size  = hidden_size
         self.device = device
         self.embedding    = torch.nn.Embedding(input_size, embedding_size)
@@ -86,6 +100,7 @@ class AgentNetwork(torch.nn.Module):
         self.linear       = torch.nn.Linear(hidden_size, 1)
         self.linear_command = torch.nn.Linear(hidden_size * 2, 1)
 
+    # Load the GloVe pretrained embeddings
     def load_pretrained_embeddings(self, embeddings):
         self.embedding.weight.data[:-2, :] = torch.tensor(embeddings.vectors)
     
@@ -107,13 +122,21 @@ class AgentNetwork(torch.nn.Module):
 
         scores = F.relu(self.linear_command(input_commands)).squeeze(-1)  
         probs = F.softmax(scores, dim=2) 
-        index = probs[0].multinomial(num_samples=1).unsqueeze(0)
+        index = probs[0].multinomial(num_samples=1).unsqueeze(0) 
         
         return scores, index, value
     
     
 class GPTNetwork(torch.nn.Module):
     def __init__(self, input_size, embedding_size, hidden_size, device="cuda"):
+        """
+        GPT Agent Network which contains a "gpt2" model to process observation, "gru_command" to process commands, and two linear networks to calculates the values
+
+        :param input_size: nums of input words
+        :param embedding_size: embedding dimension
+        :param hidden_size: hidden size of gru network
+        :param device: cuda or cpu
+        """
         super(GPTNetwork, self).__init__()
         self.hidden_size  = hidden_size
         self.device = device
@@ -124,7 +147,6 @@ class GPTNetwork(torch.nn.Module):
         self.gpt_linear = torch.nn.Linear(embedding_size, hidden_size)
         self.linear = torch.nn.Linear(hidden_size, 1)
         
-        
         self.gru_command  = torch.nn.GRU(embedding_size, hidden_size, batch_first=True)
         self.linear_command = torch.nn.Linear(hidden_size * 2, 1)
 
@@ -133,6 +155,10 @@ class GPTNetwork(torch.nn.Module):
         self.embedding.weight.data[:-2, :] = torch.tensor(embeddings.vectors)
         
     def forward(self, observations, commands):
+        '''
+        This forward function is similar to the above GRUNetwork, but using "gpt-2" model to process observations
+        Same process to deal with the commands 
+        '''
         observations = observations.permute(1,0)
         commands = commands.permute(1,0)
         batch_size, num_commands = observations.shape[0], commands.shape[0]
@@ -223,6 +249,7 @@ class BERT_GRU(torch.nn.Module):
         
         return scores, index, value
     
+# Transition and ReplayMemory are used for DQN framework
 Transition = namedtuple('Transition',('observation', 'commands', 'action', 'next_observation', 'next_commands', 'reward'))
 
 class ReplayMemory(object):
@@ -244,6 +271,16 @@ class ReplayMemory(object):
     
 class NLPAgent:
     def __init__(self, model_type="bert_gru", max_vocab_num=1000, update_freq=10, log_freq=1000, gamma=0.9, lr=1e-5):
+        """
+        NLPAgent which is used to train the model
+
+        :param model_type: gru or gpt-2 or bert-gru
+        :param max_vocab_num: maximum number of vacabulary size
+        :param update_freq: the frequency to update the network
+        :param log_freq: the frequency to print some data
+        :param gamma: discount factor
+        :param lr: the learning rate of optimizer
+        """
         self.model_type = model_type
         self.max_vocab_num = max_vocab_num
         self.update_freq = update_freq
@@ -263,8 +300,8 @@ class NLPAgent:
         self.word2idx = {w: i for i, w in enumerate(self.idx2word)}
         
         if self.model_type == "gru":
-            self.agent_model = AgentNetwork(len(self.idx2word), 300, 128, self.device).to(device)
-            self.target_model = AgentNetwork(len(self.idx2word), 300, 128, self.device).to(device)
+            self.agent_model = GRUNetwork(len(self.idx2word), 300, 128, self.device).to(device)
+            self.target_model = GRUNetwork(len(self.idx2word), 300, 128, self.device).to(device)
             self.target_model.load_state_dict(self.agent_model.state_dict())
             self.memory = ReplayMemory(10000)
         elif self.model_type == "gpt-2":
@@ -293,6 +330,7 @@ class NLPAgent:
     def get_env_infos(self):
         return textworld.EnvInfos(admissible_commands=True, max_score = True, description=True, inventory=True, won=True, lost=True)
     
+    # Used for tokenize the sentences
     def _tokenize_text(self, texts):
         texts = re.sub(r"[^a-zA-Z0-9\- ]", " ", texts)
         words_list = texts.split()
@@ -305,6 +343,7 @@ class NLPAgent:
             
         return words_idx
     
+    # Split the sentences and tokenize them
     def _preprocess_texts(self, texts):
         tokenized_texts = []
         max_len = 0
@@ -447,46 +486,42 @@ class NLPAgent:
         if np.random.random() > epsilon or self.run_mode == "test":
             agent_input_tensor = agent_input_tensor.to(self.device)
             commands_tensor = commands_tensor.to(self.device)
-            
-            output, index, value = self.agent_model(agent_input_tensor, commands_tensor)
-            action_step = infos["admissible_commands"][index[0]]
+            with torch.no_grad():
+                scores, idx, value = self.agent_model(agent_input_tensor, commands_tensor)
+
             if self.run_mode == "test" and done and self.model_type == "gru":
                 self.agent_model.init_hidden(1)
             
         else:
-            action_step = np.random.choice(infos["admissible_commands"]) # Select random action with probability epsilon
-        return action_step
+            idx = torch.tensor([np.random.choice(len(infos["admissible_commands"]))]) # Select random action with probability epsilon
+            
+        action_step = infos["admissible_commands"][idx]
+        return action_step, idx
     
     def replay(self, batch_size, gamma=0.5):
-        if len(self.replay_buffer) < batch_size: 
+        if len(self.memory) < batch_size: 
             return
         transitions = self.memory.sample(batch_size)
         batch = Transition(*zip(*transitions))
-        non_final_mask = torch.tensor(tuple(map(lambda s: s is not None, batch.next_observation)), device=self.device, dtype=torch.bool)
-        non_final_next_observations = torch.cat([s for s in batch.next_observation if s is not None])
-        non_final_next_commands = torch.cat([s for s in batch.next_commands if s is not None])
         
-        observation_batch = torch.cat(batch.observation)
-        commands_batch = torch.cat(batch.commands)
-        action_batch = torch.cat(batch.action)
-        reward_batch = torch.cat(batch.reward) 
-        
-        state_action_values = self.agent_model(observation_batch, commands_batch)[0].gather(1, action_batch)
-        
-        next_state_values = torch.zeros(batch_size, device=self.device)
-        
-        with torch.no_grad():
-            next_state_values[non_final_mask] = self.target_model(non_final_next_observations, non_final_next_commands)[0].max(1)[0]
-        
-        expected_state_action_values = (next_state_values * gamma) + reward_batch
         criterion = torch.nn.SmoothL1Loss()
-        loss = criterion(state_action_values, expected_state_action_values.unsqueeze(1))
-        
+        reward_batch = torch.tensor(batch.reward).to(self.device)
+        batch_loss = 0
         self.optimizer.zero_grad()
-        loss.backward()
+
+        for i in range(batch_size):
+            scores, index, value = self.agent_model(batch.observation[i], batch.commands[i])
+            state_action_values = scores[0][0][batch.action[i]]
+            with torch.no_grad():
+                next_state_values = self.target_model(batch.next_observation[i], batch.next_commands[i])[0][0].max(1)[0]
+            expected_state_action_values = (next_state_values * gamma) + reward_batch[i]
+            loss = criterion(state_action_values, expected_state_action_values)
+            loss.backward()
         
         torch.nn.utils.clip_grad_value_(self.agent_model.parameters(), 100)
         self.optimizer.step()
+        if self.model_type == "gru":
+                self.agent_model.init_hidden(1)
         
     
     def update_model_handler(self, epoch, update_target_model):

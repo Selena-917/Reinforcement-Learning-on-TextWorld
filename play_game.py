@@ -8,9 +8,20 @@ import torch
 import time
 import argparse
 
-import sys
+
 
 def play_game(agent, game_path, max_steps=100, num_episodes=10, seed=None):
+    
+    """
+    Function to play the game(s). 
+    If playing with a single game, the model will be trained to play the game for several episodes (num_episodes)
+    If playing with multiple games, the model will be trained to play the games recurrently. For example there are two games, the model will be trained to play first episode on first game, second episode on second game, and third episode back on the first game and so on.
+
+    :param game_path: File path of single game / folder path of multiple games
+    :param max_steps: Maximum steps to play each episode
+    :param num_episodes: Number of episodes to play
+    :param seed: Random seed
+    """
     
     if seed:
         torch.manual_seed(seed)
@@ -52,6 +63,17 @@ def play_game(agent, game_path, max_steps=100, num_episodes=10, seed=None):
         
         
 def play_game_dqn(agent, game_path, max_steps=100, num_episodes=10, seed=None):
+    """
+    Function to play the game(s) with DQN framework. 
+    Unfortunately the DQN framework does not perform well. This may be caused by several reasons.
+    One of reason may be our model network like GRUNetwork is not suitable for the DQN since our network rightnow can only process one single batch.
+    We will try to improve DQN framework in the future.
+
+    :param game_path: File path of single game / folder path of multiple games
+    :param max_steps: Maximum steps to play each episode
+    :param num_episodes: Number of episodes to play
+    :param seed: Random seed
+    """
     
     if seed:
         torch.manual_seed(seed)
@@ -85,7 +107,7 @@ def play_game_dqn(agent, game_path, max_steps=100, num_episodes=10, seed=None):
         last_score = 0
         done = False
         while not done:
-            agent_command = agent.epsilon_greedy_action_selection(epsilon, agent_input_tensor, commands_tensor, infos, done)
+            agent_command, idx = agent.epsilon_greedy_action_selection(epsilon, agent_input_tensor, commands_tensor, infos, done)
             next_observations, score, done, infos = env.step(agent_command)
             
             next_agent_input = "{}\n{}\n{}".format(next_observations, infos["description"], infos["inventory"])
@@ -94,8 +116,8 @@ def play_game_dqn(agent, game_path, max_steps=100, num_episodes=10, seed=None):
             
             if agent.run_mode == "train":
                 rewards.append(score-last_score)
-                agent.memory.push(agent_input_tensor, commands_tensor, agent_command, next_agent_input_tensor, next_commands_tensor, score-last_score)
-                agent.replay(32)
+                agent.memory.push(agent_input_tensor, commands_tensor, idx, next_agent_input_tensor, next_commands_tensor, score-last_score)
+                agent.replay(1)
                 
             agent_input_tensor = next_agent_input_tensor
             commands_tensor = next_commands_tensor
@@ -145,7 +167,7 @@ def main(args):
         
             print("\nNLP Agent GRU (train the model) ------------------------------------------\n")
             
-            nlp_agent_gru = agents.NLPAgent(model_type="gru", lr=0.0005) # May need to tune this lr
+            nlp_agent_gru = agents.NLPAgent(model_type="gru", lr=0.00005) # May need to tune this lr
             print("NLP Agent GRU (acc before training) --------------------------------------")
             nlp_agent_gru.test()
             if not args.dqn:
@@ -160,7 +182,7 @@ def main(args):
             if not args.dqn:
                 play_game(nlp_agent_gru, args.single_gamefile, 100, num_episodes=200) # May need to tune num_episodes
             else:
-                play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, num_episodes=200)
+                play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, num_episodes=300)
                 
             os.makedirs('checkpoints', exist_ok=True) 
             torch.save(nlp_agent_gru, "checkpoints/GRU-"+save_model_name+".pt")
@@ -234,10 +256,7 @@ def main(args):
             
             print("\nNLP Agent BERT GRU (test the model) ------------------------------------------")
             nlp_agent_bert_gru.test()
-            if not args.dqn:
-                play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
-            else:
-                play_game_dqn(nlp_agent_bert_gru, args.single_gamefile, 100, 10, 1)
+            play_game(nlp_agent_bert_gru, args.single_gamefile, 100, 10) 
             
             print("----------------------------------------------------------------------")
     
@@ -271,7 +290,6 @@ if __name__ == '__main__':
     
     print(args)
     main(args)
-    
     
     # save_model_name = args.single_gamefile[args.single_gamefile.rfind("/")+1:args.single_gamefile.rfind(".")]
     # nlp_agent_gru = torch.load("checkpoints/GRU-"+save_model_name+".pt")
