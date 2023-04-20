@@ -1,0 +1,372 @@
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-11.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-11.z8']\
+Average steps used: 90.20; Average score: 0.30/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-11.z8']\
+Average steps used: 83.70; Average score: 0.50/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-11.z8']\
+Total step:   1000  reward: 0.337  value: 36.660  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.337  value: 34.436  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.337  value: 56.588  entropy: 1.331  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.112  value: 5.652  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.112  value: 25.251  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.224  value: 44.597  entropy: 1.350  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.561  value: 100.722  entropy: 1.338  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.449  value: 53.486  entropy: 1.331  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.673  value: 98.069  entropy: 1.315  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.224  value: 41.948  entropy: 1.317  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.224  value: 45.213  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.449  value: 85.633  entropy: 1.323  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.224  value: 31.105  entropy: 1.323  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.449  value: 66.267  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 0.449  value: 83.063  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.224  value: 32.881  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.673  value: 96.369  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Average steps used: 88.83; Average score: 0.35/1\
+Total training time: 211.36827421188354\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-11.z8']\
+Average steps used: 74.60; Average score: 0.60/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-12.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+Average steps used: 89.50; Average score: 0.30/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-12.z8']\
+Average steps used: 83.70; Average score: 0.50/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-12.z8']\
+Total step:   1000  reward: 0.337  value: 66.116  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.337  value: 44.889  entropy: 1.326  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.112  value: 10.247  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.673  value: 116.145  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.224  value: 30.892  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.337  value: 68.500  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.224  value: 36.881  entropy: 1.342  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.449  value: 55.725  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.112  value: 5.649  entropy: 1.320  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.001  entropy: 1.324  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.337  value: 46.572  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.449  value: 75.013  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.337  value: 37.137  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.673  value: 102.572  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 0.337  value: 21.400  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 1.010  value: 189.941  entropy: 1.331  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.112  value: 19.277  entropy: 1.324  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.673  value: 104.038  entropy: 1.325  max_score:   1  num_vocab: 30002\
+Average steps used: 89.33; Average score: 0.34/1\
+Total training time: 212.23912382125854\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-12.z8']\
+Average steps used: 74.70; Average score: 0.60/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-13.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-13.z8']\
+\
+Average steps used: 97.40; Average score: 0.10/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-13.z8']\
+Average steps used: 93.80; Average score: 0.20/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-13.z8']\
+Total step:   1000  reward: 0.224  value: 30.948  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.224  value: 47.220  entropy: 1.322  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.112  value: 19.392  entropy: 1.334  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.337  value: 49.949  entropy: 1.342  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.337  value: 68.750  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.003  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.337  value: 65.074  entropy: 1.352  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.224  value: 47.026  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.224  value: 42.362  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.449  value: 65.968  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.010  entropy: 1.331  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.006  entropy: 1.340  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.224  value: 48.197  entropy: 1.349  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.112  value: 10.203  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 0.112  value: 22.757  entropy: 1.356  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.224  value: 39.556  entropy: 1.349  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.224  value: 41.961  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.008  entropy: 1.340  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.337  value: 65.155  entropy: 1.349  max_score:   1  num_vocab: 30002\
+Average steps used: 94.83; Average score: 0.17/1\
+Total training time: 224.78760528564453\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-13.z8']\
+Average steps used: 93.10; Average score: 0.20/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-14.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-14.z8']\
+Average steps used: 96.90; Average score: 0.40/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-14.z8']\
+Average steps used: 93.80; Average score: 0.20/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-14.z8']\
+Total step:   1000  reward: 0.112  value: 24.290  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 10.255  entropy: 1.350  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.224  value: 35.366  entropy: 1.349  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.112  value: 10.250  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.224  value: 29.644  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.224  value: 24.201  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.224  value: 27.162  entropy: 1.342  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.337  value: 61.216  entropy: 1.334  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.224  value: 33.297  entropy: 1.334  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.002  entropy: 1.319  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.112  value: 21.333  entropy: 1.338  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.224  value: 34.412  entropy: 1.352  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.001  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.224  value: 39.806  entropy: 1.357  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.337  value: 57.506  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.112  value: 5.599  entropy: 1.360  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.112  value: 22.744  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.002  entropy: 1.337  max_score:   0  num_vocab: 30002\
+Average steps used: 96.92; Average score: 0.14/1\
+Total training time: 229.98432064056396\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-14.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-15.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-15.z8']\
+Average steps used: 97.60; Average score: 0.10/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-15.z8']\
+Average steps used: 94.00; Average score: 0.10/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-15.z8']\
+Total step:   1000  reward: 0.112  value: 25.328  entropy: 1.348  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.000  value: 0.000  entropy: 1.336  max_score:   0  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.351  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Total step:   6000  reward: 0.224  value: 35.582  entropy: 1.329  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:   8000  reward: 0.224  value: 38.821  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.337  value: 50.292  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.002  entropy: 1.322  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 1.333  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.112  value: 25.325  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.112  value: 16.961  entropy: 1.358  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.353  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 1.363  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002\
+Total step:  17000  reward: 0.000  value: 0.000  entropy: 1.335  max_score:   0  num_vocab: 30002\
+Total step:  18000  reward: 0.112  value: 22.968  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Average steps used: 98.94; Average score: 0.06/1\
+Total training time: 235.85115456581116\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-15.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-16.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-16.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-16.z8']\
+Average steps used: 95.70; Average score: 0.10/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-16.z8']\
+Total step:   1000  reward: 0.224  value: 35.565  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 24.285  entropy: 1.347  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.328  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.328  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.112  value: 25.332  entropy: 1.358  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.000  value: 0.000  entropy: 1.346  max_score:   0  num_vocab: 30002\
+Total step:   9000  reward: 0.112  value: 16.975  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.000  entropy: 1.355  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.112  value: 5.660  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.112  value: 19.399  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.353  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.112  value: 19.406  entropy: 1.365  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.000  value: 0.001  entropy: 1.330  max_score:   0  num_vocab: 30002\
+Total step:  17000  reward: 0.112  value: 5.653  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.347  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.322  max_score:   0  num_vocab: 30002\
+Average steps used: 99.22; Average score: 0.04/1\
+Total training time: 234.28002643585205\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-16.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-17.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-17.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-17.z8']\
+Average steps used: 95.70; Average score: 0.10/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-17.z8']\
+Total step:   1000  reward: 0.112  value: 19.423  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 13.972  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.330  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.320  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.337  max_score:   0  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.341  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 1.352  max_score:   0  num_vocab: 30002\
+Total step:   8000  reward: 0.112  value: 10.253  entropy: 1.351  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   0  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.000  entropy: 1.354  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.112  value: 22.981  entropy: 1.334  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.112  value: 5.660  entropy: 1.356  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 1.362  max_score:   0  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 1.350  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.000  value: 0.000  entropy: 1.341  max_score:   0  num_vocab: 30002\
+Total step:  17000  reward: 0.112  value: 5.658  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.351  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.338  max_score:   0  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.332  max_score:   0  num_vocab: 30002\
+Average steps used: 99.32; Average score: 0.03/1\
+Total training time: 234.8246147632599\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-17.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-18.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-18.z8']\
+Average steps used: 99.20; Average score: 0.10/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-18.z8']\
+Average steps used: 95.70; Average score: 0.10/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-18.z8']\
+Total step:   1000  reward: 0.000  value: 0.000  entropy: 1.347  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.000  value: 0.000  entropy: 1.337  max_score:   0  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.334  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.352  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002\
+Total step:   8000  reward: 0.112  value: 24.290  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.000  value: 0.000  entropy: 1.330  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.000  entropy: 1.351  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.112  value: 22.995  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 1.353  max_score:   0  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.338  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 1.360  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.000  value: 0.000  entropy: 1.333  max_score:   0  num_vocab: 30002\
+Total step:  17000  reward: 0.000  value: 0.000  entropy: 1.340  max_score:   0  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.351  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.346  max_score:   0  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Average steps used: 99.77; Average score: 0.01/1\
+Total training time: 235.50953221321106\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-18.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-19.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-19.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-19.z8']\
+Average steps used: 95.70; Average score: 0.10/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-19.z8']\
+Total step:   1000  reward: 0.000  value: 0.000  entropy: 1.341  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.000  value: 0.000  entropy: 1.337  max_score:   0  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.334  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.352  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002\
+Total step:   8000  reward: 0.112  value: 16.987  entropy: 1.354  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 1.333  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.112  value: 5.665  entropy: 1.347  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 1.356  max_score:   0  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 1.350  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.000  value: 0.000  entropy: 1.341  max_score:   0  num_vocab: 30002\
+Total step:  17000  reward: 0.112  value: 10.250  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.354  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.336  max_score:   0  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.338  max_score:   0  num_vocab: 30002\
+Average steps used: 99.88; Average score: 0.01/1\
+Total training time: 236.71514463424683\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-19.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gru', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-20.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-20.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+NLP Agent GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-20.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-20.z8']\
+Total step:   1000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.000  value: 0.000  entropy: 1.333  max_score:   0  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.333  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.346  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.358  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002\
+Total step:   8000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:   9000  reward: 0.000  value: 0.000  entropy: 1.328  max_score:   0  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.000  entropy: 1.335  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 1.319  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.346  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 1.361  max_score:   0  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.355  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 1.347  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.112  value: 16.988  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.000  value: 0.000  entropy: 1.324  max_score:   0  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.330  max_score:   0  num_vocab: 30002\
+Average steps used: 99.98; Average score: 0.01/1\
+Total training time: 236.7887988090515\
+\
+NLP Agent GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-20.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------}
