@@ -1,0 +1,716 @@
+** 100 tw-simple games Reward: Dense; Goal: Detailed **
+
+Namespace(play_method='multiple', single_gamefile='./tw_games/tw-rewardsDense_goalDetailed.z8', multiple_games_folder='tw-simple_games/')
+Training on multiple games------------------------------------------
+game_files: ['tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-kGDLudo8fXeJH1Yg.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1jr7FeK9TgZCQ9n.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-KJODI168SvJVFM9x.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-DWvMiBQvCR5sNkx.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-dZ2oU2KnflPksnEY.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-WxnkhG07upKRhbNV.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1QKVfg6YhRb1ul1e.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Kx32iybbtDGRFQl6.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Mn8oTkr2fvv8TX1.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-WvgBsoOmhDObfRgL.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-XR5RUnmMIgOnCYyy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-GN1YHrQ6s6vBTnNb.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-pGedtxVJsYDxsGaV.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6VXXCVGKiEWkhPer.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-qZDfWDNTJmQiLvq.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-5rjrFkZEiyOIj1y.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-J9ylcQmmc190Cgn3.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-68kvf8x7TBd9Iq0P.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-2OOjSlaNUBKcgLy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-nOVQCNlrINVxIDje.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-QlDlS6DxCMnVu81D.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-5PBeh9J3IX5XUjL3.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-3qLvIOZ9c66Igby.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-JBP7TQZ6fV7biZ9q.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-G6a7HeZPcJNGhLQ2.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-JGJdTBvVHrpBiVy5.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-5VVVSK6fGjlspnj.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-o7PNc5j0URa5HYLb.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-2KK5iXD8ueb3ikl6.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-M2vecROLFVBxHBvl.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-mbJLuQBoCbbkUv1n.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-3bj9creDs3V0IKKN.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-0lvotxEKtYZ6umyJ.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-mn3JuMrnfPNNI5K5.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6GMVtjVYF5QRupyN.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-VLpEiW2msKJpTZ7J.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-ek06H8B7uqoYFVEy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-g0GEcMQ5CWaeF3nJ.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Oq9ns8K0uK5EhJvr.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-o2RVTmrEi6R5T3p0.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-P6RdC912uMrbcXBX.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-n3OYtnV7IY8rTkBq.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-67XKC3EyH2riOk8.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-DvPBs6OphW6nCnQ3.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1dgPTd1ki5kQUkrn.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-566vUvgjfXgU9GK.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-aernSYY1f7rrflvB.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1MB8fmosEL9HNEv.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Q9nDu630U5j3tqBG.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-EloyS7BZs8LRHNVn.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-7KpYUDDdckE0cBqZ.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-ekDZtbGXIbO5FKp8.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6kRniM7gfXQNCyj6.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-mNB2tM2ohGmRIB2J.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-q3rdiVK5I1lrsNpj.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-D8gMTlO8cPoEtgZx.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-W1qJibX5FqLRS3kL.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-E5eLHkaXFk6BSgR1.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-aMq9U18aFMlOHVEe.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-OWRZsvM8h6XyIpQy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-D3PEFjpNIQykuqra.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-p1RLFX7MU7KjFy0d.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-El9oUXJWIYVgF1jy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-xQNoFqlDs10nfr79.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Qbq3h3VWFkPdtogB.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-M7MmCGG5i6kES1kV.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-WrmvTdgGc05rh3eZ.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6yPJsEJMTeR6fpPR.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1EQPheDOiVB8I7m5.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-NPQ8TkJ9i2x6fYDM.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6WNBiZyofr8mu6MG.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-jROVIEqEIya6Tr0L.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-eRNBC9q7tr5Vi3Mv.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-M8xnUOBkulX7HNQX.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Mj8NTxYWso7LfmN9.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-RvQYhbdKfMyqS5Wp.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-eBxGu3KeiYjbHDl9.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-R7y2UJkBUeEqS8Bk.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-nrEoHEqgUba7U1nx.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-165ai83atZWatMRa.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-jYPJukgls6oZf6qG.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-xqa9SlmxsDmVs8yb.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-vKm0IdN8c0VRfJl1.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-gkdXTMLPtKpeSY5J.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Eykru3m8ilOGiBnx.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-o8WVtobyuRR0Uqv5.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1vbrCekqT6xMcMdP.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-gPyQi5vkhdQOUV0J.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-mDjNimx7S5a5tmZ7.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-eDi7Z2iEJ7FdL9.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-YnvLs6vYIWvWC51e.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-535aCDxgu5MqF7R1.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-8koWh6KqcgNPI8Ox.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-7yGrcV9pTE8DF75n.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-XElPhYRjT8gWs1eM.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-0a72tMGVtQnPSvMR.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-KrNpTrdMtdqVUKOB.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-R2bxU9dJUK0LCxk0.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-redEHVr6CmKYhrJg.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6GZ3CqJvCX9rfev3.z8']
+Total step:   1000  reward: 0.042  value: 0.061  entropy: 2.325  max_score:   6  num_vocab: 30002
+Total step:   2000  reward: -0.053  value: 20.770  entropy: 2.373  max_score:   9  num_vocab: 30002
+Total step:   3000  reward: 0.062  value: 0.106  entropy: 2.428  max_score:   9  num_vocab: 30002
+Total step:   4000  reward: -0.039  value: 16.588  entropy: 2.483  max_score:   9  num_vocab: 30002
+Total step:   5000  reward: -0.140  value: 40.730  entropy: 2.484  max_score:   9  num_vocab: 30002
+Total step:   6000  reward: 0.059  value: 0.167  entropy: 2.529  max_score:   7  num_vocab: 30002
+Total step:   7000  reward: -0.466  value: 87.650  entropy: 2.517  max_score:   9  num_vocab: 30002
+Total step:   8000  reward: 0.063  value: 0.127  entropy: 2.425  max_score:   8  num_vocab: 30002
+Total step:   9000  reward: -0.028  value: 20.222  entropy: 2.439  max_score:   9  num_vocab: 30002
+Total step:  10000  reward: -0.147  value: 23.366  entropy: 2.471  max_score:   9  num_vocab: 30002
+Total step:  11000  reward: -0.041  value: 13.009  entropy: 2.458  max_score:   9  num_vocab: 30002
+Total step:  12000  reward: -0.132  value: 69.126  entropy: 2.541  max_score:   9  num_vocab: 30002
+Total step:  13000  reward: -0.032  value: 18.242  entropy: 2.483  max_score:   9  num_vocab: 30002
+Total step:  14000  reward: -0.253  value: 48.166  entropy: 2.502  max_score:   9  num_vocab: 30002
+Total step:  15000  reward: -0.150  value: 25.100  entropy: 2.494  max_score:   9  num_vocab: 30002
+Total step:  16000  reward: 0.070  value: 0.216  entropy: 2.560  max_score:   9  num_vocab: 30002
+Total step:  17000  reward: -0.031  value: 21.847  entropy: 2.533  max_score:   9  num_vocab: 30002
+Total step:  18000  reward: 0.066  value: 0.204  entropy: 2.510  max_score:   9  num_vocab: 30002
+Total step:  19000  reward: -0.134  value: 30.970  entropy: 2.519  max_score:   9  num_vocab: 30002
+Total step:  20000  reward: -0.142  value: 27.912  entropy: 2.388  max_score:   9  num_vocab: 30002
+Total step:  21000  reward: -0.023  value: 21.223  entropy: 2.408  max_score:   9  num_vocab: 30002
+Total step:  22000  reward: 0.067  value: 0.217  entropy: 2.402  max_score:   9  num_vocab: 30002
+Total step:  23000  reward: -0.346  value: 44.503  entropy: 2.374  max_score:   9  num_vocab: 30002
+Total step:  24000  reward: -0.247  value: 42.420  entropy: 2.355  max_score:   9  num_vocab: 30002
+Total step:  25000  reward: -0.670  value: 96.172  entropy: 2.220  max_score:   9  num_vocab: 30002
+Total step:  26000  reward: 0.081  value: 23.630  entropy: 2.458  max_score:   9  num_vocab: 30002
+Total step:  27000  reward: 0.179  value: 17.921  entropy: 2.530  max_score:   9  num_vocab: 30002
+Total step:  28000  reward: 0.188  value: 24.427  entropy: 2.544  max_score:   8  num_vocab: 30002
+Total step:  29000  reward: -0.143  value: 37.958  entropy: 2.534  max_score:   9  num_vocab: 30002
+Total step:  30000  reward: 0.076  value: 32.552  entropy: 2.573  max_score:   9  num_vocab: 30002
+Total step:  31000  reward: -0.051  value: 25.117  entropy: 2.533  max_score:   7  num_vocab: 30002
+Total step:  32000  reward: 0.051  value: 0.095  entropy: 2.418  max_score:   7  num_vocab: 30002
+Total step:  33000  reward: -0.142  value: 41.412  entropy: 2.454  max_score:   9  num_vocab: 30002
+Total step:  34000  reward: -0.139  value: 33.468  entropy: 2.374  max_score:   9  num_vocab: 30002
+Total step:  35000  reward: -0.139  value: 36.056  entropy: 2.394  max_score:   9  num_vocab: 30002
+Total step:  36000  reward: -0.357  value: 32.901  entropy: 2.458  max_score:   9  num_vocab: 30002
+Total step:  37000  reward: -0.142  value: 29.818  entropy: 2.210  max_score:   9  num_vocab: 30002
+Total step:  38000  reward: -0.027  value: 13.054  entropy: 2.408  max_score:   9  num_vocab: 30002
+Total step:  39000  reward: -0.132  value: 60.923  entropy: 2.318  max_score:   9  num_vocab: 30002
+Total step:  40000  reward: -0.249  value: 66.084  entropy: 2.365  max_score:   9  num_vocab: 30002
+Total step:  41000  reward: -0.459  value: 86.937  entropy: 2.417  max_score:   9  num_vocab: 30002
+Total step:  42000  reward: 0.066  value: 0.181  entropy: 2.441  max_score:   8  num_vocab: 30002
+Total step:  43000  reward: -0.031  value: 70.494  entropy: 2.374  max_score:  10  num_vocab: 30002
+Total step:  44000  reward: -0.028  value: 21.816  entropy: 2.531  max_score:   9  num_vocab: 30002
+Total step:  45000  reward: -0.034  value: 22.976  entropy: 2.486  max_score:   9  num_vocab: 30002
+Total step:  46000  reward: 0.070  value: 0.205  entropy: 2.570  max_score:   9  num_vocab: 30002
+Total step:  47000  reward: 0.061  value: 0.189  entropy: 2.543  max_score:   8  num_vocab: 30002
+Total step:  48000  reward: 0.066  value: 0.201  entropy: 2.501  max_score:   9  num_vocab: 30002
+Total step:  49000  reward: 0.061  value: 0.235  entropy: 2.549  max_score:   8  num_vocab: 30002
+Total step:  50000  reward: -0.044  value: 5.322  entropy: 2.548  max_score:   8  num_vocab: 30002
+Total step:  51000  reward: -0.146  value: 37.000  entropy: 2.465  max_score:   9  num_vocab: 30002
+Total step:  52000  reward: -0.038  value: 5.436  entropy: 2.449  max_score:   9  num_vocab: 30002
+Total step:  53000  reward: -0.467  value: 68.289  entropy: 2.383  max_score:   9  num_vocab: 30002
+Total step:  54000  reward: -0.138  value: 14.783  entropy: 2.412  max_score:   9  num_vocab: 30002
+Total step:  55000  reward: -0.037  value: 25.290  entropy: 2.395  max_score:   9  num_vocab: 30002
+Total step:  56000  reward: 0.087  value: 40.064  entropy: 2.319  max_score:  10  num_vocab: 30002
+Total step:  57000  reward: -0.463  value: 98.129  entropy: 2.324  max_score:   9  num_vocab: 30002
+Total step:  58000  reward: 0.176  value: 11.009  entropy: 2.484  max_score:   7  num_vocab: 30002
+Total step:  59000  reward: 0.077  value: 0.228  entropy: 2.420  max_score:   9  num_vocab: 30002
+Total step:  60000  reward: -0.364  value: 80.431  entropy: 2.619  max_score:   9  num_vocab: 30002
+Total step:  61000  reward: -0.130  value: 22.682  entropy: 2.380  max_score:   9  num_vocab: 30002
+Total step:  62000  reward: -0.148  value: 22.900  entropy: 2.442  max_score:   9  num_vocab: 30002
+Total step:  63000  reward: -0.038  value: 19.980  entropy: 2.511  max_score:   9  num_vocab: 30002
+Total step:  64000  reward: -0.036  value: 24.943  entropy: 2.347  max_score:   9  num_vocab: 30002
+Total step:  65000  reward: -0.333  value: 81.311  entropy: 2.284  max_score:   9  num_vocab: 30002
+Total step:  66000  reward: -0.249  value: 43.576  entropy: 2.393  max_score:   9  num_vocab: 30002
+Total step:  67000  reward: -0.461  value: 83.119  entropy: 2.307  max_score:   9  num_vocab: 30002
+Total step:  68000  reward: -0.149  value: 37.466  entropy: 2.374  max_score:   9  num_vocab: 30002
+Total step:  69000  reward: -0.136  value: 45.093  entropy: 2.366  max_score:   9  num_vocab: 30002
+Total step:  70000  reward: -0.154  value: 27.587  entropy: 2.413  max_score:   9  num_vocab: 30002
+Total step:  71000  reward: -0.022  value: 24.978  entropy: 2.394  max_score:   9  num_vocab: 30002
+Total step:  72000  reward: -0.456  value: 93.219  entropy: 2.311  max_score:   9  num_vocab: 30002
+Total step:  73000  reward: -0.152  value: 44.962  entropy: 2.456  max_score:   9  num_vocab: 30002
+Total step:  74000  reward: -0.240  value: 50.253  entropy: 2.486  max_score:   9  num_vocab: 30002
+Total step:  75000  reward: -0.128  value: 30.534  entropy: 2.440  max_score:   9  num_vocab: 30002
+Total step:  76000  reward: -0.354  value: 87.764  entropy: 2.353  max_score:   9  num_vocab: 30002
+Total step:  77000  reward: -0.348  value: 66.844  entropy: 2.310  max_score:   9  num_vocab: 30002
+Total step:  78000  reward: 0.077  value: 0.179  entropy: 2.495  max_score:   9  num_vocab: 30002
+Total step:  79000  reward: 0.068  value: 0.289  entropy: 2.477  max_score:   9  num_vocab: 30002
+Total step:  80000  reward: -0.252  value: 59.654  entropy: 2.469  max_score:   9  num_vocab: 30002
+Total step:  81000  reward: -0.039  value: 21.100  entropy: 2.552  max_score:   9  num_vocab: 30002
+Total step:  82000  reward: 0.183  value: 54.142  entropy: 2.557  max_score:   8  num_vocab: 30002
+Total step:  83000  reward: 0.087  value: 50.744  entropy: 2.441  max_score:   9  num_vocab: 30002
+Total step:  84000  reward: 0.186  value: 18.593  entropy: 2.420  max_score:   9  num_vocab: 30002
+Total step:  85000  reward: -0.032  value: 65.654  entropy: 2.482  max_score:   9  num_vocab: 30002
+Total step:  86000  reward: 0.069  value: 0.226  entropy: 2.491  max_score:   8  num_vocab: 30002
+Total step:  87000  reward: -0.039  value: 22.615  entropy: 2.466  max_score:   9  num_vocab: 30002
+Total step:  88000  reward: 0.067  value: 0.254  entropy: 2.456  max_score:   9  num_vocab: 30002
+Total step:  89000  reward: -0.029  value: 15.851  entropy: 2.566  max_score:   9  num_vocab: 30002
+Total step:  90000  reward: 0.073  value: 0.248  entropy: 2.512  max_score:   9  num_vocab: 30002
+Total step:  91000  reward: -0.031  value: 13.123  entropy: 2.488  max_score:   9  num_vocab: 30002
+Total step:  92000  reward: -0.246  value: 32.690  entropy: 2.372  max_score:   9  num_vocab: 30002
+Total step:  93000  reward: 0.180  value: 25.421  entropy: 2.460  max_score:   9  num_vocab: 30002
+Average steps used: 92.32; Average normalized score: 0.77/1
+Total training time: 2043.276631116867
+game_files: ['tw-games/tw-rewardsDense_goalDetailed-166.z8']
+Average steps used: 91.10; Average score: 5.50/7
+
+
+Tests
+1. tw-rewardsDense_goalDetailed-1.z8
+Average steps used: 72.40; Average score: 6.10/8
+
+2. tw-rewardsDense_goalBrief-1.z8
+Average steps used: 72.40; Average score: 6.10/8
+
+----------------------------------------------------------------------------------------------------
+
+Training on multiple games------------------------------------------
+game_files: ['tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-kGDLudo8fXeJH1Yg.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1jr7FeK9TgZCQ9n.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-KJODI168SvJVFM9x.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-DWvMiBQvCR5sNkx.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-dZ2oU2KnflPksnEY.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-WxnkhG07upKRhbNV.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1QKVfg6YhRb1ul1e.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Kx32iybbtDGRFQl6.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Mn8oTkr2fvv8TX1.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-WvgBsoOmhDObfRgL.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-XR5RUnmMIgOnCYyy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-GN1YHrQ6s6vBTnNb.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-pGedtxVJsYDxsGaV.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6VXXCVGKiEWkhPer.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-qZDfWDNTJmQiLvq.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-5rjrFkZEiyOIj1y.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-J9ylcQmmc190Cgn3.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-68kvf8x7TBd9Iq0P.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-2OOjSlaNUBKcgLy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-nOVQCNlrINVxIDje.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-QlDlS6DxCMnVu81D.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-5PBeh9J3IX5XUjL3.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-3qLvIOZ9c66Igby.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-JBP7TQZ6fV7biZ9q.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-G6a7HeZPcJNGhLQ2.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-JGJdTBvVHrpBiVy5.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-5VVVSK6fGjlspnj.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-o7PNc5j0URa5HYLb.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-2KK5iXD8ueb3ikl6.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-M2vecROLFVBxHBvl.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-mbJLuQBoCbbkUv1n.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-3bj9creDs3V0IKKN.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-0lvotxEKtYZ6umyJ.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-mn3JuMrnfPNNI5K5.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6GMVtjVYF5QRupyN.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-VLpEiW2msKJpTZ7J.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-ek06H8B7uqoYFVEy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-g0GEcMQ5CWaeF3nJ.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Oq9ns8K0uK5EhJvr.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-o2RVTmrEi6R5T3p0.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-P6RdC912uMrbcXBX.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-n3OYtnV7IY8rTkBq.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-67XKC3EyH2riOk8.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-DvPBs6OphW6nCnQ3.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1dgPTd1ki5kQUkrn.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-566vUvgjfXgU9GK.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-aernSYY1f7rrflvB.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1MB8fmosEL9HNEv.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Q9nDu630U5j3tqBG.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-EloyS7BZs8LRHNVn.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-7KpYUDDdckE0cBqZ.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-ekDZtbGXIbO5FKp8.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6kRniM7gfXQNCyj6.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-mNB2tM2ohGmRIB2J.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-q3rdiVK5I1lrsNpj.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-D8gMTlO8cPoEtgZx.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-W1qJibX5FqLRS3kL.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-E5eLHkaXFk6BSgR1.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-aMq9U18aFMlOHVEe.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-OWRZsvM8h6XyIpQy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-D3PEFjpNIQykuqra.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-p1RLFX7MU7KjFy0d.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-El9oUXJWIYVgF1jy.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-xQNoFqlDs10nfr79.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Qbq3h3VWFkPdtogB.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-M7MmCGG5i6kES1kV.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-WrmvTdgGc05rh3eZ.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6yPJsEJMTeR6fpPR.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1EQPheDOiVB8I7m5.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-NPQ8TkJ9i2x6fYDM.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6WNBiZyofr8mu6MG.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-jROVIEqEIya6Tr0L.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-eRNBC9q7tr5Vi3Mv.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-M8xnUOBkulX7HNQX.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Mj8NTxYWso7LfmN9.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-RvQYhbdKfMyqS5Wp.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-eBxGu3KeiYjbHDl9.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-R7y2UJkBUeEqS8Bk.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-nrEoHEqgUba7U1nx.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-165ai83atZWatMRa.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-jYPJukgls6oZf6qG.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-xqa9SlmxsDmVs8yb.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-vKm0IdN8c0VRfJl1.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-gkdXTMLPtKpeSY5J.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-Eykru3m8ilOGiBnx.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-o8WVtobyuRR0Uqv5.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-1vbrCekqT6xMcMdP.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-gPyQi5vkhdQOUV0J.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-mDjNimx7S5a5tmZ7.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-eDi7Z2iEJ7FdL9.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-YnvLs6vYIWvWC51e.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-535aCDxgu5MqF7R1.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-8koWh6KqcgNPI8Ox.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-7yGrcV9pTE8DF75n.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-XElPhYRjT8gWs1eM.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-0a72tMGVtQnPSvMR.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-KrNpTrdMtdqVUKOB.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-R2bxU9dJUK0LCxk0.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-redEHVr6CmKYhrJg.z8', 'tw-simple_games/tw-simple-rDense+gDetailed+train-house-GP-6GZ3CqJvCX9rfev3.z8']
+Total step:   1000  reward: 0.037  value: 0.066  entropy: 2.349  max_score:   5  num_vocab: 30002
+Total step:   2000  reward: 0.047  value: 0.084  entropy: 2.385  max_score:   7  num_vocab: 30002
+Total step:   3000  reward: 0.039  value: 0.066  entropy: 2.368  max_score:   5  num_vocab: 30002
+Total step:   4000  reward: 0.050  value: 0.075  entropy: 2.411  max_score:   7  num_vocab: 30002
+Total step:   5000  reward: 0.054  value: 0.088  entropy: 2.394  max_score:   7  num_vocab: 30002
+Total step:   6000  reward: 0.053  value: 0.095  entropy: 2.463  max_score:   6  num_vocab: 30002
+Total step:   7000  reward: -0.060  value: 5.480  entropy: 2.419  max_score:   9  num_vocab: 30002
+Total step:   8000  reward: 0.052  value: 0.085  entropy: 2.438  max_score:   8  num_vocab: 30002
+Total step:   9000  reward: 0.060  value: 0.087  entropy: 2.422  max_score:   9  num_vocab: 30002
+Total step:  10000  reward: -0.041  value: 13.285  entropy: 2.466  max_score:   9  num_vocab: 30002
+Total step:  11000  reward: -0.258  value: 59.631  entropy: 2.452  max_score:   9  num_vocab: 30002
+Total step:  12000  reward: 0.176  value: 14.235  entropy: 2.423  max_score:   8  num_vocab: 30002
+Total step:  13000  reward: 0.064  value: 0.112  entropy: 2.394  max_score:   9  num_vocab: 30002
+Total step:  14000  reward: 0.063  value: 0.126  entropy: 2.516  max_score:   7  num_vocab: 30002
+Total step:  15000  reward: 0.181  value: 25.749  entropy: 2.417  max_score:   9  num_vocab: 30002
+Total step:  16000  reward: -0.148  value: 27.275  entropy: 2.404  max_score:   9  num_vocab: 30002
+Total step:  17000  reward: -0.147  value: 21.663  entropy: 2.410  max_score:   9  num_vocab: 30002
+Total step:  18000  reward: -0.036  value: 25.227  entropy: 2.436  max_score:   9  num_vocab: 30002
+Total step:  19000  reward: 0.190  value: 17.473  entropy: 2.496  max_score:  10  num_vocab: 30002
+Total step:  20000  reward: 0.068  value: 0.122  entropy: 2.407  max_score:   9  num_vocab: 30002
+Total step:  21000  reward: -0.037  value: 13.502  entropy: 2.476  max_score:   9  num_vocab: 30002
+Total step:  22000  reward: -0.139  value: 28.283  entropy: 2.320  max_score:   9  num_vocab: 30002
+Total step:  23000  reward: -0.243  value: 44.317  entropy: 2.385  max_score:   9  num_vocab: 30002
+Total step:  24000  reward: -0.030  value: 23.483  entropy: 2.367  max_score:   9  num_vocab: 30002
+Total step:  25000  reward: -0.141  value: 29.872  entropy: 2.414  max_score:   9  num_vocab: 30002
+Total step:  26000  reward: 0.084  value: 30.254  entropy: 2.428  max_score:   9  num_vocab: 30002
+Total step:  27000  reward: 0.072  value: 0.168  entropy: 2.551  max_score:   9  num_vocab: 30002
+Total step:  28000  reward: -0.048  value: 23.633  entropy: 2.509  max_score:   8  num_vocab: 30002
+Total step:  29000  reward: 0.064  value: 0.112  entropy: 2.526  max_score:   8  num_vocab: 30002
+Total step:  30000  reward: -0.034  value: 15.811  entropy: 2.407  max_score:   9  num_vocab: 30002
+Total step:  31000  reward: -0.038  value: 23.144  entropy: 2.461  max_score:   9  num_vocab: 30002
+Total step:  32000  reward: 0.071  value: 34.827  entropy: 2.503  max_score:   7  num_vocab: 30002
+Total step:  33000  reward: 0.078  value: 0.183  entropy: 2.573  max_score:   9  num_vocab: 30002
+Total step:  34000  reward: -0.029  value: 18.628  entropy: 2.448  max_score:   9  num_vocab: 30002
+Total step:  35000  reward: -0.139  value: 18.263  entropy: 2.417  max_score:   9  num_vocab: 30002
+Total step:  36000  reward: -0.141  value: 37.776  entropy: 2.466  max_score:   9  num_vocab: 30002
+Total step:  37000  reward: -0.030  value: 9.740  entropy: 2.511  max_score:   9  num_vocab: 30002
+Total step:  38000  reward: -0.144  value: 43.467  entropy: 2.516  max_score:   9  num_vocab: 30002
+Total step:  39000  reward: -0.142  value: 34.456  entropy: 2.505  max_score:   9  num_vocab: 30002
+Total step:  40000  reward: -0.030  value: 21.694  entropy: 2.508  max_score:   9  num_vocab: 30002
+Total step:  41000  reward: -0.250  value: 50.688  entropy: 2.447  max_score:   9  num_vocab: 30002
+Total step:  42000  reward: 0.064  value: 0.151  entropy: 2.415  max_score:   7  num_vocab: 30002
+Total step:  43000  reward: 0.071  value: 0.145  entropy: 2.542  max_score:   9  num_vocab: 30002
+Total step:  44000  reward: -0.031  value: 21.751  entropy: 2.367  max_score:   9  num_vocab: 30002
+Total step:  45000  reward: -0.363  value: 92.876  entropy: 2.443  max_score:   9  num_vocab: 30002
+Total step:  46000  reward: 0.193  value: 20.363  entropy: 2.493  max_score:   9  num_vocab: 30002
+Total step:  47000  reward: -0.033  value: 20.308  entropy: 2.414  max_score:   9  num_vocab: 30002
+Total step:  48000  reward: -0.046  value: 18.049  entropy: 2.574  max_score:   9  num_vocab: 30002
+Total step:  49000  reward: 0.062  value: 0.146  entropy: 2.523  max_score:   7  num_vocab: 30002
+Total step:  50000  reward: -0.142  value: 27.461  entropy: 2.441  max_score:   9  num_vocab: 30002
+Total step:  51000  reward: 0.078  value: 0.155  entropy: 2.406  max_score:   9  num_vocab: 30002
+Total step:  52000  reward: -0.132  value: 36.208  entropy: 2.419  max_score:   9  num_vocab: 30002
+Total step:  53000  reward: -0.149  value: 42.694  entropy: 2.494  max_score:   9  num_vocab: 30002
+Total step:  54000  reward: -0.054  value: 5.552  entropy: 2.497  max_score:   7  num_vocab: 30002
+Total step:  55000  reward: -0.047  value: 16.327  entropy: 2.544  max_score:   7  num_vocab: 30002
+Total step:  56000  reward: 0.071  value: 0.134  entropy: 2.619  max_score:   9  num_vocab: 30002
+Total step:  57000  reward: 0.072  value: 34.932  entropy: 2.529  max_score:   9  num_vocab: 30002
+Total step:  58000  reward: 0.079  value: 0.198  entropy: 2.405  max_score:   9  num_vocab: 30002
+Total step:  59000  reward: -0.139  value: 34.699  entropy: 2.471  max_score:   9  num_vocab: 30002
+Total step:  60000  reward: 0.071  value: 0.192  entropy: 2.402  max_score:   9  num_vocab: 30002
+Total step:  61000  reward: -0.149  value: 29.763  entropy: 2.450  max_score:   9  num_vocab: 30002
+Total step:  62000  reward: -0.046  value: 21.977  entropy: 2.451  max_score:   9  num_vocab: 30002
+Total step:  63000  reward: -0.236  value: 69.138  entropy: 2.424  max_score:   9  num_vocab: 30002
+Total step:  64000  reward: -0.146  value: 41.012  entropy: 2.452  max_score:   9  num_vocab: 30002
+Total step:  65000  reward: -0.136  value: 41.683  entropy: 2.370  max_score:   9  num_vocab: 30002
+Total step:  66000  reward: -0.248  value: 69.837  entropy: 2.353  max_score:   9  num_vocab: 30002
+Total step:  67000  reward: -0.033  value: 24.509  entropy: 2.360  max_score:   9  num_vocab: 30002
+Total step:  68000  reward: -0.361  value: 64.915  entropy: 2.493  max_score:   9  num_vocab: 30002
+Total step:  69000  reward: -0.141  value: 42.537  entropy: 2.578  max_score:   9  num_vocab: 30002
+Total step:  70000  reward: -0.043  value: 13.316  entropy: 2.490  max_score:   9  num_vocab: 30002
+Total step:  71000  reward: 0.068  value: 0.187  entropy: 2.476  max_score:   9  num_vocab: 30002
+Total step:  72000  reward: -0.141  value: 44.295  entropy: 2.489  max_score:   9  num_vocab: 30002
+Total step:  73000  reward: 0.088  value: 34.237  entropy: 2.474  max_score:   9  num_vocab: 30002
+Total step:  74000  reward: -0.453  value: 100.394  entropy: 2.427  max_score:   9  num_vocab: 30002
+Total step:  75000  reward: -0.148  value: 39.980  entropy: 2.429  max_score:   9  num_vocab: 30002
+Total step:  76000  reward: 0.066  value: 40.708  entropy: 2.475  max_score:   9  num_vocab: 30002
+Total step:  77000  reward: -0.130  value: 41.837  entropy: 2.407  max_score:   9  num_vocab: 30002
+Total step:  78000  reward: -0.246  value: 52.425  entropy: 2.423  max_score:   9  num_vocab: 30002
+Total step:  79000  reward: -0.027  value: 95.414  entropy: 2.498  max_score:  10  num_vocab: 30002
+Total step:  80000  reward: -0.144  value: 25.236  entropy: 2.480  max_score:   9  num_vocab: 30002
+Total step:  81000  reward: -0.241  value: 43.229  entropy: 2.422  max_score:   9  num_vocab: 30002
+Total step:  82000  reward: -0.254  value: 51.014  entropy: 2.361  max_score:   9  num_vocab: 30002
+Total step:  83000  reward: -0.039  value: 20.412  entropy: 2.439  max_score:   9  num_vocab: 30002
+Total step:  84000  reward: 0.086  value: 69.082  entropy: 2.414  max_score:   9  num_vocab: 30002
+Total step:  85000  reward: -0.140  value: 22.474  entropy: 2.437  max_score:   9  num_vocab: 30002
+Total step:  86000  reward: -0.347  value: 50.851  entropy: 2.414  max_score:   9  num_vocab: 30002
+Total step:  87000  reward: -0.036  value: 12.959  entropy: 2.377  max_score:   9  num_vocab: 30002
+Total step:  88000  reward: -0.030  value: 58.536  entropy: 2.447  max_score:  10  num_vocab: 30002
+Total step:  89000  reward: 0.074  value: 0.206  entropy: 2.489  max_score:   9  num_vocab: 30002
+Total step:  90000  reward: -0.021  value: 9.609  entropy: 2.428  max_score:   9  num_vocab: 30002
+Total step:  91000  reward: -0.357  value: 33.838  entropy: 2.373  max_score:   9  num_vocab: 30002
+Total step:  92000  reward: -0.022  value: 70.645  entropy: 2.367  max_score:   9  num_vocab: 30002
+Total step:  93000  reward: -0.034  value: 18.266  entropy: 2.383  max_score:   9  num_vocab: 30002
+Total step:  94000  reward: -0.348  value: 80.795  entropy: 2.474  max_score:   9  num_vocab: 30002
+Total step:  95000  reward: 0.063  value: 0.162  entropy: 2.504  max_score:   7  num_vocab: 30002
+Average steps used: 94.65; Average normalized score: 0.75/1
+Total training time: 1967.4315934181213
+
+Tests:
+
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']
+Average steps used: 87.50; Average score: 6.40/8
+
+game_files: ['tw_games/tw-rewardsDense_goalDetailed-166.z8']
+Average steps used: 100.00; Average score: 5.30/7
+
+game_files: ['tw_games/tw-rewardsDense_goalDetailed-101.z8']
+Average steps used: 89.80; Average score: 8.00/10
+
+game_files: ['tw_games/tw-rewardsDense_goalDetailed-102.z8']
+Average steps used: 87.50; Average score: 6.40/8
+
+game_files: ['tw_games/tw-rewardsDense_goalDetailed-103.z8']
+Average steps used: 100.00; Average score: 5.10/7
+
+game_files: ['tw_games/tw-rewardsDense_goalDetailed-104.z8']
+Average steps used: 80.80; Average score: 7.70/10
+
+game_files: ['tw_games/tw-rewardsDense_goalDetailed-105.z8']
+Average steps used: 87.80; Average score: 8.20/10
+
+game_files: ['tw_single_games/tw-rewardsBalanced_goalDetailed-1.z8']
+Average steps used: 87.50; Average score: 1.60/3
+
+game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-101.z8']
+Average steps used: 89.80; Average score: 2.60/4
+
+game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-102.z8']
+Average steps used: 87.50; Average score: 1.60/3
+
+game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-103.z8']
+Average steps used: 100.00; Average score: 1.10/3
+
+game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-104.z8']
+Average steps used: 80.80; Average score: 2.30/4
+
+game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-105.z8']
+Average steps used: 87.80; Average score: 2.60/4
+
+game_files: ['tw_single_games/tw-rewardsSparse_goalDetailed-1.z8']
+Average steps used: 87.50; Average score: 0.00/1
+
+
+
+----------------------------------------------------------------------------------------------------
+** 100 tw-simple games Reward: Balanced; Goal: Detailed **
+
+Training on multiple games------------------------------------------
+game_files: ['tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-pGedtxVJsYDxsGaV.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-JBP7TQZ6fV7biZ9q.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-aMq9U18aFMlOHVEe.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-0lvotxEKtYZ6umyJ.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-DWvMiBQvCR5sNkx.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-3qLvIOZ9c66Igby.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-El9oUXJWIYVgF1jy.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-WvgBsoOmhDObfRgL.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-Q9nDu630U5j3tqBG.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-n3OYtnV7IY8rTkBq.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-eRNBC9q7tr5Vi3Mv.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-6GZ3CqJvCX9rfev3.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-5PBeh9J3IX5XUjL3.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-7yGrcV9pTE8DF75n.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-1MB8fmosEL9HNEv.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-g0GEcMQ5CWaeF3nJ.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-RvQYhbdKfMyqS5Wp.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-XElPhYRjT8gWs1eM.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-WrmvTdgGc05rh3eZ.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-5rjrFkZEiyOIj1y.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-R2bxU9dJUK0LCxk0.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-p1RLFX7MU7KjFy0d.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-jYPJukgls6oZf6qG.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-1jr7FeK9TgZCQ9n.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-ek06H8B7uqoYFVEy.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-1vbrCekqT6xMcMdP.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-xqa9SlmxsDmVs8yb.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-YnvLs6vYIWvWC51e.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-W1qJibX5FqLRS3kL.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-Qbq3h3VWFkPdtogB.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-jROVIEqEIya6Tr0L.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-6WNBiZyofr8mu6MG.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-nOVQCNlrINVxIDje.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-eDi7Z2iEJ7FdL9.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-Kx32iybbtDGRFQl6.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-DvPBs6OphW6nCnQ3.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-nrEoHEqgUba7U1nx.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-Mj8NTxYWso7LfmN9.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-XR5RUnmMIgOnCYyy.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-6yPJsEJMTeR6fpPR.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-R7y2UJkBUeEqS8Bk.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-aernSYY1f7rrflvB.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-Eykru3m8ilOGiBnx.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-ekDZtbGXIbO5FKp8.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-QlDlS6DxCMnVu81D.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-P6RdC912uMrbcXBX.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-165ai83atZWatMRa.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-D3PEFjpNIQykuqra.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-o2RVTmrEi6R5T3p0.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-KJODI168SvJVFM9x.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-NPQ8TkJ9i2x6fYDM.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-mNB2tM2ohGmRIB2J.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-o7PNc5j0URa5HYLb.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-535aCDxgu5MqF7R1.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-Oq9ns8K0uK5EhJvr.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-1EQPheDOiVB8I7m5.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-7KpYUDDdckE0cBqZ.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-VLpEiW2msKJpTZ7J.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-2KK5iXD8ueb3ikl6.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-M8xnUOBkulX7HNQX.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-gkdXTMLPtKpeSY5J.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-J9ylcQmmc190Cgn3.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-E5eLHkaXFk6BSgR1.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-1dgPTd1ki5kQUkrn.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-G6a7HeZPcJNGhLQ2.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-qZDfWDNTJmQiLvq.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-0a72tMGVtQnPSvMR.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-KrNpTrdMtdqVUKOB.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-WxnkhG07upKRhbNV.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-6kRniM7gfXQNCyj6.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-GN1YHrQ6s6vBTnNb.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-D8gMTlO8cPoEtgZx.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-mDjNimx7S5a5tmZ7.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-5VVVSK6fGjlspnj.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-xQNoFqlDs10nfr79.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-3bj9creDs3V0IKKN.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-EloyS7BZs8LRHNVn.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-redEHVr6CmKYhrJg.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-67XKC3EyH2riOk8.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-M2vecROLFVBxHBvl.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-566vUvgjfXgU9GK.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-eBxGu3KeiYjbHDl9.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-kGDLudo8fXeJH1Yg.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-gPyQi5vkhdQOUV0J.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-dZ2oU2KnflPksnEY.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-o8WVtobyuRR0Uqv5.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-6GMVtjVYF5QRupyN.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-8koWh6KqcgNPI8Ox.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-q3rdiVK5I1lrsNpj.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-1QKVfg6YhRb1ul1e.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-OWRZsvM8h6XyIpQy.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-mn3JuMrnfPNNI5K5.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-Mn8oTkr2fvv8TX1.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-JGJdTBvVHrpBiVy5.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-mbJLuQBoCbbkUv1n.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-vKm0IdN8c0VRfJl1.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-6VXXCVGKiEWkhPer.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-M7MmCGG5i6kES1kV.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-68kvf8x7TBd9Iq0P.z8', 'tw-simple_games_rewardBalanced/tw-simple-rBalanced+gDetailed+train-house-GP-2OOjSlaNUBKcgLy.z8']
+Total step:   1000  reward: 0.008  value: 0.009  entropy: 2.378  max_score:   2  num_vocab: 30002
+Total step:   2000  reward: 0.007  value: 0.014  entropy: 2.396  max_score:   2  num_vocab: 30002
+Total step:   3000  reward: 0.008  value: 0.013  entropy: 2.451  max_score:   2  num_vocab: 30002
+Total step:   4000  reward: 0.010  value: 0.014  entropy: 2.420  max_score:   2  num_vocab: 30002
+Total step:   5000  reward: 0.006  value: 0.011  entropy: 2.356  max_score:   2  num_vocab: 30002
+Total step:   6000  reward: 0.003  value: 0.004  entropy: 2.340  max_score:   1  num_vocab: 30002
+Total step:   7000  reward: -0.101  value: 16.427  entropy: 2.412  max_score:   3  num_vocab: 30002
+Total step:   8000  reward: 0.004  value: 0.005  entropy: 2.375  max_score:   2  num_vocab: 30002
+Total step:   9000  reward: 0.006  value: 0.007  entropy: 2.403  max_score:   2  num_vocab: 30002
+Total step:  10000  reward: 0.009  value: 0.011  entropy: 2.396  max_score:   2  num_vocab: 30002
+Total step:  11000  reward: 0.006  value: 0.008  entropy: 2.376  max_score:   2  num_vocab: 30002
+Total step:  12000  reward: 0.006  value: 0.010  entropy: 2.396  max_score:   1  num_vocab: 30002
+Total step:  13000  reward: 0.006  value: 0.008  entropy: 2.358  max_score:   1  num_vocab: 30002
+Total step:  14000  reward: 0.121  value: 25.621  entropy: 2.355  max_score:   3  num_vocab: 30002
+Total step:  15000  reward: 0.004  value: 0.008  entropy: 2.354  max_score:   1  num_vocab: 30002
+Total step:  16000  reward: 0.007  value: 0.012  entropy: 2.321  max_score:   2  num_vocab: 30002
+Total step:  17000  reward: -0.106  value: 19.050  entropy: 2.401  max_score:   2  num_vocab: 30002
+Total step:  18000  reward: 0.003  value: 0.005  entropy: 2.355  max_score:   2  num_vocab: 30002
+Total step:  19000  reward: 0.004  value: 0.009  entropy: 2.322  max_score:   2  num_vocab: 30002
+Total step:  20000  reward: 0.010  value: 0.015  entropy: 2.404  max_score:   2  num_vocab: 30002
+Total step:  21000  reward: 0.006  value: 0.010  entropy: 2.409  max_score:   1  num_vocab: 30002
+Total step:  22000  reward: 0.006  value: 0.012  entropy: 2.357  max_score:   2  num_vocab: 30002
+Total step:  23000  reward: 0.006  value: 0.008  entropy: 2.400  max_score:   1  num_vocab: 30002
+Total step:  24000  reward: 0.007  value: 0.008  entropy: 2.330  max_score:   2  num_vocab: 30002
+Total step:  25000  reward: 0.007  value: 0.010  entropy: 2.345  max_score:   2  num_vocab: 30002
+Total step:  26000  reward: -0.104  value: 22.533  entropy: 2.378  max_score:   2  num_vocab: 30002
+Total step:  27000  reward: 0.004  value: 0.007  entropy: 2.367  max_score:   1  num_vocab: 30002
+Total step:  28000  reward: 0.002  value: 0.004  entropy: 2.313  max_score:   1  num_vocab: 30002
+Total step:  29000  reward: 0.010  value: 0.018  entropy: 2.395  max_score:   3  num_vocab: 30002
+Total step:  30000  reward: 0.006  value: 0.009  entropy: 2.360  max_score:   2  num_vocab: 30002
+Total step:  31000  reward: -0.097  value: 18.848  entropy: 2.425  max_score:   3  num_vocab: 30002
+Total step:  32000  reward: -0.102  value: 18.965  entropy: 2.413  max_score:   3  num_vocab: 30002
+Total step:  33000  reward: 0.007  value: 0.011  entropy: 2.382  max_score:   2  num_vocab: 30002
+Total step:  34000  reward: 0.004  value: 0.006  entropy: 2.405  max_score:   2  num_vocab: 30002
+Total step:  35000  reward: 0.008  value: 0.017  entropy: 2.407  max_score:   2  num_vocab: 30002
+Total step:  36000  reward: 0.123  value: 10.312  entropy: 2.378  max_score:   4  num_vocab: 30002
+Total step:  37000  reward: 0.004  value: 0.007  entropy: 2.367  max_score:   1  num_vocab: 30002
+Total step:  38000  reward: 0.004  value: 0.006  entropy: 2.389  max_score:   1  num_vocab: 30002
+Total step:  39000  reward: 0.011  value: 0.020  entropy: 2.446  max_score:   2  num_vocab: 30002
+Total step:  40000  reward: 0.009  value: 0.011  entropy: 2.346  max_score:   3  num_vocab: 30002
+Total step:  41000  reward: -0.106  value: 24.553  entropy: 2.358  max_score:   2  num_vocab: 30002
+Total step:  42000  reward: 0.009  value: 0.022  entropy: 2.392  max_score:   2  num_vocab: 30002
+Total step:  43000  reward: -0.107  value: 20.990  entropy: 2.351  max_score:   2  num_vocab: 30002
+Total step:  44000  reward: 0.008  value: 0.013  entropy: 2.405  max_score:   2  num_vocab: 30002
+Total step:  45000  reward: 0.009  value: 0.015  entropy: 2.422  max_score:   2  num_vocab: 30002
+Total step:  46000  reward: 0.008  value: 0.011  entropy: 2.373  max_score:   2  num_vocab: 30002
+Total step:  47000  reward: 0.004  value: 0.006  entropy: 2.375  max_score:   2  num_vocab: 30002
+Total step:  48000  reward: 0.004  value: 0.009  entropy: 2.355  max_score:   1  num_vocab: 30002
+Total step:  49000  reward: -0.213  value: 37.737  entropy: 2.381  max_score:   2  num_vocab: 30002
+Total step:  50000  reward: -0.102  value: 5.534  entropy: 2.340  max_score:   2  num_vocab: 30002
+Total step:  51000  reward: 0.002  value: 0.003  entropy: 2.321  max_score:   1  num_vocab: 30002
+Total step:  52000  reward: 0.010  value: 0.017  entropy: 2.430  max_score:   2  num_vocab: 30002
+Total step:  53000  reward: 0.004  value: 0.011  entropy: 2.338  max_score:   2  num_vocab: 30002
+Total step:  54000  reward: 0.007  value: 0.008  entropy: 2.328  max_score:   3  num_vocab: 30002
+Total step:  55000  reward: 0.002  value: 0.002  entropy: 2.329  max_score:   1  num_vocab: 30002
+Total step:  56000  reward: 0.007  value: 0.011  entropy: 2.382  max_score:   2  num_vocab: 30002
+Total step:  57000  reward: 0.009  value: 0.012  entropy: 2.385  max_score:   2  num_vocab: 30002
+Total step:  58000  reward: 0.003  value: 0.007  entropy: 2.310  max_score:   2  num_vocab: 30002
+Total step:  59000  reward: 0.009  value: 0.013  entropy: 2.421  max_score:   2  num_vocab: 30002
+Total step:  60000  reward: 0.008  value: 0.011  entropy: 2.347  max_score:   2  num_vocab: 30002
+Total step:  61000  reward: 0.004  value: 0.007  entropy: 2.366  max_score:   1  num_vocab: 30002
+Total step:  62000  reward: -0.103  value: 13.519  entropy: 2.413  max_score:   2  num_vocab: 30002
+Total step:  63000  reward: 0.004  value: 0.006  entropy: 2.343  max_score:   1  num_vocab: 30002
+Total step:  64000  reward: 0.001  value: 0.002  entropy: 2.344  max_score:   1  num_vocab: 30002
+Total step:  65000  reward: 0.008  value: 0.014  entropy: 2.343  max_score:   2  num_vocab: 30002
+Total step:  66000  reward: 0.006  value: 0.006  entropy: 2.405  max_score:   1  num_vocab: 30002
+Total step:  67000  reward: 0.123  value: 24.510  entropy: 2.466  max_score:   3  num_vocab: 30002
+Total step:  68000  reward: 0.008  value: 0.013  entropy: 2.394  max_score:   3  num_vocab: 30002
+Total step:  69000  reward: 0.002  value: 0.004  entropy: 2.343  max_score:   1  num_vocab: 30002
+Total step:  70000  reward: 0.013  value: 0.024  entropy: 2.424  max_score:   2  num_vocab: 30002
+Total step:  71000  reward: 0.011  value: 0.022  entropy: 2.417  max_score:   2  num_vocab: 30002
+Total step:  72000  reward: -0.108  value: 13.646  entropy: 2.341  max_score:   2  num_vocab: 30002
+Total step:  73000  reward: 0.007  value: 0.012  entropy: 2.401  max_score:   2  num_vocab: 30002
+Total step:  74000  reward: 0.010  value: 0.014  entropy: 2.441  max_score:   2  num_vocab: 30002
+Total step:  75000  reward: -0.214  value: 41.300  entropy: 2.379  max_score:   3  num_vocab: 30002
+Total step:  76000  reward: 0.004  value: 0.005  entropy: 2.317  max_score:   2  num_vocab: 30002
+Total step:  77000  reward: 0.004  value: 0.006  entropy: 2.346  max_score:   2  num_vocab: 30002
+Total step:  78000  reward: 0.007  value: 0.012  entropy: 2.324  max_score:   1  num_vocab: 30002
+Total step:  79000  reward: 0.004  value: 0.009  entropy: 2.318  max_score:   1  num_vocab: 30002
+Total step:  80000  reward: -0.102  value: 23.632  entropy: 2.426  max_score:   3  num_vocab: 30002
+Total step:  81000  reward: 0.004  value: 0.008  entropy: 2.348  max_score:   2  num_vocab: 30002
+Total step:  82000  reward: -0.103  value: 20.945  entropy: 2.354  max_score:   2  num_vocab: 30002
+Total step:  83000  reward: 0.010  value: 0.021  entropy: 2.365  max_score:   3  num_vocab: 30002
+Total step:  84000  reward: 0.003  value: 0.005  entropy: 2.321  max_score:   2  num_vocab: 30002
+Total step:  85000  reward: 0.120  value: 17.120  entropy: 2.373  max_score:   3  num_vocab: 30002
+Total step:  86000  reward: 0.004  value: 0.005  entropy: 2.365  max_score:   1  num_vocab: 30002
+Total step:  87000  reward: 0.007  value: 0.011  entropy: 2.376  max_score:   2  num_vocab: 30002
+Total step:  88000  reward: 0.002  value: 0.004  entropy: 2.335  max_score:   1  num_vocab: 30002
+Total step:  89000  reward: 0.006  value: 0.008  entropy: 2.408  max_score:   2  num_vocab: 30002
+Total step:  90000  reward: 0.006  value: 0.008  entropy: 2.357  max_score:   2  num_vocab: 30002
+Total step:  91000  reward: 0.008  value: 0.010  entropy: 2.420  max_score:   1  num_vocab: 30002
+Total step:  92000  reward: 0.001  value: 0.001  entropy: 2.335  max_score:   1  num_vocab: 30002
+Total step:  93000  reward: 0.003  value: 0.004  entropy: 2.325  max_score:   1  num_vocab: 30002
+Total step:  94000  reward: 0.002  value: 0.004  entropy: 2.319  max_score:   1  num_vocab: 30002
+Total step:  95000  reward: 0.003  value: 0.005  entropy: 2.326  max_score:   1  num_vocab: 30002
+Total step:  96000  reward: 0.003  value: 0.004  entropy: 2.303  max_score:   2  num_vocab: 30002
+Total step:  97000  reward: 0.012  value: 0.019  entropy: 2.500  max_score:   2  num_vocab: 30002
+Total step:  98000  reward: 0.003  value: 0.006  entropy: 2.358  max_score:   1  num_vocab: 30002
+Total step:  99000  reward: -0.102  value: 24.778  entropy: 2.343  max_score:   3  num_vocab: 30002
+Total step: 100000  reward: 0.010  value: 0.013  entropy: 2.333  max_score:   2  num_vocab: 30002
+Average steps used: 99.64; Average normalized score: 0.17/1
+Total training time: 2027.9893636703491
+
+game_files: ['tw_single_games/tw-rewardsBalanced_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 0.70/3
+
+game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-101.z8']
+Average steps used: 100.00; Average score: 0.70/4
+
+game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-102.z8']
+Average steps used: 100.00; Average score: 0.30/3
+
+game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-104.z8']
+Average steps used: 100.00; Average score: 0.40/4
+
+game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-105.z8']
+Average steps used: 100.00; Average score: 0.70/4
+
+
+
+Training on multiple games------------------------------------------
+
+Total step:   1000  reward: -0.106  value: 23.516  entropy: 2.374  max_score:   2  num_vocab: 30002
+Total step:   2000  reward: 0.006  value: 0.009  entropy: 2.324  max_score:   3  num_vocab: 30002
+Total step:   3000  reward: 0.010  value: 0.015  entropy: 2.391  max_score:   3  num_vocab: 30002
+Total step:   4000  reward: 0.009  value: 0.013  entropy: 2.409  max_score:   2  num_vocab: 30002
+Total step:   5000  reward: 0.004  value: 0.004  entropy: 2.406  max_score:   1  num_vocab: 30002
+Total step:   6000  reward: 0.006  value: 0.009  entropy: 2.365  max_score:   1  num_vocab: 30002
+Total step:   7000  reward: 0.010  value: 0.013  entropy: 2.439  max_score:   2  num_vocab: 30002
+Total step:   8000  reward: 0.007  value: 0.012  entropy: 2.348  max_score:   3  num_vocab: 30002
+Total step:   9000  reward: 0.004  value: 0.008  entropy: 2.360  max_score:   2  num_vocab: 30002
+Total step:  10000  reward: 0.008  value: 0.012  entropy: 2.359  max_score:   2  num_vocab: 30002
+Total step:  11000  reward: 0.003  value: 0.007  entropy: 2.290  max_score:   1  num_vocab: 30002
+Total step:  12000  reward: 0.008  value: 0.010  entropy: 2.333  max_score:   3  num_vocab: 30002
+Total step:  13000  reward: -0.099  value: 5.580  entropy: 2.420  max_score:   2  num_vocab: 30002
+Total step:  14000  reward: 0.002  value: 0.003  entropy: 2.352  max_score:   1  num_vocab: 30002
+Total step:  15000  reward: 0.007  value: 0.010  entropy: 2.389  max_score:   2  num_vocab: 30002
+Total step:  16000  reward: -0.104  value: 18.755  entropy: 2.358  max_score:   2  num_vocab: 30002
+Total step:  17000  reward: 0.009  value: 0.011  entropy: 2.378  max_score:   2  num_vocab: 30002
+Total step:  18000  reward: 0.007  value: 0.012  entropy: 2.396  max_score:   2  num_vocab: 30002
+Total step:  19000  reward: 0.004  value: 0.006  entropy: 2.370  max_score:   2  num_vocab: 30002
+Total step:  20000  reward: 0.004  value: 0.010  entropy: 2.382  max_score:   2  num_vocab: 30002
+Total step:  21000  reward: 0.004  value: 0.006  entropy: 2.335  max_score:   2  num_vocab: 30002
+Total step:  22000  reward: 0.001  value: 0.002  entropy: 2.331  max_score:   1  num_vocab: 30002
+Total step:  23000  reward: -0.104  value: 22.575  entropy: 2.388  max_score:   2  num_vocab: 30002
+Total step:  24000  reward: 0.004  value: 0.008  entropy: 2.347  max_score:   2  num_vocab: 30002
+Total step:  25000  reward: 0.006  value: 0.009  entropy: 2.418  max_score:   2  num_vocab: 30002
+Total step:  26000  reward: -0.098  value: 16.515  entropy: 2.416  max_score:   2  num_vocab: 30002
+Total step:  27000  reward: 0.004  value: 0.006  entropy: 2.317  max_score:   2  num_vocab: 30002
+Total step:  28000  reward: -0.107  value: 16.640  entropy: 2.351  max_score:   2  num_vocab: 30002
+Total step:  29000  reward: 0.006  value: 0.011  entropy: 2.295  max_score:   2  num_vocab: 30002
+Total step:  30000  reward: 0.007  value: 0.009  entropy: 2.422  max_score:   2  num_vocab: 30002
+Total step:  31000  reward: 0.002  value: 0.003  entropy: 2.337  max_score:   1  num_vocab: 30002
+Total step:  32000  reward: 0.009  value: 0.019  entropy: 2.368  max_score:   2  num_vocab: 30002
+Total step:  33000  reward: 0.002  value: 0.003  entropy: 2.298  max_score:   1  num_vocab: 30002
+Total step:  34000  reward: -0.101  value: 18.742  entropy: 2.330  max_score:   3  num_vocab: 30002
+Total step:  35000  reward: 0.007  value: 0.009  entropy: 2.338  max_score:   2  num_vocab: 30002
+Total step:  36000  reward: 0.008  value: 0.015  entropy: 2.363  max_score:   2  num_vocab: 30002
+Total step:  37000  reward: 0.008  value: 0.011  entropy: 2.341  max_score:   2  num_vocab: 30002
+Total step:  38000  reward: 0.006  value: 0.011  entropy: 2.369  max_score:   2  num_vocab: 30002
+Total step:  39000  reward: 0.009  value: 0.014  entropy: 2.452  max_score:   2  num_vocab: 30002
+Total step:  40000  reward: 0.007  value: 0.010  entropy: 2.340  max_score:   1  num_vocab: 30002
+Total step:  41000  reward: 0.128  value: 17.135  entropy: 2.508  max_score:   3  num_vocab: 30002
+Total step:  42000  reward: 0.001  value: 0.001  entropy: 2.316  max_score:   1  num_vocab: 30002
+Total step:  43000  reward: 0.117  value: 24.698  entropy: 2.372  max_score:   3  num_vocab: 30002
+Total step:  44000  reward: 0.010  value: 0.019  entropy: 2.375  max_score:   3  num_vocab: 30002
+Total step:  45000  reward: 0.007  value: 0.009  entropy: 2.377  max_score:   3  num_vocab: 30002
+Total step:  46000  reward: 0.007  value: 0.008  entropy: 2.377  max_score:   2  num_vocab: 30002
+Total step:  47000  reward: -0.102  value: 20.463  entropy: 2.367  max_score:   2  num_vocab: 30002
+Total step:  48000  reward: 0.003  value: 0.005  entropy: 2.363  max_score:   1  num_vocab: 30002
+Total step:  49000  reward: 0.122  value: 10.363  entropy: 2.399  max_score:   3  num_vocab: 30002
+Total step:  50000  reward: 0.012  value: 0.021  entropy: 2.383  max_score:   2  num_vocab: 30002
+Total step:  51000  reward: -0.103  value: 20.752  entropy: 2.334  max_score:   2  num_vocab: 30002
+Total step:  52000  reward: 0.003  value: 0.005  entropy: 2.332  max_score:   2  num_vocab: 30002
+Total step:  53000  reward: 0.006  value: 0.009  entropy: 2.337  max_score:   1  num_vocab: 30002
+Total step:  54000  reward: 0.001  value: 0.003  entropy: 2.305  max_score:   1  num_vocab: 30002
+Total step:  55000  reward: -0.100  value: 24.858  entropy: 2.444  max_score:   2  num_vocab: 30002
+Total step:  56000  reward: 0.007  value: 0.010  entropy: 2.391  max_score:   2  num_vocab: 30002
+Total step:  57000  reward: 0.003  value: 0.005  entropy: 2.347  max_score:   1  num_vocab: 30002
+Total step:  58000  reward: 0.006  value: 0.008  entropy: 2.338  max_score:   2  num_vocab: 30002
+Total step:  59000  reward: 0.002  value: 0.003  entropy: 2.333  max_score:   2  num_vocab: 30002
+Total step:  60000  reward: 0.004  value: 0.010  entropy: 2.329  max_score:   2  num_vocab: 30002
+Total step:  61000  reward: 0.011  value: 0.017  entropy: 2.455  max_score:   2  num_vocab: 30002
+Total step:  62000  reward: -0.101  value: 20.978  entropy: 2.437  max_score:   3  num_vocab: 30002
+Total step:  63000  reward: 0.010  value: 0.017  entropy: 2.389  max_score:   2  num_vocab: 30002
+Total step:  64000  reward: 0.006  value: 0.007  entropy: 2.368  max_score:   2  num_vocab: 30002
+Total step:  65000  reward: 0.007  value: 0.010  entropy: 2.423  max_score:   1  num_vocab: 30002
+Total step:  66000  reward: 0.008  value: 0.008  entropy: 2.401  max_score:   2  num_vocab: 30002
+Total step:  67000  reward: -0.099  value: 20.668  entropy: 2.432  max_score:   2  num_vocab: 30002
+Total step:  68000  reward: -0.101  value: 13.701  entropy: 2.364  max_score:   3  num_vocab: 30002
+Total step:  69000  reward: 0.002  value: 0.004  entropy: 2.326  max_score:   3  num_vocab: 30002
+Total step:  70000  reward: 0.004  value: 0.003  entropy: 2.368  max_score:   1  num_vocab: 30002
+Total step:  71000  reward: 0.003  value: 0.005  entropy: 2.389  max_score:   1  num_vocab: 30002
+Total step:  72000  reward: 0.003  value: 0.004  entropy: 2.353  max_score:   1  num_vocab: 30002
+Total step:  73000  reward: 0.008  value: 0.006  entropy: 2.418  max_score:   2  num_vocab: 30002
+Total step:  74000  reward: 0.009  value: 0.013  entropy: 2.394  max_score:   2  num_vocab: 30002
+Total step:  75000  reward: 0.003  value: 0.004  entropy: 2.324  max_score:   2  num_vocab: 30002
+Total step:  76000  reward: 0.006  value: 0.005  entropy: 2.379  max_score:   2  num_vocab: 30002
+Total step:  77000  reward: 0.009  value: 0.015  entropy: 2.394  max_score:   2  num_vocab: 30002
+Total step:  78000  reward: 0.006  value: 0.007  entropy: 2.380  max_score:   2  num_vocab: 30002
+Total step:  79000  reward: 0.011  value: 0.020  entropy: 2.455  max_score:   2  num_vocab: 30002
+Total step:  80000  reward: 0.007  value: 0.014  entropy: 2.387  max_score:   2  num_vocab: 30002
+Total step:  81000  reward: 0.007  value: 0.010  entropy: 2.365  max_score:   2  num_vocab: 30002
+Total step:  82000  reward: 0.002  value: 0.002  entropy: 2.331  max_score:   1  num_vocab: 30002
+Total step:  83000  reward: 0.001  value: 0.003  entropy: 2.339  max_score:   1  num_vocab: 30002
+Total step:  84000  reward: 0.009  value: 0.015  entropy: 2.370  max_score:   2  num_vocab: 30002
+Total step:  85000  reward: 0.002  value: 0.004  entropy: 2.325  max_score:   1  num_vocab: 30002
+Total step:  86000  reward: -0.100  value: 20.778  entropy: 2.415  max_score:   3  num_vocab: 30002
+Total step:  87000  reward: 0.006  value: 0.007  entropy: 2.362  max_score:   2  num_vocab: 30002
+Total step:  88000  reward: 0.004  value: 0.006  entropy: 2.335  max_score:   2  num_vocab: 30002
+Total step:  89000  reward: 0.008  value: 0.010  entropy: 2.396  max_score:   3  num_vocab: 30002
+Total step:  90000  reward: 0.002  value: 0.003  entropy: 2.317  max_score:   1  num_vocab: 30002
+Total step:  91000  reward: 0.010  value: 0.014  entropy: 2.386  max_score:   2  num_vocab: 30002
+Total step:  92000  reward: 0.009  value: 0.011  entropy: 2.386  max_score:   2  num_vocab: 30002
+Total step:  93000  reward: 0.004  value: 0.005  entropy: 2.366  max_score:   2  num_vocab: 30002
+Total step:  94000  reward: 0.003  value: 0.005  entropy: 2.320  max_score:   1  num_vocab: 30002
+Total step:  95000  reward: -0.103  value: 19.040  entropy: 2.314  max_score:   2  num_vocab: 30002
+Total step:  96000  reward: 0.002  value: 0.003  entropy: 2.342  max_score:   1  num_vocab: 30002
+Total step:  97000  reward: 0.006  value: 0.012  entropy: 2.375  max_score:   2  num_vocab: 30002
+Total step:  98000  reward: 0.006  value: 0.006  entropy: 2.354  max_score:   2  num_vocab: 30002
+Total step:  99000  reward: 0.011  value: 0.017  entropy: 2.420  max_score:   3  num_vocab: 30002
+Total step: 100000  reward: 0.002  value: 0.003  entropy: 2.339  max_score:   1  num_vocab: 30002
+Average steps used: 99.60; Average normalized score: 0.17/1
+Total training time: 2054.094850540161
+
+
+game_files: ['tw_single_games/tw-rewardsBalanced_goalDetailed-1.z8']
+Average steps used: 100.00; Average score: 0.60/3
+
+
+
+** 100 tw-coin_collector games Level 1-100 **
+
+Training on multiple games------------------------------------------
+game_files: ['tw-coin_collector_games/tw-coin_collector_level-57.z8', 'tw-coin_collector_games/tw-coin_collector_level-67.z8', 'tw-coin_collector_games/tw-coin_collector_level-66.z8', 'tw-coin_collector_games/tw-coin_collector_level-92.z8', 'tw-coin_collector_games/tw-coin_collector_level-34.z8', 'tw-coin_collector_games/tw-coin_collector_level-55.z8', 'tw-coin_collector_games/tw-coin_collector_level-88.z8', 'tw-coin_collector_games/tw-coin_collector_level-44.z8', 'tw-coin_collector_games/tw-coin_collector_level-12.z8', 'tw-coin_collector_games/tw-coin_collector_level-60.z8', 'tw-coin_collector_games/tw-coin_collector_level-90.z8', 'tw-coin_collector_games/tw-coin_collector_level-22.z8', 'tw-coin_collector_games/tw-coin_collector_level-73.z8', 'tw-coin_collector_games/tw-coin_collector_level-100.z8', 'tw-coin_collector_games/tw-coin_collector_level-53.z8', 'tw-coin_collector_games/tw-coin_collector_level-50.z8', 'tw-coin_collector_games/tw-coin_collector_level-25.z8', 'tw-coin_collector_games/tw-coin_collector_level-86.z8', 'tw-coin_collector_games/tw-coin_collector_level-99.z8', 'tw-coin_collector_games/tw-coin_collector_level-1.z8', 'tw-coin_collector_games/tw-coin_collector_level-64.z8', 'tw-coin_collector_games/tw-coin_collector_level-97.z8', 'tw-coin_collector_games/tw-coin_collector_level-75.z8', 'tw-coin_collector_games/tw-coin_collector_level-35.z8', 'tw-coin_collector_games/tw-coin_collector_level-4.z8', 'tw-coin_collector_games/tw-coin_collector_level-77.z8', 'tw-coin_collector_games/tw-coin_collector_level-91.z8', 'tw-coin_collector_games/tw-coin_collector_level-82.z8', 'tw-coin_collector_games/tw-coin_collector_level-29.z8', 'tw-coin_collector_games/tw-coin_collector_level-80.z8', 'tw-coin_collector_games/tw-coin_collector_level-10.z8', 'tw-coin_collector_games/tw-coin_collector_level-32.z8', 'tw-coin_collector_games/tw-coin_collector_level-26.z8', 'tw-coin_collector_games/tw-coin_collector_level-5.z8', 'tw-coin_collector_games/tw-coin_collector_level-52.z8', 'tw-coin_collector_games/tw-coin_collector_level-31.z8', 'tw-coin_collector_games/tw-coin_collector_level-59.z8', 'tw-coin_collector_games/tw-coin_collector_level-87.z8', 'tw-coin_collector_games/tw-coin_collector_level-27.z8', 'tw-coin_collector_games/tw-coin_collector_level-63.z8', 'tw-coin_collector_games/tw-coin_collector_level-81.z8', 'tw-coin_collector_games/tw-coin_collector_level-40.z8', 'tw-coin_collector_games/tw-coin_collector_level-95.z8', 'tw-coin_collector_games/tw-coin_collector_level-51.z8', 'tw-coin_collector_games/tw-coin_collector_level-28.z8', 'tw-coin_collector_games/tw-coin_collector_level-48.z8', 'tw-coin_collector_games/tw-coin_collector_level-8.z8', 'tw-coin_collector_games/tw-coin_collector_level-68.z8', 'tw-coin_collector_games/tw-coin_collector_level-56.z8', 'tw-coin_collector_games/tw-coin_collector_level-36.z8', 'tw-coin_collector_games/tw-coin_collector_level-65.z8', 'tw-coin_collector_games/tw-coin_collector_level-84.z8', 'tw-coin_collector_games/tw-coin_collector_level-13.z8', 'tw-coin_collector_games/tw-coin_collector_level-42.z8', 'tw-coin_collector_games/tw-coin_collector_level-17.z8', 'tw-coin_collector_games/tw-coin_collector_level-74.z8', 'tw-coin_collector_games/tw-coin_collector_level-85.z8', 'tw-coin_collector_games/tw-coin_collector_level-45.z8', 'tw-coin_collector_games/tw-coin_collector_level-11.z8', 'tw-coin_collector_games/tw-coin_collector_level-24.z8', 'tw-coin_collector_games/tw-coin_collector_level-71.z8', 'tw-coin_collector_games/tw-coin_collector_level-79.z8', 'tw-coin_collector_games/tw-coin_collector_level-33.z8', 'tw-coin_collector_games/tw-coin_collector_level-62.z8', 'tw-coin_collector_games/tw-coin_collector_level-72.z8', 'tw-coin_collector_games/tw-coin_collector_level-58.z8', 'tw-coin_collector_games/tw-coin_collector_level-2.z8', 'tw-coin_collector_games/tw-coin_collector_level-19.z8', 'tw-coin_collector_games/tw-coin_collector_level-21.z8', 'tw-coin_collector_games/tw-coin_collector_level-49.z8', 'tw-coin_collector_games/tw-coin_collector_level-37.z8', 'tw-coin_collector_games/tw-coin_collector_level-16.z8', 'tw-coin_collector_games/tw-coin_collector_level-83.z8', 'tw-coin_collector_games/tw-coin_collector_level-93.z8', 'tw-coin_collector_games/tw-coin_collector_level-20.z8', 'tw-coin_collector_games/tw-coin_collector_level-47.z8', 'tw-coin_collector_games/tw-coin_collector_level-54.z8', 'tw-coin_collector_games/tw-coin_collector_level-46.z8', 'tw-coin_collector_games/tw-coin_collector_level-38.z8', 'tw-coin_collector_games/tw-coin_collector_level-23.z8', 'tw-coin_collector_games/tw-coin_collector_level-30.z8', 'tw-coin_collector_games/tw-coin_collector_level-15.z8', 'tw-coin_collector_games/tw-coin_collector_level-94.z8', 'tw-coin_collector_games/tw-coin_collector_level-76.z8', 'tw-coin_collector_games/tw-coin_collector_level-14.z8', 'tw-coin_collector_games/tw-coin_collector_level-61.z8', 'tw-coin_collector_games/tw-coin_collector_level-39.z8', 'tw-coin_collector_games/tw-coin_collector_level-78.z8', 'tw-coin_collector_games/tw-coin_collector_level-41.z8', 'tw-coin_collector_games/tw-coin_collector_level-6.z8', 'tw-coin_collector_games/tw-coin_collector_level-98.z8', 'tw-coin_collector_games/tw-coin_collector_level-96.z8', 'tw-coin_collector_games/tw-coin_collector_level-69.z8', 'tw-coin_collector_games/tw-coin_collector_level-9.z8', 'tw-coin_collector_games/tw-coin_collector_level-7.z8', 'tw-coin_collector_games/tw-coin_collector_level-18.z8', 'tw-coin_collector_games/tw-coin_collector_level-70.z8', 'tw-coin_collector_games/tw-coin_collector_level-3.z8', 'tw-coin_collector_games/tw-coin_collector_level-43.z8', 'tw-coin_collector_games/tw-coin_collector_level-89.z8']
+Total step:   1000  reward: 0.000  value: 0.000  entropy: 1.328  max_score:   0  num_vocab: 30002
+Total step:   2000  reward: 0.112  value: 25.345  entropy: 1.344  max_score:   1  num_vocab: 30002
+Total step:   3000  reward: 0.112  value: 25.351  entropy: 1.344  max_score:   1  num_vocab: 30002
+Total step:   4000  reward: 0.112  value: 22.987  entropy: 1.361  max_score:   1  num_vocab: 30002
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.326  max_score:   0  num_vocab: 30002
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.323  max_score:   0  num_vocab: 30002
+Total step:   7000  reward: 0.112  value: 24.295  entropy: 1.324  max_score:   1  num_vocab: 30002
+Total step:   8000  reward: 0.000  value: 0.000  entropy: 1.346  max_score:   1  num_vocab: 30002
+Total step:   9000  reward: 0.112  value: 5.665  entropy: 1.351  max_score:   1  num_vocab: 30002
+Total step:  10000  reward: 0.224  value: 44.727  entropy: 1.335  max_score:   1  num_vocab: 30002
+Total step:  11000  reward: 0.000  value: 0.001  entropy: 1.334  max_score:   0  num_vocab: 30002
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.335  max_score:   0  num_vocab: 30002
+Total step:  13000  reward: 0.112  value: 24.283  entropy: 1.332  max_score:   1  num_vocab: 30002
+Total step:  14000  reward: 0.112  value: 22.977  entropy: 1.357  max_score:   1  num_vocab: 30002
+Total step:  15000  reward: 0.224  value: 44.721  entropy: 1.328  max_score:   1  num_vocab: 30002
+Total step:  16000  reward: 0.000  value: 0.002  entropy: 1.326  max_score:   0  num_vocab: 30002
+Total step:  17000  reward: 0.112  value: 13.952  entropy: 1.358  max_score:   1  num_vocab: 30002
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.325  max_score:   0  num_vocab: 30002
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002
+Total step:  21000  reward: 0.000  value: 0.000  entropy: 1.326  max_score:   0  num_vocab: 30002
+Total step:  22000  reward: 0.112  value: 5.656  entropy: 1.321  max_score:   1  num_vocab: 30002
+Total step:  23000  reward: 0.112  value: 16.949  entropy: 1.336  max_score:   1  num_vocab: 30002
+Total step:  24000  reward: 0.112  value: 16.915  entropy: 1.317  max_score:   1  num_vocab: 30002
+Total step:  25000  reward: 0.000  value: 0.001  entropy: 1.334  max_score:   0  num_vocab: 30002
+Total step:  26000  reward: 0.112  value: 24.069  entropy: 1.320  max_score:   1  num_vocab: 30002
+Total step:  27000  reward: 0.000  value: 0.000  entropy: 1.329  max_score:   0  num_vocab: 30002
+Total step:  28000  reward: 0.000  value: 0.000  entropy: 1.351  max_score:   0  num_vocab: 30002
+Total step:  29000  reward: 0.112  value: 10.216  entropy: 1.344  max_score:   1  num_vocab: 30002
+Total step:  30000  reward: 0.112  value: 24.263  entropy: 1.334  max_score:   1  num_vocab: 30002
+Total step:  31000  reward: 0.224  value: 28.571  entropy: 1.331  max_score:   1  num_vocab: 30002
+Total step:  32000  reward: 0.112  value: 22.480  entropy: 1.323  max_score:   1  num_vocab: 30002
+Total step:  33000  reward: 0.000  value: 0.000  entropy: 1.337  max_score:   0  num_vocab: 30002
+Total step:  34000  reward: 0.224  value: 48.199  entropy: 1.332  max_score:   1  num_vocab: 30002
+Total step:  35000  reward: 0.000  value: 0.001  entropy: 1.337  max_score:   0  num_vocab: 30002
+Total step:  36000  reward: 0.112  value: 19.047  entropy: 1.345  max_score:   1  num_vocab: 30002
+Total step:  37000  reward: 0.000  value: 0.001  entropy: 1.317  max_score:   0  num_vocab: 30002
+Total step:  38000  reward: 0.112  value: 9.974  entropy: 1.324  max_score:   1  num_vocab: 30002
+Total step:  39000  reward: 0.112  value: 25.405  entropy: 1.331  max_score:   1  num_vocab: 30002
+Total step:  40000  reward: 0.112  value: 24.521  entropy: 1.336  max_score:   1  num_vocab: 30002
+Total step:  41000  reward: 0.112  value: 13.313  entropy: 1.344  max_score:   1  num_vocab: 30002
+Total step:  42000  reward: 0.337  value: 48.347  entropy: 1.347  max_score:   1  num_vocab: 30002
+Total step:  43000  reward: 0.000  value: 0.001  entropy: 1.349  max_score:   0  num_vocab: 30002
+Total step:  44000  reward: 0.000  value: 0.000  entropy: 1.324  max_score:   0  num_vocab: 30002
+Total step:  45000  reward: 0.000  value: 0.000  entropy: 1.351  max_score:   0  num_vocab: 30002
+Total step:  46000  reward: 0.112  value: 24.152  entropy: 1.357  max_score:   1  num_vocab: 30002
+Total step:  47000  reward: 0.224  value: 34.361  entropy: 1.330  max_score:   1  num_vocab: 30002
+Total step:  48000  reward: 0.000  value: 0.000  entropy: 1.317  max_score:   0  num_vocab: 30002
+Total step:  49000  reward: 0.224  value: 46.011  entropy: 1.350  max_score:   1  num_vocab: 30002
+Total step:  50000  reward: 0.224  value: 34.673  entropy: 1.354  max_score:   1  num_vocab: 30002
+Total step:  51000  reward: 0.112  value: 21.101  entropy: 1.335  max_score:   1  num_vocab: 30002
+Total step:  52000  reward: 0.112  value: 16.211  entropy: 1.344  max_score:   1  num_vocab: 30002
+Total step:  53000  reward: 0.000  value: 0.049  entropy: 1.350  max_score:   0  num_vocab: 30002
+Total step:  54000  reward: 0.000  value: 0.054  entropy: 1.345  max_score:   0  num_vocab: 30002
+Total step:  55000  reward: 0.000  value: 0.000  entropy: 1.325  max_score:   0  num_vocab: 30002
+Total step:  56000  reward: 0.000  value: 0.000  entropy: 1.329  max_score:   0  num_vocab: 30002
+Total step:  57000  reward: 0.000  value: 0.000  entropy: 1.347  max_score:   0  num_vocab: 30002
+Total step:  58000  reward: 0.000  value: 0.000  entropy: 1.337  max_score:   0  num_vocab: 30002
+Total step:  59000  reward: 0.000  value: 0.000  entropy: 1.333  max_score:   0  num_vocab: 30002
+Total step:  60000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002
+Total step:  61000  reward: 0.000  value: 0.000  entropy: 1.328  max_score:   0  num_vocab: 30002
+Total step:  62000  reward: 0.112  value: 23.855  entropy: 1.343  max_score:   1  num_vocab: 30002
+Total step:  63000  reward: 0.224  value: 34.754  entropy: 1.350  max_score:   1  num_vocab: 30002
+Total step:  64000  reward: 0.000  value: 0.000  entropy: 1.334  max_score:   0  num_vocab: 30002
+Total step:  65000  reward: 0.112  value: 9.533  entropy: 1.315  max_score:   1  num_vocab: 30002
+Total step:  66000  reward: 0.224  value: 43.027  entropy: 1.345  max_score:   1  num_vocab: 30002
+Total step:  67000  reward: 0.000  value: 0.000  entropy: 1.322  max_score:   0  num_vocab: 30002
+Total step:  68000  reward: 0.112  value: 12.783  entropy: 1.331  max_score:   1  num_vocab: 30002
+Total step:  69000  reward: 0.224  value: 28.518  entropy: 1.335  max_score:   1  num_vocab: 30002
+Total step:  70000  reward: 0.000  value: 0.000  entropy: 1.335  max_score:   0  num_vocab: 30002
+Total step:  71000  reward: 0.112  value: 22.648  entropy: 1.346  max_score:   1  num_vocab: 30002
+Total step:  72000  reward: 0.000  value: 0.076  entropy: 1.358  max_score:   1  num_vocab: 30002
+Total step:  73000  reward: 0.000  value: 0.020  entropy: 1.355  max_score:   0  num_vocab: 30002
+Total step:  74000  reward: 0.112  value: 20.200  entropy: 1.328  max_score:   1  num_vocab: 30002
+Total step:  75000  reward: 0.000  value: 0.000  entropy: 1.340  max_score:   0  num_vocab: 30002
+Total step:  76000  reward: 0.112  value: 22.669  entropy: 1.325  max_score:   1  num_vocab: 30002
+Total step:  77000  reward: 0.337  value: 41.614  entropy: 1.364  max_score:   1  num_vocab: 30002
+Total step:  78000  reward: 0.337  value: 54.960  entropy: 1.341  max_score:   1  num_vocab: 30002
+Total step:  79000  reward: 0.000  value: 0.006  entropy: 1.333  max_score:   0  num_vocab: 30002
+Total step:  80000  reward: 0.000  value: 0.000  entropy: 1.336  max_score:   0  num_vocab: 30002
+Total step:  81000  reward: 0.000  value: 0.065  entropy: 1.348  max_score:   1  num_vocab: 30002
+Total step:  82000  reward: 0.000  value: 0.000  entropy: 1.347  max_score:   0  num_vocab: 30002
+Total step:  83000  reward: 0.224  value: 30.657  entropy: 1.349  max_score:   1  num_vocab: 30002
+Total step:  84000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002
+Total step:  85000  reward: 0.000  value: 0.000  entropy: 1.335  max_score:   0  num_vocab: 30002
+Total step:  86000  reward: 0.000  value: 0.000  entropy: 1.314  max_score:   0  num_vocab: 30002
+Total step:  87000  reward: 0.000  value: 0.000  entropy: 1.348  max_score:   0  num_vocab: 30002
+Total step:  88000  reward: 0.112  value: 5.379  entropy: 1.341  max_score:   1  num_vocab: 30002
+Total step:  89000  reward: 0.000  value: 0.018  entropy: 1.345  max_score:   0  num_vocab: 30002
+Total step:  90000  reward: 0.112  value: 9.531  entropy: 1.337  max_score:   1  num_vocab: 30002
+Total step:  91000  reward: 0.112  value: 21.897  entropy: 1.351  max_score:   1  num_vocab: 30002
+Total step:  92000  reward: 0.000  value: 0.000  entropy: 1.326  max_score:   0  num_vocab: 30002
+Total step:  93000  reward: 0.224  value: 41.137  entropy: 1.352  max_score:   1  num_vocab: 30002
+Total step:  94000  reward: 0.337  value: 59.587  entropy: 1.341  max_score:   1  num_vocab: 30002
+Total step:  95000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002
+Average steps used: 94.94; Average normalized score: 0.07/1
+Total training time: 1054.9884805679321
+
+Tests
+
+['tw_single_games/tw-coin_collector_level-1.z8']
+Average steps used: 3.70; Average score: 1.00/1
+
+['tw_single_games/tw-coin_collector_level-2.z8']
+Average steps used: 10.30; Average score: 1.00/1
+
+['tw_single_games/tw-coin_collector_level-3.z8']
+Average steps used: 23.40; Average score: 1.00/1
+
+['tw_single_games/tw-coin_collector_level-4.z8']
+Average steps used: 31.40; Average score: 1.00/1
+
+['tw_single_games/tw-coin_collector_level-5.z8']
+Average steps used: 43.90; Average score: 0.90/1
+
+['tw_single_games/tw-coin_collector_level-6.z8']
+Average steps used: 50.50; Average score: 0.90/1
+
+['tw_single_games/tw-coin_collector_level-7.z8']
+Average steps used: 86.50; Average score: 0.30/1
+
+['tw_single_games/tw-coin_collector_level-8.z8']
+Average steps used: 76.40; Average score: 0.50/1
+
+['tw_single_games/tw-coin_collector_level-9.z8']
+Average steps used: 87.80; Average score: 0.30/1
+
+['tw_single_games/tw-coin_collector_level-10.z8']
+Average steps used: 92.00; Average score: 0.20/1
+
+['tw_single_games/tw-coin_collector_level-11.z8']
+Average steps used: 92.00; Average score: 0.20/1
+
+['tw_single_games/tw-coin_collector_level-12.z8']
+Average steps used: 92.10; Average score: 0.20/1
+
+['tw_single_games/tw-coin_collector_level-13.z8']
+Average steps used: 100.00; Average score: 0.00/1
+
+['tw_single_games/tw-coin_collector_level-14.z8']
+Average steps used: 100.00; Average score: 0.00/1
+
+['tw_single_games/tw-coin_collector_level-15.z8']
+Average steps used: 100.00; Average score: 0.00/1
+
+['tw_single_games/tw-coin_collector_level-16.z8']
+Average steps used: 100.00; Average score: 0.00/1
+
+
+
+** 150 Treasure Hunter games 5 games for each level (30 levels total) **
+
+Forgot to record Traning logs...
+
+Tests:
+['tw-treasure_hunter_test/tw-treasure_hunter_level-1.z8']
+Average steps used: 18.00; Average score: 0.70/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-2.z8']
+Average steps used: 17.00; Average score: 0.80/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-3.z8']
+Average steps used: 15.00; Average score: 0.60/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-4.z8']
+Average steps used: 18.80; Average score: 0.70/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-5.z8']
+Average steps used: 32.60; Average score: 0.50/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-6.z8']
+Average steps used: 45.20; Average score: 0.50/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-7.z8']
+Average steps used: 31.10; Average score: 0.50/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-8.z8']
+Average steps used: 50.60; Average score: 0.70/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-9.z8']
+Average steps used: 31.20; Average score: 0.40/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-10.z8']
+Average steps used: 40.60; Average score: 0.40/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-11.z8']
+Average steps used: 76.50; Average score: 0.40/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-12.z8']
+Average steps used: 60.20; Average score: 0.50/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-13.z8']
+Average steps used: 81.00; Average score: 0.10/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-14.z8']
+Average steps used: 69.20; Average score: 0.10/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-14.z8']
+Average steps used: 69.20; Average score: 0.10/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-15.z8']
+Average steps used: 73.50; Average score: 0.60/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-16.z8']
+Average steps used: 83.90; Average score: 0.00/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-17.z8']
+Average steps used: 98.80; Average score: 0.10/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-18.z8']
+Average steps used: 20.70; Average score: 0.00/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-19.z8']
+Average steps used: 85.20; Average score: 0.10/1
+
+['tw-treasure_hunter_test/tw-treasure_hunter_level-20.z8']
+Average steps used: 97.10; Average score: 0.10/1
