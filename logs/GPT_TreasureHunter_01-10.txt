@@ -1,0 +1,240 @@
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-1.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-1.z8']\
+Average steps used: 11.60; Average score: 0.80/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-1.z8']\
+Average steps used: 10.60; Average score: 0.80/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-1.z8']\
+Total step:   1000  reward: 4.511  value: 1522.620  entropy: 1.583  max_score:   1  num_vocab: 30002\
+Average steps used: 5.60; Average score: 0.84/1\
+Total training time: 78.03708505630493\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-1.z8']\
+Average steps used: 3.50; Average score: 0.90/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-2.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-2.z8']\
+Average steps used: 6.80; Average score: 0.90/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-2.z8']\
+Average steps used: 10.60; Average score: 0.80/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-2.z8']\
+Total step:   1000  reward: 4.511  value: 1522.620  entropy: 1.583  max_score:   1  num_vocab: 30002\
+Average steps used: 5.60; Average score: 0.84/1\
+Total training time: 77.94643926620483\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-2.z8']\
+Average steps used: 3.50; Average score: 0.90/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-3.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-3.z8']\
+Average steps used: 15.20; Average score: 0.50/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-3.z8']\
+Average steps used: 25.00; Average score: 0.20/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-3.z8']\
+Total step:   1000  reward: -0.538  value: 637.355  entropy: 1.541  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: -0.432  value: 410.112  entropy: 1.518  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.684  value: 418.729  entropy: 1.522  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.016  value: 511.051  entropy: 1.551  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.796  value: 389.922  entropy: 1.543  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: -0.984  value: 722.823  entropy: 1.528  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 2.589  value: 616.068  entropy: 1.504  max_score:   1  num_vocab: 30002\
+Average steps used: 25.26; Average score: 0.61/1\
+Total training time: 285.85587453842163\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-3.z8']\
+Average steps used: 14.60; Average score: 1.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-4.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-4.z8']\
+Average steps used: 14.80; Average score: 0.60/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-4.z8']\
+Average steps used: 25.00; Average score: 0.20/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-4.z8']\
+Total step:   1000  reward: -0.538  value: 637.355  entropy: 1.541  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: -0.432  value: 410.112  entropy: 1.518  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.684  value: 418.729  entropy: 1.522  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.016  value: 511.051  entropy: 1.551  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.796  value: 389.922  entropy: 1.543  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: -0.984  value: 722.823  entropy: 1.528  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 2.589  value: 616.068  entropy: 1.504  max_score:   1  num_vocab: 30002\
+Average steps used: 25.26; Average score: 0.61/1\
+Total training time: 283.3148262500763\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-4.z8']\
+Average steps used: 14.60; Average score: 1.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-5.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-5.z8']\
+Average steps used: 13.20; Average score: 0.40/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-5.z8']\
+Average steps used: 18.00; Average score: 0.50/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-5.z8']\
+Total step:   1000  reward: -0.433  value: 428.247  entropy: 1.523  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: -0.769  value: 390.387  entropy: 1.511  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.574  value: 533.095  entropy: 1.522  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.577  value: 505.475  entropy: 1.523  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.243  value: 697.449  entropy: 1.529  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.356  value: 711.597  entropy: 1.527  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 1.810  value: 708.181  entropy: 1.508  max_score:   1  num_vocab: 30002\
+Average steps used: 25.03; Average score: 0.59/1\
+Total training time: 280.1638174057007\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-5.z8']\
+Average steps used: 11.20; Average score: 1.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-6.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-6.z8']\
+Average steps used: 17.10; Average score: 0.40/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-6.z8']\
+Average steps used: 18.00; Average score: 0.50/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-6.z8']\
+Total step:   1000  reward: -0.433  value: 428.247  entropy: 1.523  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: -0.769  value: 390.387  entropy: 1.511  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.574  value: 533.095  entropy: 1.522  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.577  value: 505.475  entropy: 1.523  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.243  value: 697.449  entropy: 1.529  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.356  value: 711.597  entropy: 1.527  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 1.810  value: 708.181  entropy: 1.508  max_score:   1  num_vocab: 30002\
+Average steps used: 25.03; Average score: 0.59/1\
+Total training time: 280.26359963417053\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-6.z8']\
+Average steps used: 11.20; Average score: 1.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-7.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-7.z8']\
+Average steps used: 11.00; Average score: 0.40/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-7.z8']\
+Average steps used: 15.20; Average score: 0.30/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-7.z8']\
+Total step:   1000  reward: -0.877  value: 535.034  entropy: 1.483  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: -0.316  value: 613.339  entropy: 1.516  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.684  value: 516.426  entropy: 1.515  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.458  value: 316.716  entropy: 1.498  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 1.018  value: 364.474  entropy: 1.486  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 2.920  value: 494.120  entropy: 1.461  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 3.820  value: 601.542  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 5.389  value: 846.748  entropy: 1.315  max_score:   1  num_vocab: 30002\
+Average steps used: 26.42; Average score: 0.73/1\
+Total training time: 293.8185176849365\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-7.z8']\
+Average steps used: 14.80; Average score: 1.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-8.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-8.z8']\
+Average steps used: 29.00; Average score: 0.20/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-8.z8']\
+Average steps used: 15.20; Average score: 0.30/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-8.z8']\
+Total step:   1000  reward: -0.877  value: 535.034  entropy: 1.483  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: -0.316  value: 613.339  entropy: 1.516  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.684  value: 516.426  entropy: 1.515  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.458  value: 316.716  entropy: 1.498  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 1.018  value: 364.474  entropy: 1.486  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 2.920  value: 494.120  entropy: 1.461  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 3.820  value: 601.542  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 5.389  value: 846.748  entropy: 1.315  max_score:   1  num_vocab: 30002\
+Average steps used: 26.42; Average score: 0.73/1\
+Total training time: 291.2574646472931\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-8.z8']\
+Average steps used: 14.80; Average score: 1.00/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-9.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-9.z8']\
+Average steps used: 18.90; Average score: 0.40/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-9.z8']\
+Average steps used: 10.30; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-9.z8']\
+Total step:   1000  reward: -1.424  value: 828.389  entropy: 1.567  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: -0.652  value: 544.979  entropy: 1.543  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.348  value: 326.013  entropy: 1.527  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.462  value: 563.031  entropy: 1.531  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: -0.212  value: 412.589  entropy: 1.494  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.798  value: 439.659  entropy: 1.522  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 2.366  value: 614.039  entropy: 1.499  max_score:   1  num_vocab: 30002\
+Average steps used: 25.25; Average score: 0.56/1\
+Total training time: 278.78683400154114\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-9.z8']\
+Average steps used: 17.70; Average score: 0.90/1\
+----------------------------------------------------------------------\
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw-games/tw-treasure_hunter_level-10.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-10.z8']\
+Average steps used: 12.10; Average score: 0.50/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-10.z8']\
+Average steps used: 10.30; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-10.z8']\
+Total step:   1000  reward: -1.424  value: 828.389  entropy: 1.567  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: -0.652  value: 544.979  entropy: 1.543  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.348  value: 326.013  entropy: 1.527  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.462  value: 563.031  entropy: 1.531  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: -0.212  value: 412.589  entropy: 1.494  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.798  value: 439.659  entropy: 1.522  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 2.366  value: 614.039  entropy: 1.499  max_score:   1  num_vocab: 30002\
+Average steps used: 25.25; Average score: 0.56/1\
+Total training time: 279.2817096710205\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw-games/tw-treasure_hunter_level-10.z8']\
+Average steps used: 17.70; Average score: 0.90/1\
+----------------------------------------------------------------------}
