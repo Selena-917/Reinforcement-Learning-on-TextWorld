@@ -1,0 +1,49 @@
+Namespace(model_type='bert_gru', play_method='single', single_gamefile='tw_single_games/tw-rewardsDense_goalDetailed-1.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']\
+Average steps used: 93.90; Average score: 4.70/8\
+----------------------------------------------------------------------\
+\
+NLP Agent BERT GRU (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']\
+Downloading (\'85)solve/main/vocab.txt: 100% 232k/232k [00:00<00:00, 1.75MB/s]\
+Downloading (\'85)okenizer_config.json: 100% 28.0/28.0 [00:00<00:00, 10.8kB/s]\
+Average steps used: 100.00; Average score: 2.90/8\
+\
+NLP Agent BERT GRU (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']\
+Total step:   1000  reward: 0.047  value: 0.081  entropy: 2.367  max_score:   7  num_vocab: 30002\
+Total step:   2000  reward: 0.058  value: 0.086  entropy: 2.436  max_score:   7  num_vocab: 30002\
+Total step:   3000  reward: 0.059  value: 0.113  entropy: 2.415  max_score:   7  num_vocab: 30002\
+Total step:   4000  reward: -0.157  value: 41.537  entropy: 2.477  max_score:   7  num_vocab: 30002\
+Total step:   5000  reward: -0.144  value: 10.960  entropy: 2.409  max_score:   7  num_vocab: 30002\
+Total step:   6000  reward: -0.042  value: 13.765  entropy: 2.426  max_score:   7  num_vocab: 30002\
+Total step:   7000  reward: 0.068  value: 33.773  entropy: 2.333  max_score:   8  num_vocab: 30002\
+Total step:   8000  reward: 0.082  value: 45.050  entropy: 2.470  max_score:   8  num_vocab: 30002\
+Total step:   9000  reward: -0.146  value: 31.938  entropy: 2.393  max_score:   7  num_vocab: 30002\
+Total step:  10000  reward: 0.186  value: 25.178  entropy: 2.452  max_score:   8  num_vocab: 30002\
+Total step:  11000  reward: 0.069  value: 0.133  entropy: 2.448  max_score:   7  num_vocab: 30002\
+Total step:  12000  reward: -0.138  value: 40.516  entropy: 2.417  max_score:   7  num_vocab: 30002\
+Total step:  13000  reward: 0.072  value: 42.439  entropy: 2.390  max_score:   8  num_vocab: 30002\
+Total step:  14000  reward: 0.190  value: 10.698  entropy: 2.403  max_score:   8  num_vocab: 30002\
+Total step:  15000  reward: 0.193  value: 5.986  entropy: 2.344  max_score:   8  num_vocab: 30002\
+Total step:  16000  reward: 0.191  value: 25.658  entropy: 2.360  max_score:   8  num_vocab: 30002\
+Total step:  17000  reward: -0.038  value: 21.972  entropy: 2.421  max_score:   7  num_vocab: 30002\
+Total step:  18000  reward: -0.033  value: 23.492  entropy: 2.457  max_score:   7  num_vocab: 30002\
+Total step:  19000  reward: 0.300  value: 38.065  entropy: 2.407  max_score:   8  num_vocab: 30002\
+Total step:  20000  reward: -0.137  value: 43.758  entropy: 2.461  max_score:   7  num_vocab: 30002\
+Total step:  21000  reward: 0.417  value: 66.442  entropy: 2.383  max_score:   8  num_vocab: 30002\
+Total step:  22000  reward: -0.033  value: 47.495  entropy: 2.316  max_score:   8  num_vocab: 30002\
+Total step:  23000  reward: 0.197  value: 41.112  entropy: 2.428  max_score:   8  num_vocab: 30002\
+Total step:  24000  reward: 0.074  value: 0.145  entropy: 2.445  max_score:   7  num_vocab: 30002\
+Total step:  25000  reward: -0.256  value: 53.205  entropy: 2.430  max_score:   7  num_vocab: 30002\
+Total step:  26000  reward: -0.356  value: 84.748  entropy: 2.355  max_score:   7  num_vocab: 30002\
+Total step:  27000  reward: -0.021  value: 62.865  entropy: 2.309  max_score:   8  num_vocab: 30002\
+Total step:  28000  reward: -0.034  value: 20.404  entropy: 2.330  max_score:   7  num_vocab: 30002\
+Average steps used: 94.09; Average score: 6.45/8\
+Total training time: 12248.59707570076\
+\
+NLP Agent BERT GRU (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-rewardsDense_goalDetailed-1.z8']\
+Average steps used: 93.90; Average score: 6.70/8\
+----------------------------------------------------------------------}
