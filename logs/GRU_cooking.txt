@@ -1,0 +1,133 @@
+Namespace(model_type='gru', play_method='single', single_gamefile='./tw-games/tw-cooking_Recipe-1_Take-1_Go-1_open.z8', multiple_games_folder='tw-simple_games/', dqn=False)
+Random Agent (do random action) --------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-1_Take-1_Go-1_open.z8']
+Average steps used: 67.10; Average score: 1.20/3
+----------------------------------------------------------------------
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-1_Take-1_Go-1_open.z8']
+Average steps used: 72.50; Average score: 1.10/3
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-1_Take-1_Go-1_open.z8']
+Total step:   1000  reward: -0.093  value: 52.379  entropy: 3.078  max_score:   3  num_vocab: 30002
+Total step:   2000  reward: -1.099  value: 183.878  entropy: 3.037  max_score:   2  num_vocab: 30002
+Total step:   3000  reward: -0.983  value: 108.705  entropy: 2.937  max_score:   2  num_vocab: 30002
+Total step:   4000  reward: -0.656  value: 126.662  entropy: 2.949  max_score:   1  num_vocab: 30002
+Total step:   5000  reward: -0.544  value: 91.373  entropy: 2.936  max_score:   2  num_vocab: 30002
+Total step:   6000  reward: -0.323  value: 63.301  entropy: 3.019  max_score:   1  num_vocab: 30002
+Total step:   7000  reward: -0.216  value: 28.984  entropy: 3.048  max_score:   1  num_vocab: 30002
+Total step:   8000  reward: 0.130  value: 103.169  entropy: 2.976  max_score:   3  num_vocab: 30002
+Total step:   9000  reward: -0.654  value: 102.764  entropy: 2.992  max_score:   2  num_vocab: 30002
+Total step:  10000  reward: -0.648  value: 143.313  entropy: 3.054  max_score:   3  num_vocab: 30002
+Total step:  11000  reward: -0.313  value: 145.749  entropy: 2.981  max_score:   3  num_vocab: 30002
+Total step:  12000  reward: -0.319  value: 83.608  entropy: 2.941  max_score:   3  num_vocab: 30002
+Total step:  13000  reward: -0.312  value: 165.460  entropy: 2.959  max_score:   3  num_vocab: 30002
+Total step:  14000  reward: -0.322  value: 57.517  entropy: 2.906  max_score:   1  num_vocab: 30002
+Total step:  15000  reward: -0.097  value: 34.314  entropy: 2.980  max_score:   3  num_vocab: 30002
+Total step:  16000  reward: -0.100  value: 50.940  entropy: 3.008  max_score:   3  num_vocab: 30002
+Average steps used: 79.33; Average score: 1.04/3
+Total training time: 373.06310772895813
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-1_Take-1_Go-1_open.z8']
+Average steps used: 89.50; Average score: 1.00/3
+----------------------------------------------------------------------
+
+
+Namespace(model_type='gru', play_method='single', single_gamefile='./tw-games/tw-cooking_Recipe-2_Take-1_Go-1_open.z8', multiple_games_folder='tw-simple_games/', dqn=False)
+Random Agent (do random action) --------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-2_Take-1_Go-1_open.z8']
+Average steps used: 67.40; Average score: 1.60/4
+----------------------------------------------------------------------
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-2_Take-1_Go-1_open.z8']
+Average steps used: 59.80; Average score: 1.30/4
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-2_Take-1_Go-1_open.z8']
+Total step:   1000  reward: -0.870  value: 171.870  entropy: 3.040  max_score:   2  num_vocab: 30002
+Total step:   2000  reward: -1.304  value: 163.236  entropy: 3.035  max_score:   4  num_vocab: 30002
+Total step:   3000  reward: -0.761  value: 135.992  entropy: 3.031  max_score:   2  num_vocab: 30002
+Total step:   4000  reward: -0.759  value: 128.865  entropy: 3.030  max_score:   2  num_vocab: 30002
+Total step:   5000  reward: -1.200  value: 173.052  entropy: 3.029  max_score:   2  num_vocab: 30002
+Total step:   6000  reward: -0.538  value: 68.656  entropy: 3.025  max_score:   3  num_vocab: 30002
+Total step:   7000  reward: -1.092  value: 211.303  entropy: 3.015  max_score:   3  num_vocab: 30002
+Total step:   8000  reward: -0.649  value: 131.344  entropy: 2.964  max_score:   2  num_vocab: 30002
+Total step:   9000  reward: -0.652  value: 88.810  entropy: 2.988  max_score:   2  num_vocab: 30002
+Total step:  10000  reward: -0.977  value: 164.549  entropy: 3.095  max_score:   3  num_vocab: 30002
+Total step:  11000  reward: -0.978  value: 155.012  entropy: 2.971  max_score:   3  num_vocab: 30002
+Total step:  12000  reward: -0.538  value: 53.519  entropy: 2.987  max_score:   2  num_vocab: 30002
+Total step:  13000  reward: -0.981  value: 164.153  entropy: 3.104  max_score:   2  num_vocab: 30002
+Total step:  14000  reward: -0.866  value: 154.714  entropy: 3.135  max_score:   2  num_vocab: 30002
+Average steps used: 70.39; Average score: 1.28/4
+Total training time: 341.1519567966461
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-2_Take-1_Go-1_open.z8']
+Average steps used: 86.90; Average score: 1.50/4
+----------------------------------------------------------------------
+
+
+Namespace(model_type='gru', play_method='single', single_gamefile='./tw-games/tw-cooking_Recipe-2_Take-2_Go-1_open_cook.z8', multiple_games_folder='tw-simple_games/', dqn=False)
+Random Agent (do random action) --------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-2_Take-2_Go-1_open_cook.z8']
+Average steps used: 48.40; Average score: 2.00/6
+----------------------------------------------------------------------
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-2_Take-2_Go-1_open_cook.z8']
+Average steps used: 33.20; Average score: 2.00/6
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-2_Take-2_Go-1_open_cook.z8']
+Total step:   1000  reward: -1.406  value: 225.221  entropy: 3.110  max_score:   3  num_vocab: 30002
+Total step:   2000  reward: -1.399  value: 248.484  entropy: 3.087  max_score:   4  num_vocab: 30002
+Total step:   3000  reward: -1.623  value: 316.078  entropy: 3.050  max_score:   3  num_vocab: 30002
+Total step:   4000  reward: -1.404  value: 246.621  entropy: 3.033  max_score:   4  num_vocab: 30002
+Total step:   5000  reward: -2.614  value: 478.201  entropy: 3.056  max_score:   3  num_vocab: 30002
+Total step:   6000  reward: -1.087  value: 176.802  entropy: 3.043  max_score:   3  num_vocab: 30002
+Total step:   7000  reward: -1.417  value: 237.039  entropy: 2.953  max_score:   3  num_vocab: 30002
+Total step:   8000  reward: -0.864  value: 143.115  entropy: 3.011  max_score:   2  num_vocab: 30002
+Total step:   9000  reward: -1.181  value: 212.294  entropy: 3.079  max_score:   3  num_vocab: 30002
+Total step:  10000  reward: -0.740  value: 117.487  entropy: 3.014  max_score:   3  num_vocab: 30002
+Total step:  11000  reward: -0.854  value: 140.567  entropy: 3.096  max_score:   3  num_vocab: 30002
+Average steps used: 54.77; Average score: 1.88/6
+Total training time: 272.79384446144104
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-2_Take-2_Go-1_open_cook.z8']
+Average steps used: 63.40; Average score: 2.30/6
+----------------------------------------------------------------------
+
+
+Namespace(model_type='gru', play_method='single', single_gamefile='./tw-games/tw-cooking_Recipe-3_Take-3_Go-6_open_cook.z8', multiple_games_folder='tw-simple_games/', dqn=False)
+Random Agent (do random action) --------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-3_Take-3_Go-6_open_cook.z8']
+Average steps used: 83.70; Average score: 1.50/8
+----------------------------------------------------------------------
+NLP Agent GRU (acc before training) --------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-3_Take-3_Go-6_open_cook.z8']
+Average steps used: 74.80; Average score: 1.90/8
+
+NLP Agent GRU (start training) -------------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-3_Take-3_Go-6_open_cook.z8']
+Total step:   1000  reward: -1.199  value: 185.382  entropy: 2.285  max_score:   3  num_vocab: 30002
+Total step:   2000  reward: -0.867  value: 118.214  entropy: 2.209  max_score:   3  num_vocab: 30002
+Total step:   3000  reward: -1.081  value: 157.157  entropy: 2.308  max_score:   3  num_vocab: 30002
+Total step:   4000  reward: -1.084  value: 175.346  entropy: 2.226  max_score:   3  num_vocab: 30002
+Total step:   5000  reward: -0.971  value: 173.458  entropy: 2.496  max_score:   3  num_vocab: 30002
+Total step:   6000  reward: -1.310  value: 188.506  entropy: 2.224  max_score:   3  num_vocab: 30002
+Total step:   7000  reward: -0.641  value: 97.381  entropy: 2.399  max_score:   4  num_vocab: 30002
+Total step:   8000  reward: -0.756  value: 112.085  entropy: 2.346  max_score:   3  num_vocab: 30002
+Total step:   9000  reward: -1.193  value: 210.708  entropy: 2.212  max_score:   3  num_vocab: 30002
+Total step:  10000  reward: -0.867  value: 157.215  entropy: 2.172  max_score:   4  num_vocab: 30002
+Total step:  11000  reward: -1.083  value: 170.170  entropy: 2.267  max_score:   4  num_vocab: 30002
+Total step:  12000  reward: -0.209  value: 34.157  entropy: 2.234  max_score:   3  num_vocab: 30002
+Total step:  13000  reward: -1.302  value: 190.780  entropy: 2.340  max_score:   3  num_vocab: 30002
+Total step:  14000  reward: -0.538  value: 69.256  entropy: 2.095  max_score:   3  num_vocab: 30002
+Average steps used: 69.19; Average score: 1.55/8
+Total training time: 309.22912669181824
+
+NLP Agent GRU (test the model) ------------------------------------------
+game_files: ['./tw-games/tw-cooking_Recipe-3_Take-3_Go-6_open_cook.z8']
+Average steps used: 92.00; Average score: 1.80/8
+----------------------------------------------------------------------
