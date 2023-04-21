@@ -805,3 +805,194 @@ Average steps used: 80.60; Average score: 0.00/1
 
 ['tw_single_games/tw-treasure_hunter_level-20.z8']
 Average steps used: 80.60; Average score: 0.00/1
+
+
+
+** 160 Cooking games (recipe: 1,2; take: 1,2; go: 1,6,9,12; 10 games for each) **
+
+
+Training on multiple games------------------------------------------
+number of game_files: 160
+Total step:   1000  reward: -0.656  value: 107.523  entropy: 2.507  max_score:   2  num_vocab: 30002
+Total step:   2000  reward: -0.102  value: 24.861  entropy: 2.353  max_score:   2  num_vocab: 30002
+Total step:   3000  reward: -0.880  value: 157.011  entropy: 2.379  max_score:   2  num_vocab: 30002
+Total step:   4000  reward: -0.876  value: 118.621  entropy: 2.426  max_score:   3  num_vocab: 30002
+Total step:   5000  reward: -0.434  value: 84.063  entropy: 2.529  max_score:   2  num_vocab: 30002
+Total step:   6000  reward: -0.327  value: 62.765  entropy: 2.440  max_score:   2  num_vocab: 30002
+Total step:   7000  reward: -0.652  value: 95.186  entropy: 2.443  max_score:   2  num_vocab: 30002
+Total step:   8000  reward: -0.876  value: 161.752  entropy: 2.508  max_score:   3  num_vocab: 30002
+Total step:   9000  reward: -0.548  value: 67.967  entropy: 2.148  max_score:   2  num_vocab: 30002
+Total step:  10000  reward: -0.219  value: 29.929  entropy: 2.063  max_score:   2  num_vocab: 30002
+Total step:  11000  reward: -0.438  value: 66.738  entropy: 2.273  max_score:   1  num_vocab: 30002
+Total step:  12000  reward: -0.651  value: 109.290  entropy: 2.506  max_score:   2  num_vocab: 30002
+Total step:  13000  reward: -0.429  value: 74.929  entropy: 2.466  max_score:   2  num_vocab: 30002
+Total step:  14000  reward: -0.324  value: 48.693  entropy: 2.486  max_score:   3  num_vocab: 30002
+Total step:  15000  reward: -0.652  value: 103.441  entropy: 2.416  max_score:   3  num_vocab: 30002
+Total step:  16000  reward: -0.438  value: 82.835  entropy: 2.271  max_score:   2  num_vocab: 30002
+Total step:  17000  reward: -0.653  value: 100.454  entropy: 2.545  max_score:   2  num_vocab: 30002
+Total step:  18000  reward: -0.763  value: 105.030  entropy: 2.327  max_score:   3  num_vocab: 30002
+Total step:  19000  reward: -0.217  value: 19.006  entropy: 2.263  max_score:   1  num_vocab: 30002
+Total step:  20000  reward: -0.766  value: 121.653  entropy: 2.459  max_score:   2  num_vocab: 30002
+Total step:  21000  reward: -0.874  value: 90.098  entropy: 2.307  max_score:   4  num_vocab: 30002
+Total step:  22000  reward: -0.550  value: 96.327  entropy: 2.279  max_score:   1  num_vocab: 30002
+Total step:  23000  reward: -0.433  value: 123.665  entropy: 2.405  max_score:   3  num_vocab: 30002
+Total step:  24000  reward: -0.549  value: 87.620  entropy: 2.204  max_score:   2  num_vocab: 30002
+Total step:  25000  reward: -0.758  value: 157.738  entropy: 2.449  max_score:   3  num_vocab: 30002
+Total step:  26000  reward: -0.656  value: 113.454  entropy: 2.457  max_score:   2  num_vocab: 30002
+Total step:  27000  reward: -0.546  value: 82.085  entropy: 2.389  max_score:   2  num_vocab: 30002
+Total step:  28000  reward: -0.324  value: 48.578  entropy: 2.257  max_score:   2  num_vocab: 30002
+Total step:  29000  reward: -0.539  value: 91.925  entropy: 2.348  max_score:   3  num_vocab: 30002
+Total step:  30000  reward: -0.989  value: 140.331  entropy: 2.384  max_score:   2  num_vocab: 30002
+Total step:  31000  reward: -0.764  value: 122.052  entropy: 2.370  max_score:   2  num_vocab: 30002
+Total step:  32000  reward: -0.763  value: 156.769  entropy: 2.558  max_score:   2  num_vocab: 30002
+Total step:  33000  reward: -0.548  value: 70.467  entropy: 2.430  max_score:   2  num_vocab: 30002
+Total step:  34000  reward: -0.548  value: 72.750  entropy: 2.610  max_score:   2  num_vocab: 30002
+Total step:  35000  reward: -0.214  value: 28.880  entropy: 2.262  max_score:   1  num_vocab: 30002
+Total step:  36000  reward: -0.427  value: 53.557  entropy: 2.469  max_score:   3  num_vocab: 30002
+Total step:  37000  reward: -0.661  value: 100.352  entropy: 2.141  max_score:   2  num_vocab: 30002
+Total step:  38000  reward: -0.761  value: 109.788  entropy: 2.411  max_score:   2  num_vocab: 30002
+Total step:  39000  reward: -0.988  value: 141.096  entropy: 2.300  max_score:   2  num_vocab: 30002
+Total step:  40000  reward: -0.767  value: 96.674  entropy: 2.426  max_score:   2  num_vocab: 30002
+Total step:  41000  reward: -0.766  value: 161.884  entropy: 2.206  max_score:   2  num_vocab: 30002
+Total step:  42000  reward: -0.987  value: 135.442  entropy: 2.455  max_score:   2  num_vocab: 30002
+Total step:  43000  reward: -0.324  value: 60.387  entropy: 2.269  max_score:   2  num_vocab: 30002
+Total step:  44000  reward: -0.213  value: 44.896  entropy: 2.551  max_score:   2  num_vocab: 30002
+Total step:  45000  reward: -0.656  value: 95.617  entropy: 2.738  max_score:   2  num_vocab: 30002
+Total step:  46000  reward: -0.656  value: 75.409  entropy: 2.541  max_score:   2  num_vocab: 30002
+Total step:  47000  reward: -0.989  value: 149.749  entropy: 2.342  max_score:   3  num_vocab: 30002
+Total step:  48000  reward: -0.766  value: 108.671  entropy: 2.360  max_score:   2  num_vocab: 30002
+Total step:  49000  reward: -0.767  value: 144.901  entropy: 2.532  max_score:   2  num_vocab: 30002
+Total step:  50000  reward: -0.659  value: 124.004  entropy: 2.028  max_score:   2  num_vocab: 30002
+Total step:  51000  reward: -0.439  value: 57.731  entropy: 2.264  max_score:   2  num_vocab: 30002
+Total step:  52000  reward: -0.657  value: 132.255  entropy: 2.084  max_score:   2  num_vocab: 30002
+Total step:  53000  reward: -0.548  value: 69.086  entropy: 2.431  max_score:   1  num_vocab: 30002
+Total step:  54000  reward: -0.543  value: 63.723  entropy: 2.347  max_score:   2  num_vocab: 30002
+Total step:  55000  reward: -0.321  value: 58.034  entropy: 2.393  max_score:   2  num_vocab: 30002
+Total step:  56000  reward: -0.324  value: 62.242  entropy: 2.404  max_score:   2  num_vocab: 30002
+Total step:  57000  reward: -0.432  value: 74.781  entropy: 2.349  max_score:   2  num_vocab: 30002
+Total step:  58000  reward: -0.436  value: 75.948  entropy: 2.394  max_score:   2  num_vocab: 30002
+Total step:  59000  reward: -0.539  value: 105.317  entropy: 2.712  max_score:   3  num_vocab: 30002
+Total step:  60000  reward: -0.436  value: 49.191  entropy: 2.271  max_score:   3  num_vocab: 30002
+Total step:  61000  reward: -0.542  value: 87.415  entropy: 2.471  max_score:   2  num_vocab: 30002
+Total step:  62000  reward: -1.211  value: 204.277  entropy: 2.127  max_score:   2  num_vocab: 30002
+Total step:  63000  reward: -0.544  value: 57.512  entropy: 2.424  max_score:   3  num_vocab: 30002
+Total step:  64000  reward: -0.876  value: 134.584  entropy: 2.472  max_score:   3  num_vocab: 30002
+Total step:  65000  reward: -0.649  value: 164.885  entropy: 2.646  max_score:   4  num_vocab: 30002
+Total step:  66000  reward: -0.216  value: 44.469  entropy: 2.296  max_score:   2  num_vocab: 30002
+Total step:  67000  reward: -0.106  value: 16.411  entropy: 2.420  max_score:   1  num_vocab: 30002
+Total step:  68000  reward: -0.768  value: 123.333  entropy: 2.308  max_score:   1  num_vocab: 30002
+Total step:  69000  reward: -0.214  value: 48.472  entropy: 2.383  max_score:   2  num_vocab: 30002
+Total step:  70000  reward: -0.652  value: 123.607  entropy: 2.532  max_score:   2  num_vocab: 30002
+Total step:  71000  reward: -1.207  value: 205.952  entropy: 2.337  max_score:   3  num_vocab: 30002
+Total step:  72000  reward: -0.770  value: 173.156  entropy: 2.317  max_score:   3  num_vocab: 30002
+Total step:  73000  reward: -0.434  value: 77.393  entropy: 2.336  max_score:   2  num_vocab: 30002
+Total step:  74000  reward: -0.433  value: 91.504  entropy: 2.255  max_score:   3  num_vocab: 30002
+Total step:  75000  reward: -0.658  value: 126.525  entropy: 2.257  max_score:   1  num_vocab: 30002
+Total step:  76000  reward: -0.658  value: 127.306  entropy: 2.306  max_score:   2  num_vocab: 30002
+Total step:  77000  reward: -0.542  value: 114.328  entropy: 2.542  max_score:   2  num_vocab: 30002
+Total step:  78000  reward: -0.322  value: 57.202  entropy: 2.053  max_score:   4  num_vocab: 30002
+Total step:  79000  reward: -0.542  value: 78.884  entropy: 2.549  max_score:   3  num_vocab: 30002
+Total step:  80000  reward: -0.542  value: 91.941  entropy: 2.411  max_score:   3  num_vocab: 30002
+Total step:  81000  reward: -0.662  value: 121.371  entropy: 2.344  max_score:   1  num_vocab: 30002
+Total step:  82000  reward: -0.877  value: 148.226  entropy: 2.241  max_score:   2  num_vocab: 30002
+Total step:  83000  reward: -0.440  value: 65.708  entropy: 2.186  max_score:   2  num_vocab: 30002
+Total step:  84000  reward: -0.547  value: 75.322  entropy: 2.352  max_score:   3  num_vocab: 30002
+Total step:  85000  reward: -1.204  value: 192.402  entropy: 2.417  max_score:   2  num_vocab: 30002
+Total step:  86000  reward: -0.323  value: 63.022  entropy: 2.364  max_score:   2  num_vocab: 30002
+Total step:  87000  reward: -0.542  value: 58.179  entropy: 2.668  max_score:   2  num_vocab: 30002
+Total step:  88000  reward: -0.103  value: 16.373  entropy: 2.185  max_score:   2  num_vocab: 30002
+Total step:  89000  reward: -0.657  value: 110.361  entropy: 2.188  max_score:   2  num_vocab: 30002
+Total step:  90000  reward: -0.877  value: 162.725  entropy: 2.439  max_score:   2  num_vocab: 30002
+Total step:  91000  reward: -0.434  value: 56.260  entropy: 2.252  max_score:   3  num_vocab: 30002
+Total step:  92000  reward: -0.547  value: 154.036  entropy: 2.421  max_score:   2  num_vocab: 30002
+Total step:  93000  reward: -0.543  value: 95.182  entropy: 2.423  max_score:   2  num_vocab: 30002
+Total step:  94000  reward: -0.878  value: 151.803  entropy: 2.647  max_score:   2  num_vocab: 30002
+Total step:  95000  reward: -0.329  value: 57.838  entropy: 2.413  max_score:   2  num_vocab: 30002
+Total step:  96000  reward: -0.992  value: 152.199  entropy: 2.456  max_score:   1  num_vocab: 30002
+Total step:  97000  reward: -1.312  value: 244.228  entropy: 2.466  max_score:   4  num_vocab: 30002
+Total step:  98000  reward: -0.216  value: 36.848  entropy: 2.285  max_score:   2  num_vocab: 30002
+Total step:  99000  reward: -0.540  value: 75.537  entropy: 2.345  max_score:   2  num_vocab: 30002
+Total step: 100000  reward: 0.009  value: 0.044  entropy: 2.276  max_score:   3  num_vocab: 30002
+Total step: 101000  reward: -0.541  value: 81.365  entropy: 2.475  max_score:   3  num_vocab: 30002
+Total step: 102000  reward: -0.770  value: 111.843  entropy: 2.323  max_score:   2  num_vocab: 30002
+Total step: 103000  reward: -0.549  value: 81.957  entropy: 2.279  max_score:   2  num_vocab: 30002
+Total step: 104000  reward: -0.763  value: 130.586  entropy: 2.387  max_score:   2  num_vocab: 30002
+Total step: 105000  reward: -0.984  value: 134.092  entropy: 2.352  max_score:   3  num_vocab: 30002
+Total step: 106000  reward: -0.330  value: 34.109  entropy: 2.091  max_score:   1  num_vocab: 30002
+Total step: 107000  reward: -0.653  value: 67.381  entropy: 2.302  max_score:   2  num_vocab: 30002
+Total step: 108000  reward: -0.658  value: 128.039  entropy: 2.413  max_score:   2  num_vocab: 30002
+Total step: 109000  reward: -0.651  value: 102.697  entropy: 2.295  max_score:   3  num_vocab: 30002
+Total step: 110000  reward: -0.879  value: 129.458  entropy: 2.444  max_score:   2  num_vocab: 30002
+Total step: 111000  reward: -0.104  value: 23.340  entropy: 2.316  max_score:   1  num_vocab: 30002
+Total step: 112000  reward: -0.991  value: 166.591  entropy: 2.285  max_score:   2  num_vocab: 30002
+Total step: 113000  reward: -0.546  value: 106.434  entropy: 2.456  max_score:   2  num_vocab: 30002
+Total step: 114000  reward: -0.653  value: 109.951  entropy: 2.407  max_score:   2  num_vocab: 30002
+Total step: 115000  reward: -0.657  value: 110.936  entropy: 2.305  max_score:   2  num_vocab: 30002
+Total step: 116000  reward: -0.880  value: 136.206  entropy: 2.282  max_score:   2  num_vocab: 30002
+Total step: 117000  reward: -0.872  value: 160.116  entropy: 2.527  max_score:   3  num_vocab: 30002
+Total step: 118000  reward: -0.433  value: 75.204  entropy: 2.402  max_score:   2  num_vocab: 30002
+Average steps used: 73.27; Average normalized score: 0.12/1
+Total training time: 2783.427314043045
+
+Tests
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-1_none.z8']
+Average steps used: 54.10; Average score: 1.30/3
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-1_o.z8']
+Average steps used: 78.90; Average score: 1.10/3
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-1_oc.z8']
+Average steps used: 40.80; Average score: 1.20/4
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-1_occ.z8']
+Average steps used: 61.10; Average score: 1.40/5
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-1_all.z8']
+Average steps used: 63.10; Average score: 1.50/5
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-6_none.z8']
+Average steps used: 98.00; Average score: 0.40/3
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-6_o.z8']
+Average steps used: 97.50; Average score: 0.30/3
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-6_oc.z8']
+Average steps used: 84.30; Average score: 1.30/4
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-6_occ.z8']
+Average steps used: 91.80; Average score: 0.70/5
+
+['tw_single_games/tw-cooking_Recipe-1_Take-1_Go-6_all.z8']
+Average steps used: 91.30; Average score: 0.50/5
+
+['tw_single_games/tw-cooking_Recipe-2_Take-1_Go-1_none.z8']
+Average steps used: 45.90; Average score: 1.70/4
+
+['tw_single_games/tw-cooking_Recipe-2_Take-1_Go-1_o.z8']
+Average steps used: 66.80; Average score: 1.70/4
+
+['tw_single_games/tw-cooking_Recipe-2_Take-1_Go-1_oc.z8']
+Average steps used: 40.50; Average score: 1.40/5
+
+['tw_single_games/tw-cooking_Recipe-2_Take-1_Go-1_occ.z8']
+Average steps used: 37.00; Average score: 0.70/7
+
+['tw_single_games/tw-cooking_Recipe-2_Take-1_Go-1_all.z8']
+Average steps used: 18.40; Average score: 0.30/7
+
+['tw_single_games/tw-cooking_Recipe-2_Take-2_Go-1_none.z8']
+Average steps used: 67.90; Average score: 1.50/4
+
+['tw_single_games/tw-cooking_Recipe-2_Take-2_Go-1_o.z8']
+Average steps used: 67.90; Average score: 1.60/4
+
+['tw_single_games/tw-cooking_Recipe-2_Take-2_Go-1_oc.z8']
+Average steps used: 29.60; Average score: 1.80/6
+
+['tw_single_games/tw-cooking_Recipe-2_Take-2_Go-1_occ.z8']
+Average steps used: 50.30; Average score: 2.10/8
+
+['tw_single_games/tw-cooking_Recipe-2_Take-2_Go-1_all.z8']
+Average steps used: 65.50; Average score: 2.20/8
+
