@@ -47,3 +47,6 @@ After setting play_game function random seed to 1:
 | tw-rewardsDense_goalNone        |    6.7/8    |    6.7/8    |     412.68 s       |      1328.44 s     |
 | tw-rewardsBalanced_goalNone     |    0.3/3    |    0.3/3    |     412.21 s       |      1306.45 s     |
 | tw-rewardsSparse_goalNone       |    0.0/1    |    0.0/1    |     399.63 s       |      1328.71 s     |
+
+
+All results logs we got are in "logs" folder. Almost all results are from GRUNetwork and GPTNetwork combining with A2C (Advantage Actor Critic). BERT-GRU network and DQN framwork did not perform well until now, so we drop them from our results.

@@ -374,6 +374,9 @@ class NLPAgent:
         return returns[::-1], advantages[::-1]
     
     def action(self, observations, score, done, infos):
+        """
+        Use Advantage Actor Critic (A2C) to update our model
+        """
         
         #If using GRU_BERT model, observations, descriptions, inventory, and commands are processed seperately
         if self.model_type == 'bert_gru':
