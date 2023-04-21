@@ -255,6 +255,12 @@ Average steps used: 87.80; Average score: 2.60/4
 game_files: ['tw_single_games/tw-rewardsSparse_goalDetailed-1.z8']
 Average steps used: 87.50; Average score: 0.00/1
 
+['tw_single_games/tw-rewardsDense_goalBrief.z8']
+Average steps used: 87.50; Average score: 6.40/8
+
+['tw_single_games/tw-rewardsBalanced_goalBrief.z8']
+Average steps used: 87.50; Average score: 1.60/3
+
 
 
 ----------------------------------------------------------------------------------------------------
@@ -379,6 +385,7 @@ Average steps used: 100.00; Average score: 0.40/4
 
 game_files: ['tw_games/tw-rewardsBalanced_goalDetailed-105.z8']
 Average steps used: 100.00; Average score: 0.70/4
+
 
 
 
@@ -649,68 +656,152 @@ Average steps used: 100.00; Average score: 0.00/1
 
 ** 150 Treasure Hunter games 5 games for each level (30 levels total) **
 
-Forgot to record Traning logs...
+Training on multiple games------------------------------------------
+['tw-treasure_hunter/tw-treasure_hunter_level-29_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-14_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-28_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-23_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-22_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-4_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-18_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-5_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-3_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-8_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-9_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-28_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-19_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-3_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-21_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-2_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-12_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-3_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-10_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-21_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-21_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-12_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-22_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-9_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-25_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-9_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-10_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-22_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-24_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-23_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-25_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-2_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-16_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-17_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-16_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-23_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-26_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-2_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-16_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-13_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-17_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-3_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-8_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-1_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-4_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-30_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-5_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-25_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-7_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-17_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-28_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-8_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-15_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-2_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-26_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-15_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-19_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-11_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-14_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-22_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-25_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-27_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-29_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-9_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-6_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-14_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-20_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-18_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-19_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-27_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-8_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-26_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-27_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-1_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-15_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-11_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-21_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-27_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-26_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-4_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-29_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-20_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-17_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-11_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-16_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-11_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-23_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-11_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-18_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-6_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-27_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-14_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-26_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-20_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-5_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-2_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-19_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-10_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-13_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-30_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-1_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-13_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-10_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-24_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-20_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-1_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-18_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-25_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-30_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-17_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-5_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-18_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-3_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-14_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-12_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-10_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-8_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-13_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-6_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-29_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-19_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-28_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-21_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-30_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-9_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-28_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-7_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-13_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-7_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-22_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-12_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-4_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-7_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-24_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-20_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-29_1.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-24_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-4_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-30_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-16_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-23_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-6_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-1_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-15_0.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-5_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-6_2.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-12_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-7_3.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-15_4.z8', 'tw-treasure_hunter/tw-treasure_hunter_level-24_4.z8']
+Total step:   1000  reward: 0.004  value: 167.300  entropy: 1.921  max_score:   1  num_vocab: 30002
+Total step:   2000  reward: -0.329  value: 145.758  entropy: 1.887  max_score:   1  num_vocab: 30002
+Total step:   3000  reward: -0.107  value: 150.591  entropy: 1.834  max_score:   1  num_vocab: 30002
+Total step:   4000  reward: 0.011  value: 348.714  entropy: 1.835  max_score:   1  num_vocab: 30002
+Total step:   5000  reward: 0.117  value: 152.191  entropy: 1.881  max_score:   1  num_vocab: 30002
+Total step:   6000  reward: 0.009  value: 258.363  entropy: 1.837  max_score:   1  num_vocab: 30002
+Total step:   7000  reward: -0.219  value: 144.372  entropy: 1.913  max_score:   1  num_vocab: 30002
+Total step:   8000  reward: -0.104  value: 234.649  entropy: 1.874  max_score:   1  num_vocab: 30002
+Total step:   9000  reward: 0.564  value: 210.999  entropy: 1.919  max_score:   1  num_vocab: 30002
+Total step:  10000  reward: -0.552  value: 264.412  entropy: 1.857  max_score:   1  num_vocab: 30002
+Total step:  11000  reward: -0.217  value: 257.707  entropy: 1.840  max_score:   1  num_vocab: 30002
+Total step:  12000  reward: 0.122  value: 366.438  entropy: 1.863  max_score:   1  num_vocab: 30002
+Total step:  13000  reward: -0.330  value: 147.567  entropy: 1.776  max_score:   1  num_vocab: 30002
+Total step:  14000  reward: -0.219  value: 122.973  entropy: 1.967  max_score:   1  num_vocab: 30002
+Total step:  15000  reward: -0.216  value: 204.226  entropy: 1.878  max_score:   1  num_vocab: 30002
+Total step:  16000  reward: 0.007  value: 201.150  entropy: 1.943  max_score:   1  num_vocab: 30002
+Total step:  17000  reward: 0.228  value: 127.076  entropy: 1.874  max_score:   1  num_vocab: 30002
+Total step:  18000  reward: 0.569  value: 314.933  entropy: 1.860  max_score:   1  num_vocab: 30002
+Total step:  19000  reward: 0.231  value: 252.786  entropy: 1.906  max_score:   1  num_vocab: 30002
+Total step:  20000  reward: -0.107  value: 220.257  entropy: 1.808  max_score:   1  num_vocab: 30002
+Total step:  21000  reward: 0.009  value: 230.943  entropy: 1.944  max_score:   1  num_vocab: 30002
+Total step:  22000  reward: -0.330  value: 166.385  entropy: 1.901  max_score:   1  num_vocab: 30002
+Total step:  23000  reward: 0.342  value: 268.602  entropy: 1.851  max_score:   1  num_vocab: 30002
+Total step:  24000  reward: 0.004  value: 101.406  entropy: 1.844  max_score:   1  num_vocab: 30002
+Total step:  25000  reward: -0.330  value: 154.818  entropy: 1.912  max_score:   1  num_vocab: 30002
+Total step:  26000  reward: -0.107  value: 173.293  entropy: 1.869  max_score:   1  num_vocab: 30002
+Total step:  27000  reward: -0.327  value: 253.398  entropy: 1.816  max_score:   1  num_vocab: 30002
+Total step:  28000  reward: -0.662  value: 288.041  entropy: 1.815  max_score:   1  num_vocab: 30002
+Total step:  29000  reward: 0.117  value: 168.731  entropy: 1.787  max_score:   1  num_vocab: 30002
+Total step:  30000  reward: -0.331  value: 102.061  entropy: 1.882  max_score:   1  num_vocab: 30002
+Total step:  31000  reward: -0.662  value: 210.779  entropy: 1.912  max_score:   1  num_vocab: 30002
+Total step:  32000  reward: -0.440  value: 189.374  entropy: 1.809  max_score:   1  num_vocab: 30002
+Total step:  33000  reward: -0.109  value: 87.228  entropy: 1.929  max_score:   1  num_vocab: 30002
+Total step:  34000  reward: 0.006  value: 177.448  entropy: 1.912  max_score:   1  num_vocab: 30002
+Total step:  35000  reward: -0.662  value: 220.421  entropy: 1.779  max_score:   1  num_vocab: 30002
+Total step:  36000  reward: -0.107  value: 157.549  entropy: 1.843  max_score:   1  num_vocab: 30002
+Total step:  37000  reward: 0.118  value: 211.862  entropy: 1.836  max_score:   1  num_vocab: 30002
+Total step:  38000  reward: 0.117  value: 156.126  entropy: 1.889  max_score:   1  num_vocab: 30002
+Total step:  39000  reward: -0.214  value: 273.027  entropy: 1.796  max_score:   1  num_vocab: 30002
+Total step:  40000  reward: 0.227  value: 94.390  entropy: 1.890  max_score:   1  num_vocab: 30002
+Total step:  41000  reward: 0.230  value: 183.715  entropy: 1.810  max_score:   1  num_vocab: 30002
+Total step:  42000  reward: -0.109  value: 97.293  entropy: 1.822  max_score:   1  num_vocab: 30002
+Total step:  43000  reward: -0.109  value: 68.267  entropy: 1.834  max_score:   1  num_vocab: 30002
+Total step:  44000  reward: -0.552  value: 173.442  entropy: 1.876  max_score:   1  num_vocab: 30002
+Total step:  45000  reward: 0.003  value: 97.735  entropy: 1.892  max_score:   1  num_vocab: 30002
+Total step:  46000  reward: 0.006  value: 222.950  entropy: 1.871  max_score:   1  num_vocab: 30002
+Total step:  47000  reward: 0.227  value: 118.230  entropy: 1.902  max_score:   1  num_vocab: 30002
+Total step:  48000  reward: -0.216  value: 281.991  entropy: 1.886  max_score:   1  num_vocab: 30002
+Total step:  49000  reward: -0.996  value: 284.778  entropy: 1.891  max_score:   1  num_vocab: 30002
+Total step:  50000  reward: -0.552  value: 219.595  entropy: 1.869  max_score:   1  num_vocab: 30002
+Total step:  51000  reward: -0.439  value: 277.015  entropy: 1.750  max_score:   1  num_vocab: 30002
+Total step:  52000  reward: 0.344  value: 260.330  entropy: 1.824  max_score:   1  num_vocab: 30002
+Total step:  53000  reward: -0.219  value: 132.034  entropy: 1.846  max_score:   1  num_vocab: 30002
+Total step:  54000  reward: 0.343  value: 247.438  entropy: 1.802  max_score:   1  num_vocab: 30002
+Total step:  55000  reward: 0.117  value: 113.290  entropy: 1.803  max_score:   1  num_vocab: 30002
+Total step:  56000  reward: 0.118  value: 164.424  entropy: 1.904  max_score:   1  num_vocab: 30002
+Total step:  57000  reward: 0.230  value: 200.751  entropy: 1.854  max_score:   1  num_vocab: 30002
+Total step:  58000  reward: 0.004  value: 140.296  entropy: 1.813  max_score:   1  num_vocab: 30002
+Total step:  59000  reward: 0.119  value: 215.145  entropy: 1.858  max_score:   1  num_vocab: 30002
+Total step:  60000  reward: 0.453  value: 187.708  entropy: 1.836  max_score:   1  num_vocab: 30002
+Total step:  61000  reward: 0.120  value: 197.970  entropy: 1.894  max_score:   1  num_vocab: 30002
+Total step:  62000  reward: -0.330  value: 122.714  entropy: 1.817  max_score:   1  num_vocab: 30002
+Total step:  63000  reward: 0.006  value: 174.569  entropy: 1.892  max_score:   1  num_vocab: 30002
+Total step:  64000  reward: 0.568  value: 305.163  entropy: 1.886  max_score:   1  num_vocab: 30002
+Total step:  65000  reward: -0.218  value: 164.273  entropy: 1.934  max_score:   1  num_vocab: 30002
+Total step:  66000  reward: -0.218  value: 154.772  entropy: 1.849  max_score:   1  num_vocab: 30002
+Total step:  67000  reward: -0.216  value: 227.768  entropy: 1.907  max_score:   1  num_vocab: 30002
+Total step:  68000  reward: -0.439  value: 267.707  entropy: 1.750  max_score:   1  num_vocab: 30002
+Total step:  69000  reward: 0.004  value: 137.883  entropy: 1.907  max_score:   1  num_vocab: 30002
+Total step:  70000  reward: 0.453  value: 200.802  entropy: 1.843  max_score:   1  num_vocab: 30002
+Total step:  71000  reward: 0.008  value: 229.516  entropy: 1.865  max_score:   1  num_vocab: 30002
+Total step:  72000  reward: -0.328  value: 245.103  entropy: 1.888  max_score:   1  num_vocab: 30002
+Total step:  73000  reward: -0.443  value: 88.432  entropy: 1.778  max_score:   1  num_vocab: 30002
+Total step:  74000  reward: -0.222  value: 22.194  entropy: 1.891  max_score:   0  num_vocab: 30002
+Total step:  75000  reward: 0.117  value: 176.984  entropy: 1.896  max_score:   1  num_vocab: 30002
+Total step:  76000  reward: -0.329  value: 231.244  entropy: 1.857  max_score:   1  num_vocab: 30002
+Total step:  77000  reward: -0.108  value: 116.307  entropy: 1.830  max_score:   1  num_vocab: 30002
+Total step:  78000  reward: -0.439  value: 223.437  entropy: 1.864  max_score:   1  num_vocab: 30002
+Total step:  79000  reward: 0.228  value: 159.351  entropy: 1.863  max_score:   1  num_vocab: 30002
+Total step:  80000  reward: -0.102  value: 321.640  entropy: 1.815  max_score:   1  num_vocab: 30002
+Average steps used: 52.84; Average normalized score: 0.31/1
+Total training time: 1347.0148212909698
 
 Tests:
-['tw-treasure_hunter_test/tw-treasure_hunter_level-1.z8']
+
+['tw_single_games/tw-treasure_hunter_level-1.z8']
+Average steps used: 6.20; Average score: 0.90/1
+
+['tw_single_games/tw-treasure_hunter_level-2.z8']
+Average steps used: 6.20; Average score: 0.90/1
+
+['tw_single_games/tw-treasure_hunter_level-3.z8']
 Average steps used: 18.00; Average score: 0.70/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-2.z8']
-Average steps used: 17.00; Average score: 0.80/1
+['tw_single_games/tw-treasure_hunter_level-4.z8']
+Average steps used: 18.00; Average score: 0.70/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-3.z8']
-Average steps used: 15.00; Average score: 0.60/1
+['tw_single_games/tw-treasure_hunter_level-5.z8']
+Average steps used: 22.70; Average score: 0.50/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-4.z8']
-Average steps used: 18.80; Average score: 0.70/1
+['tw_single_games/tw-treasure_hunter_level-6.z8']
+Average steps used: 22.70; Average score: 0.50/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-5.z8']
-Average steps used: 32.60; Average score: 0.50/1
+['tw_single_games/tw-treasure_hunter_level-7.z8']
+Average steps used: 30.00; Average score: 0.40/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-6.z8']
-Average steps used: 45.20; Average score: 0.50/1
+['tw_single_games/tw-treasure_hunter_level-8.z8']
+Average steps used: 30.00; Average score: 0.40/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-7.z8']
-Average steps used: 31.10; Average score: 0.50/1
+['tw_single_games/tw-treasure_hunter_level-9.z8']
+Average steps used: 21.00; Average score: 0.20/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-8.z8']
-Average steps used: 50.60; Average score: 0.70/1
+['tw_single_games/tw-treasure_hunter_level-10.z8']
+Average steps used: 21.00; Average score: 0.20/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-9.z8']
-Average steps used: 31.20; Average score: 0.40/1
+['tw_single_games/tw-treasure_hunter_level-11.z8']
+Average steps used: 52.90; Average score: 0.20/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-10.z8']
-Average steps used: 40.60; Average score: 0.40/1
+['tw_single_games/tw-treasure_hunter_level-12.z8']
+Average steps used: 67.10; Average score: 0.20/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-11.z8']
-Average steps used: 76.50; Average score: 0.40/1
+['tw_single_games/tw-treasure_hunter_level-13.z8']
+Average steps used: 78.40; Average score: 0.00/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-12.z8']
-Average steps used: 60.20; Average score: 0.50/1
-
-['tw-treasure_hunter_test/tw-treasure_hunter_level-13.z8']
+['tw_single_games/tw-treasure_hunter_level-14.z8']
 Average steps used: 81.00; Average score: 0.10/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-14.z8']
-Average steps used: 69.20; Average score: 0.10/1
+['tw_single_games/tw-treasure_hunter_level-15.z8']
+Average steps used: 75.80; Average score: 0.10/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-14.z8']
-Average steps used: 69.20; Average score: 0.10/1
+['tw_single_games/tw-treasure_hunter_level-16.z8']
+Average steps used: 75.80; Average score: 0.10/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-15.z8']
-Average steps used: 73.50; Average score: 0.60/1
+['tw_single_games/tw-treasure_hunter_level-17.z8']
+Average steps used: 80.60; Average score: 0.00/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-16.z8']
-Average steps used: 83.90; Average score: 0.00/1
+['tw_single_games/tw-treasure_hunter_level-18.z8']
+Average steps used: 80.60; Average score: 0.00/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-17.z8']
-Average steps used: 98.80; Average score: 0.10/1
+['tw_single_games/tw-treasure_hunter_level-18.z8']
+Average steps used: 80.60; Average score: 0.00/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-18.z8']
-Average steps used: 20.70; Average score: 0.00/1
+['tw_single_games/tw-treasure_hunter_level-19.z8']
+Average steps used: 80.60; Average score: 0.00/1
 
-['tw-treasure_hunter_test/tw-treasure_hunter_level-19.z8']
-Average steps used: 85.20; Average score: 0.10/1
-
-['tw-treasure_hunter_test/tw-treasure_hunter_level-20.z8']
-Average steps used: 97.10; Average score: 0.10/1
+['tw_single_games/tw-treasure_hunter_level-20.z8']
+Average steps used: 80.60; Average score: 0.00/1
