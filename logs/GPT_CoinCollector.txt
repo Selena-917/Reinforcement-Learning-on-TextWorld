@@ -1,12 +1,12 @@
+Seed of creating single games: 1
+
+** Coin Collector Game Level 1-20 **
+
 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-1.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
 Random Agent (do random action) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-1.z8']\
-
-Average steps used: 5.60; Average score: 1.00/1\
+Average steps used: 4.80; Average score: 1.00/1\
 ----------------------------------------------------------------------\
-\
-NLP Agent GPT (train the model) ------------------------------------------\
-\
 NLP Agent GPT (acc before training) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-1.z8']\
 Average steps used: 5.50; Average score: 1.00/1\
@@ -15,12 +15,786 @@ NLP Agent GPT (start training) -------------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-1.z8']\
 Total step:   1000  reward: 19.639  value: 4597.508  entropy: 1.386  max_score:   1  num_vocab: 30002\
 Average steps used: 4.18; Average score: 1.00/1\
-Total training time: 63.27655816078186\
+Total training time: 57.1911084651947\
 \
 NLP Agent GPT (test the model) ------------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-1.z8']\
 Average steps used: 5.50; Average score: 1.00/1\
 ----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-2.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-2.z8']\
+Average steps used: 18.80; Average score: 1.00/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-2.z8']\
+Average steps used: 10.60; Average score: 1.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-2.z8']\
+Total step:   1000  reward: 13.130  value: 2565.919  entropy: 1.288  max_score:   1  num_vocab: 30002\
+Average steps used: 5.15; Average score: 1.00/1\
+Total training time: 66.97280168533325\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-2.z8']\
+Average steps used: 3.70; Average score: 1.00/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-3.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-3.z8']\
+Average steps used: 22.10; Average score: 1.00/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-3.z8']\
+Average steps used: 15.40; Average score: 1.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-3.z8']\
+Total step:   1000  reward: 7.968  value: 1263.075  entropy: 1.223  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 12.120  value: 1983.813  entropy: 1.013  max_score:   1  num_vocab: 30002\
+Average steps used: 7.96; Average score: 1.00/1\
+Total training time: 95.65236759185791\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-3.z8']\
+Average steps used: 6.00; Average score: 1.00/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-4.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-4.z8']\
+Average steps used: 45.10; Average score: 0.90/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-4.z8']\
+Average steps used: 61.00; Average score: 0.80/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-4.z8']\
+Total step:   1000  reward: 2.244  value: 373.605  entropy: 1.323  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 2.693  value: 397.185  entropy: 1.351  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 2.581  value: 397.354  entropy: 1.322  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 4.377  value: 575.733  entropy: 1.280  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 5.499  value: 842.859  entropy: 1.244  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 3.928  value: 536.957  entropy: 1.243  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 6.172  value: 832.104  entropy: 1.222  max_score:   1  num_vocab: 30002\
+Average steps used: 24.47; Average score: 0.98/1\
+Total training time: 254.32723546028137\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-4.z8']\
+Average steps used: 24.60; Average score: 1.00/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-5.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-5.z8']\
+Average steps used: 63.00; Average score: 0.90/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-5.z8']\
+Average steps used: 78.10; Average score: 0.60/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-5.z8']\
+Total step:   1000  reward: 1.683  value: 309.704  entropy: 1.326  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 2.469  value: 415.837  entropy: 1.310  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 3.367  value: 527.401  entropy: 1.265  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 5.387  value: 789.645  entropy: 1.114  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 8.866  value: 1172.326  entropy: 0.797  max_score:   1  num_vocab: 30002\
+Average steps used: 18.58; Average score: 0.98/1\
+Total training time: 197.55783772468567\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-5.z8']\
+Average steps used: 8.20; Average score: 1.00/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-6.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-6.z8']\
+Average steps used: 65.30; Average score: 0.60/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-6.z8']\
+Average steps used: 72.30; Average score: 0.70/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-6.z8']\
+Total step:   1000  reward: 1.683  value: 263.709  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.786  value: 129.685  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.449  value: 82.811  entropy: 1.325  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 1.234  value: 182.360  entropy: 1.305  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 1.347  value: 238.335  entropy: 1.314  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 2.132  value: 327.307  entropy: 1.219  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 4.040  value: 542.832  entropy: 1.057  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 5.723  value: 740.567  entropy: 0.801  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 7.856  value: 773.293  entropy: 0.572  max_score:   1  num_vocab: 30002\
+Average steps used: 29.95; Average score: 0.93/1\
+Total training time: 314.04474544525146\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-6.z8']\
+Average steps used: 8.80; Average score: 1.00/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-7.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-7.z8']\
+\
+Average steps used: 57.70; Average score: 0.90/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-7.z8']\
+Average steps used: 83.20; Average score: 0.50/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-7.z8']\
+Total step:   1000  reward: 0.673  value: 80.410  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.337  value: 25.284  entropy: 1.316  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.898  value: 155.976  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 1.010  value: 110.904  entropy: 1.347  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.786  value: 131.957  entropy: 1.342  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 1.234  value: 176.635  entropy: 1.350  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 1.010  value: 152.619  entropy: 1.321  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.673  value: 91.722  entropy: 1.351  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.786  value: 136.799  entropy: 1.342  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.898  value: 161.287  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 1.459  value: 227.228  entropy: 1.324  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 1.122  value: 191.115  entropy: 1.321  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.898  value: 158.451  entropy: 1.311  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 1.459  value: 238.820  entropy: 1.309  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 0.786  value: 110.052  entropy: 1.299  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 1.571  value: 244.952  entropy: 1.312  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 1.234  value: 194.390  entropy: 1.311  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 1.459  value: 211.317  entropy: 1.301  max_score:   1  num_vocab: 30002\
+Total step:  19000  reward: 1.234  value: 202.084  entropy: 1.288  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 1.010  value: 116.952  entropy: 1.316  max_score:   1  num_vocab: 30002\
+Average steps used: 67.14; Average score: 0.67/1\
+Total training time: 671.2982668876648\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-7.z8']\
+Average steps used: 74.20; Average score: 0.70/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-8.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-8.z8']\
+Average steps used: 97.30; Average score: 0.40/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-8.z8']\
+Average steps used: 86.10; Average score: 0.40/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-8.z8']\
+Total step:   1000  reward: 0.673  value: 110.386  entropy: 1.329  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.673  value: 105.446  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.337  value: 48.083  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.561  value: 92.196  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.449  value: 71.696  entropy: 1.351  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.337  value: 51.039  entropy: 1.323  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.673  value: 124.855  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.561  value: 99.374  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.561  value: 83.454  entropy: 1.334  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.673  value: 101.755  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.337  value: 63.372  entropy: 1.347  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 1.010  value: 154.042  entropy: 1.369  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 1.010  value: 170.010  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.561  value: 68.201  entropy: 1.346  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 1.010  value: 147.561  entropy: 1.330  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.786  value: 127.264  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.000  value: 0.036  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.673  value: 115.339  entropy: 1.350  max_score:   1  num_vocab: 30002\
+Total step:  19000  reward: 0.898  value: 132.242  entropy: 1.348  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 0.224  value: 46.197  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:  21000  reward: 0.561  value: 84.895  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  22000  reward: 0.224  value: 32.665  entropy: 1.313  max_score:   1  num_vocab: 30002\
+Total step:  23000  reward: 0.898  value: 113.470  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:  24000  reward: 0.786  value: 129.733  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Average steps used: 79.86; Average score: 0.48/1\
+Total training time: 807.3720228672028\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-8.z8']\
+Average steps used: 81.10; Average score: 0.50/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-9.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-9.z8']\
+\
+Average steps used: 79.10; Average score: 0.60/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-9.z8']\
+Average steps used: 78.10; Average score: 0.50/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-9.z8']\
+Total step:   1000  reward: 0.337  value: 40.332  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.561  value: 97.611  entropy: 1.349  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.337  value: 73.894  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.224  value: 50.602  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.337  value: 59.566  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.449  value: 96.862  entropy: 1.331  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.112  value: 24.295  entropy: 1.319  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.786  value: 143.493  entropy: 1.349  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.673  value: 126.598  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.673  value: 98.111  entropy: 1.357  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.337  value: 43.939  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.224  value: 49.407  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.673  value: 99.127  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.561  value: 53.467  entropy: 1.319  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 1.010  value: 177.353  entropy: 1.357  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.337  value: 52.979  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.561  value: 77.905  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.673  value: 86.261  entropy: 1.331  max_score:   1  num_vocab: 30002\
+Total step:  19000  reward: 1.010  value: 157.127  entropy: 1.324  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 0.337  value: 47.302  entropy: 1.314  max_score:   1  num_vocab: 30002\
+Total step:  21000  reward: 0.786  value: 95.886  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:  22000  reward: 0.561  value: 73.943  entropy: 1.322  max_score:   1  num_vocab: 30002\
+Total step:  23000  reward: 0.337  value: 45.514  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:  24000  reward: 1.010  value: 125.556  entropy: 1.320  max_score:   1  num_vocab: 30002\
+Total step:  25000  reward: 0.449  value: 39.969  entropy: 1.320  max_score:   1  num_vocab: 30002\
+Average steps used: 82.87; Average score: 0.44/1\
+Total training time: 833.7112340927124\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-9.z8']\
+Average steps used: 85.70; Average score: 0.50/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-10.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-10.z8']\
+Average steps used: 91.60; Average score: 0.20/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-10.z8']\
+Average steps used: 91.70; Average score: 0.30/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-10.z8']\
+Total step:   1000  reward: 0.224  value: 45.207  entropy: 1.315  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.561  value: 111.962  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.561  value: 93.051  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.561  value: 71.147  entropy: 1.317  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.449  value: 81.718  entropy: 1.320  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.673  value: 115.765  entropy: 1.291  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.449  value: 76.932  entropy: 1.330  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 1.347  value: 193.241  entropy: 1.287  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 1.571  value: 198.070  entropy: 1.213  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 3.591  value: 461.938  entropy: 0.909  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 4.826  value: 532.990  entropy: 0.712  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 4.938  value: 368.866  entropy: 0.541  max_score:   1  num_vocab: 30002\
+Average steps used: 42.11; Average score: 0.83/1\
+Total training time: 434.1621747016907\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-10.z8']\
+Average steps used: 17.80; Average score: 1.00/1\
+----------------------------------------------------------------------
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-11.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-11.z8\'92]\
+Average steps used: 92.40; Average score: 0.40/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-11.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-11.z8']\
+Total step:   1000  reward: 0.224  value: 19.649  entropy: 1.321  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.224  value: 33.392  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.561  value: 71.908  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.337  value: 40.977  entropy: 1.317  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.112  value: 22.923  entropy: 1.348  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.224  value: 47.559  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.898  value: 145.582  entropy: 1.315  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.449  value: 81.990  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.337  value: 54.953  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.014  entropy: 1.348  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.224  value: 40.913  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.449  value: 63.330  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.337  value: 50.632  entropy: 1.338  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 0.337  value: 57.594  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.449  value: 85.258  entropy: 1.346  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.673  value: 87.717  entropy: 1.324  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.561  value: 91.016  entropy: 1.297  max_score:   1  num_vocab: 30002\
+Total step:  19000  reward: 0.449  value: 56.564  entropy: 1.322  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 0.561  value: 78.728  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:  21000  reward: 0.337  value: 39.247  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:  22000  reward: 0.000  value: 0.152  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  23000  reward: 0.673  value: 74.413  entropy: 1.338  max_score:   1  num_vocab: 30002\
+Total step:  24000  reward: 0.561  value: 90.941  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:  25000  reward: 0.561  value: 81.721  entropy: 1.311  max_score:   1  num_vocab: 30002\
+Total step:  26000  reward: 0.000  value: 0.036  entropy: 1.341  max_score:   0  num_vocab: 30002\
+Average steps used: 88.46; Average score: 0.33/1\
+Total training time: 877.0798218250275\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-11.z8']\
+Average steps used: 89.00; Average score: 0.40/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-12.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-12.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-12.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-12.z8']\
+Total step:   1000  reward: 0.112  value: 5.687  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 5.669  entropy: 1.334  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.112  value: 25.370  entropy: 1.319  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.112  value: 22.998  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.224  value: 41.293  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.449  value: 40.182  entropy: 1.350  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.112  value: 23.011  entropy: 1.330  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.337  value: 56.745  entropy: 1.331  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.561  value: 112.505  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.561  value: 93.821  entropy: 1.346  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.449  value: 46.566  entropy: 1.314  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.224  value: 30.006  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 1.347  value: 199.474  entropy: 1.268  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 1.122  value: 133.412  entropy: 1.258  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 1.347  value: 172.545  entropy: 1.222  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 1.908  value: 218.515  entropy: 1.108  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 1.010  value: 89.581  entropy: 1.260  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 2.244  value: 174.664  entropy: 1.097  max_score:   1  num_vocab: 30002\
+Total step:  19000  reward: 2.693  value: 178.925  entropy: 1.095  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 2.357  value: 122.064  entropy: 1.091  max_score:   1  num_vocab: 30002\
+Average steps used: 66.74; Average score: 0.61/1\
+Total training time: 661.048712015152\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-12.z8']\
+Average steps used: 35.00; Average score: 1.00/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-13.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-13.z8']\
+Average steps used: 97.30; Average score: 0.10/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-13.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-13.z8']\
+Total step:   1000  reward: 0.112  value: 5.685  entropy: 1.323  max_score:   1  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 5.669  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.112  value: 21.399  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.112  value: 22.993  entropy: 1.338  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.224  value: 43.757  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.449  value: 41.036  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.224  value: 39.260  entropy: 1.351  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.112  value: 21.377  entropy: 1.353  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.337  value: 41.027  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.337  value: 50.149  entropy: 1.350  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.112  value: 21.362  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.324  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.337  value: 30.701  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.001  entropy: 1.315  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.561  value: 93.950  entropy: 1.348  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.224  value: 19.816  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.786  value: 140.552  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.112  value: 19.549  entropy: 1.331  max_score:   1  num_vocab: 30002\
+Total step:  19000  reward: 0.224  value: 29.580  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 0.224  value: 47.004  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:  21000  reward: 0.224  value: 43.366  entropy: 1.320  max_score:   1  num_vocab: 30002\
+Total step:  22000  reward: 0.224  value: 44.306  entropy: 1.329  max_score:   1  num_vocab: 30002\
+Total step:  23000  reward: 0.337  value: 66.808  entropy: 1.334  max_score:   1  num_vocab: 30002\
+Total step:  24000  reward: 0.561  value: 79.491  entropy: 1.326  max_score:   1  num_vocab: 30002\
+Total step:  25000  reward: 0.112  value: 20.413  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  26000  reward: 0.561  value: 83.403  entropy: 1.320  max_score:   1  num_vocab: 30002\
+Total step:  27000  reward: 0.224  value: 33.748  entropy: 1.323  max_score:   1  num_vocab: 30002\
+Total step:  28000  reward: 0.449  value: 58.215  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Average steps used: 93.85; Average score: 0.23/1\
+Total training time: 918.306303024292\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-13.z8']\
+Average steps used: 89.50; Average score: 0.30/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-14.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-14.z8']\
+Average steps used: 93.90; Average score: 0.10/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-14.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-14.z8']\
+Total step:   1000  reward: 0.000  value: 0.008  entropy: 1.337  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.449  value: 55.096  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.112  value: 21.392  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.112  value: 22.999  entropy: 1.347  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.224  value: 29.677  entropy: 1.342  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.224  value: 40.795  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.224  value: 38.212  entropy: 1.346  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.224  value: 28.478  entropy: 1.355  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.224  value: 41.137  entropy: 1.331  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.337  value: 57.436  entropy: 1.333  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.001  entropy: 1.339  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.323  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.112  value: 22.296  entropy: 1.342  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.337  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.337  value: 47.470  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.224  value: 36.933  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.337  value: 45.278  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.337  value: 64.822  entropy: 1.329  max_score:   1  num_vocab: 30002\
+Total step:  19000  reward: 0.337  value: 66.411  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 0.112  value: 5.306  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  21000  reward: 0.224  value: 32.064  entropy: 1.338  max_score:   1  num_vocab: 30002\
+Total step:  22000  reward: 0.449  value: 56.388  entropy: 1.323  max_score:   1  num_vocab: 30002\
+Total step:  23000  reward: 0.337  value: 57.563  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:  24000  reward: 0.337  value: 66.539  entropy: 1.326  max_score:   1  num_vocab: 30002\
+Total step:  25000  reward: 0.112  value: 21.108  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  26000  reward: 0.449  value: 75.378  entropy: 1.322  max_score:   1  num_vocab: 30002\
+Total step:  27000  reward: 0.224  value: 21.572  entropy: 1.320  max_score:   1  num_vocab: 30002\
+Total step:  28000  reward: 0.112  value: 7.833  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Average steps used: 94.20; Average score: 0.19/1\
+Total training time: 921.4991343021393\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-14.z8']\
+Average steps used: 100.00; Average score: 0.10/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-15.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-15.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-15.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-15.z8']\
+Total step:   1000  reward: 0.000  value: 0.013  entropy: 1.321  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 23.009  entropy: 1.352  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.224  value: 44.806  entropy: 1.354  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.356  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.112  value: 23.002  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.224  value: 45.697  entropy: 1.357  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.112  value: 25.359  entropy: 1.336  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.224  value: 28.675  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.112  value: 25.346  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:  13000  reward: 0.224  value: 47.283  entropy: 1.355  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.348  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 0.449  value: 62.453  entropy: 1.320  max_score:   1  num_vocab: 30002\
+Total step:  16000  reward: 0.224  value: 31.515  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.000  value: 0.001  entropy: 1.321  max_score:   0  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.313  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.112  value: 25.350  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Total step:  21000  reward: 0.112  value: 16.887  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:  22000  reward: 0.112  value: 10.213  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:  23000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   0  num_vocab: 30002\
+Total step:  24000  reward: 0.000  value: 0.003  entropy: 1.338  max_score:   1  num_vocab: 30002\
+Total step:  25000  reward: 0.112  value: 16.953  entropy: 1.336  max_score:   1  num_vocab: 30002\
+Total step:  26000  reward: 0.112  value: 21.202  entropy: 1.327  max_score:   1  num_vocab: 30002\
+Total step:  27000  reward: 0.000  value: 0.000  entropy: 1.322  max_score:   0  num_vocab: 30002\
+Total step:  28000  reward: 0.000  value: 0.000  entropy: 1.321  max_score:   0  num_vocab: 30002\
+Total step:  29000  reward: 0.112  value: 24.087  entropy: 1.346  max_score:   1  num_vocab: 30002\
+Average steps used: 97.22; Average score: 0.09/1\
+Total training time: 952.9230659008026\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-15.z8']\
+Average steps used: 99.50; Average score: 0.10/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-16.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-16.z8']\
+Average steps used: 96.50; Average score: 0.10/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-16.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-16.z8']\
+Total step:   1000  reward: 0.000  value: 0.011  entropy: 1.337  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.224  value: 42.474  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.330  max_score:   0  num_vocab: 30002\
+Total step:   6000  reward: 0.112  value: 13.978  entropy: 1.340  max_score:   1  num_vocab: 30002\
+Total step:   7000  reward: 0.337  value: 68.771  entropy: 1.356  max_score:   1  num_vocab: 30002\
+Total step:   8000  reward: 0.112  value: 22.998  entropy: 1.345  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.112  value: 21.398  entropy: 1.348  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 1.331  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.338  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.112  value: 24.292  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.332  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 1.330  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.000  value: 0.000  entropy: 1.334  max_score:   0  num_vocab: 30002\
+Total step:  17000  reward: 0.112  value: 25.349  entropy: 1.330  max_score:   1  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.112  value: 16.975  entropy: 1.351  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:  21000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Total step:  22000  reward: 0.000  value: 0.000  entropy: 1.355  max_score:   0  num_vocab: 30002\
+Total step:  23000  reward: 0.000  value: 0.000  entropy: 1.341  max_score:   0  num_vocab: 30002\
+Total step:  24000  reward: 0.112  value: 24.292  entropy: 1.348  max_score:   1  num_vocab: 30002\
+Total step:  25000  reward: 0.000  value: 0.000  entropy: 1.325  max_score:   0  num_vocab: 30002\
+Total step:  26000  reward: 0.000  value: 0.000  entropy: 1.352  max_score:   0  num_vocab: 30002\
+Total step:  27000  reward: 0.112  value: 16.974  entropy: 1.346  max_score:   1  num_vocab: 30002\
+Total step:  28000  reward: 0.000  value: 0.000  entropy: 1.353  max_score:   0  num_vocab: 30002\
+Total step:  29000  reward: 0.112  value: 21.404  entropy: 1.353  max_score:   1  num_vocab: 30002\
+Average steps used: 98.87; Average score: 0.05/1\
+Total training time: 979.2513425350189\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-16.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-17.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-17.z8']\
+Average steps used: 99.50; Average score: 0.10/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-17.z8']\
+Average steps used: 100.00; Average score: 0.10/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-17.z8']\
+Total step:   1000  reward: 0.000  value: 0.009  entropy: 1.330  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 21.404  entropy: 1.337  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.112  value: 19.422  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.112  value: 19.431  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.350  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:   8000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:   9000  reward: 0.112  value: 24.292  entropy: 1.349  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.112  value: 24.297  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 1.346  max_score:   0  num_vocab: 30002\
+Total step:  14000  reward: 0.337  value: 47.220  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.001  entropy: 1.336  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.224  value: 25.093  entropy: 1.325  max_score:   1  num_vocab: 30002\
+Total step:  17000  reward: 0.000  value: 0.000  entropy: 1.332  max_score:   0  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.346  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.325  max_score:   0  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.348  max_score:   0  num_vocab: 30002\
+Total step:  21000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002\
+Total step:  22000  reward: 0.112  value: 21.396  entropy: 1.328  max_score:   1  num_vocab: 30002\
+Total step:  23000  reward: 0.000  value: 0.000  entropy: 1.333  max_score:   0  num_vocab: 30002\
+Total step:  24000  reward: 0.000  value: 0.000  entropy: 1.356  max_score:   0  num_vocab: 30002\
+Total step:  25000  reward: 0.000  value: 0.000  entropy: 1.347  max_score:   0  num_vocab: 30002\
+Total step:  26000  reward: 0.112  value: 19.420  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:  27000  reward: 0.112  value: 21.395  entropy: 1.344  max_score:   1  num_vocab: 30002\
+Total step:  28000  reward: 0.112  value: 10.270  entropy: 1.351  max_score:   1  num_vocab: 30002\
+Total step:  29000  reward: 0.112  value: 10.239  entropy: 1.330  max_score:   1  num_vocab: 30002\
+Average steps used: 98.93; Average score: 0.05/1\
+Total training time: 976.2257006168365\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-17.z8']\
+Average steps used: 100.00; Average score: 0.10/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-18.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-18.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-18.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-18.z8']\
+Total step:   1000  reward: 0.000  value: 0.011  entropy: 1.325  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 21.409  entropy: 1.338  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.112  value: 23.002  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.112  value: 10.257  entropy: 1.338  max_score:   1  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.358  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   0  num_vocab: 30002\
+Total step:   8000  reward: 0.112  value: 25.347  entropy: 1.341  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.224  value: 48.595  entropy: 1.342  max_score:   1  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.000  entropy: 1.341  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.112  value: 13.974  entropy: 1.335  max_score:   1  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.324  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002\
+Total step:  14000  reward: 0.112  value: 19.425  entropy: 1.330  max_score:   1  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.000  value: 0.000  entropy: 1.324  max_score:   0  num_vocab: 30002\
+Total step:  17000  reward: 0.000  value: 0.000  entropy: 1.335  max_score:   0  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.347  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.319  max_score:   0  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Total step:  21000  reward: 0.000  value: 0.000  entropy: 1.340  max_score:   0  num_vocab: 30002\
+Total step:  22000  reward: 0.000  value: 0.000  entropy: 1.331  max_score:   0  num_vocab: 30002\
+Total step:  23000  reward: 0.000  value: 0.000  entropy: 1.340  max_score:   0  num_vocab: 30002\
+Total step:  24000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   0  num_vocab: 30002\
+Total step:  25000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Total step:  26000  reward: 0.112  value: 16.986  entropy: 1.353  max_score:   1  num_vocab: 30002\
+Total step:  27000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   0  num_vocab: 30002\
+Total step:  28000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002\
+Total step:  29000  reward: 0.000  value: 0.000  entropy: 1.328  max_score:   0  num_vocab: 30002\
+Total step:  30000  reward: 0.000  value: 0.000  entropy: 1.336  max_score:   0  num_vocab: 30002\
+Average steps used: 99.41; Average score: 0.03/1\
+Total training time: 972.8500304222107\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-18.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+
+
+\f1 \cf2 \cb3 \strokec2 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-19.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-19.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-19.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-19.z8']\
+Total step:   1000  reward: 0.000  value: 0.011  entropy: 1.329  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 21.402  entropy: 1.331  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.112  value: 19.430  entropy: 1.349  max_score:   1  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.361  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.345  max_score:   0  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.337  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002\
+Total step:   8000  reward: 0.000  value: 0.000  entropy: 1.330  max_score:   0  num_vocab: 30002\
+Total step:   9000  reward: 0.000  value: 0.000  entropy: 1.350  max_score:   0  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.000  entropy: 1.335  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 1.328  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.307  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.348  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 1.344  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.000  value: 0.000  entropy: 1.323  max_score:   0  num_vocab: 30002\
+Total step:  17000  reward: 0.000  value: 0.000  entropy: 1.338  max_score:   0  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.000  value: 0.000  entropy: 1.351  max_score:   0  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Total step:  21000  reward: 0.000  value: 0.000  entropy: 1.348  max_score:   0  num_vocab: 30002\
+Total step:  22000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:  23000  reward: 0.000  value: 0.000  entropy: 1.334  max_score:   0  num_vocab: 30002\
+Total step:  24000  reward: 0.000  value: 0.000  entropy: 1.348  max_score:   0  num_vocab: 30002\
+Total step:  25000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Total step:  26000  reward: 0.000  value: 0.000  entropy: 1.336  max_score:   0  num_vocab: 30002\
+Total step:  27000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Total step:  28000  reward: 0.000  value: 0.000  entropy: 1.322  max_score:   0  num_vocab: 30002\
+Total step:  29000  reward: 0.000  value: 0.000  entropy: 1.352  max_score:   0  num_vocab: 30002\
+Total step:  30000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   1  num_vocab: 30002\
+Average steps used: 99.74; Average score: 0.01/1\
+Total training time: 1088.053447008133\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-19.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+
+
+Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-20.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
+Random Agent (do random action) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-20.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------\
+NLP Agent GPT (acc before training) --------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-20.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+\
+NLP Agent GPT (start training) -------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-20.z8']\
+Total step:   1000  reward: 0.000  value: 0.009  entropy: 1.325  max_score:   0  num_vocab: 30002\
+Total step:   2000  reward: 0.112  value: 23.005  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:   3000  reward: 0.000  value: 0.000  entropy: 1.334  max_score:   0  num_vocab: 30002\
+Total step:   4000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002\
+Total step:   5000  reward: 0.000  value: 0.000  entropy: 1.349  max_score:   0  num_vocab: 30002\
+Total step:   6000  reward: 0.000  value: 0.000  entropy: 1.347  max_score:   0  num_vocab: 30002\
+Total step:   7000  reward: 0.000  value: 0.000  entropy: 1.346  max_score:   0  num_vocab: 30002\
+Total step:   8000  reward: 0.112  value: 16.993  entropy: 1.332  max_score:   1  num_vocab: 30002\
+Total step:   9000  reward: 0.000  value: 0.000  entropy: 1.347  max_score:   0  num_vocab: 30002\
+Total step:  10000  reward: 0.000  value: 0.000  entropy: 1.322  max_score:   0  num_vocab: 30002\
+Total step:  11000  reward: 0.000  value: 0.000  entropy: 1.338  max_score:   0  num_vocab: 30002\
+Total step:  12000  reward: 0.000  value: 0.000  entropy: 1.315  max_score:   0  num_vocab: 30002\
+Total step:  13000  reward: 0.000  value: 0.000  entropy: 1.320  max_score:   0  num_vocab: 30002\
+Total step:  14000  reward: 0.000  value: 0.000  entropy: 1.356  max_score:   0  num_vocab: 30002\
+Total step:  15000  reward: 0.000  value: 0.000  entropy: 1.343  max_score:   0  num_vocab: 30002\
+Total step:  16000  reward: 0.000  value: 0.000  entropy: 1.317  max_score:   0  num_vocab: 30002\
+Total step:  17000  reward: 0.000  value: 0.000  entropy: 1.317  max_score:   0  num_vocab: 30002\
+Total step:  18000  reward: 0.000  value: 0.000  entropy: 1.332  max_score:   0  num_vocab: 30002\
+Total step:  19000  reward: 0.112  value: 19.428  entropy: 1.343  max_score:   1  num_vocab: 30002\
+Total step:  20000  reward: 0.000  value: 0.000  entropy: 1.334  max_score:   0  num_vocab: 30002\
+Total step:  21000  reward: 0.000  value: 0.000  entropy: 1.357  max_score:   0  num_vocab: 30002\
+Total step:  22000  reward: 0.000  value: 0.000  entropy: 1.329  max_score:   0  num_vocab: 30002\
+Total step:  23000  reward: 0.000  value: 0.000  entropy: 1.339  max_score:   0  num_vocab: 30002\
+Total step:  24000  reward: 0.000  value: 0.000  entropy: 1.350  max_score:   0  num_vocab: 30002\
+Total step:  25000  reward: 0.000  value: 0.000  entropy: 1.328  max_score:   0  num_vocab: 30002\
+Total step:  26000  reward: 0.000  value: 0.000  entropy: 1.327  max_score:   0  num_vocab: 30002\
+Total step:  27000  reward: 0.000  value: 0.000  entropy: 1.346  max_score:   0  num_vocab: 30002\
+Total step:  28000  reward: 0.000  value: 0.000  entropy: 1.329  max_score:   0  num_vocab: 30002\
+Total step:  29000  reward: 0.000  value: 0.000  entropy: 1.342  max_score:   0  num_vocab: 30002\
+Total step:  30000  reward: 0.000  value: 0.000  entropy: 1.357  max_score:   0  num_vocab: 30002\
+Average steps used: 99.86; Average score: 0.01/1\
+Total training time: 1075.9570989608765\
+\
+NLP Agent GPT (test the model) ------------------------------------------\
+game_files: ['tw_single_games/tw-coin_collector_level-20.z8']\
+Average steps used: 100.00; Average score: 0.00/1\
+----------------------------------------------------------------------
+
+
+
+
+
+** Some random higher level games **
+
+
 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-31.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
 Random Agent (do random action) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-31.z8']\
@@ -72,6 +846,8 @@ NLP Agent GPT (test the model) ------------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-31.z8']\
 Average steps used: 100.00; Average score: 0.00/1\
 ----------------------------------------------------------------------\
+
+
 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-61.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
 Random Agent (do random action) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-61.z8']\
@@ -123,6 +899,8 @@ NLP Agent GPT (test the model) ------------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-61.z8']\
 Average steps used: 100.00; Average score: 0.00/1\
 ----------------------------------------------------------------------\
+
+
 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-91.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
 Random Agent (do random action) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-91.z8']\
@@ -174,6 +952,8 @@ NLP Agent GPT (test the model) ------------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-91.z8']\
 Average steps used: 100.00; Average score: 0.00/1\
 ----------------------------------------------------------------------\
+
+
 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-121.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
 Random Agent (do random action) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-121.z8']\
@@ -225,6 +1005,8 @@ NLP Agent GPT (test the model) ------------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-121.z8']\
 Average steps used: 100.00; Average score: 0.00/1\
 ----------------------------------------------------------------------\
+
+
 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-151.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
 Random Agent (do random action) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-151.z8']\
@@ -276,6 +1058,8 @@ NLP Agent GPT (test the model) ------------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-151.z8']\
 Average steps used: 100.00; Average score: 0.00/1\
 ----------------------------------------------------------------------\
+
+
 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-181.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
 Random Agent (do random action) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-181.z8']\
@@ -327,6 +1111,8 @@ NLP Agent GPT (test the model) ------------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-181.z8']\
 Average steps used: 100.00; Average score: 0.00/1\
 ----------------------------------------------------------------------\
+
+
 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-211.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
 Random Agent (do random action) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-211.z8']\
@@ -378,6 +1164,8 @@ NLP Agent GPT (test the model) ------------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-211.z8']\
 Average steps used: 100.00; Average score: 0.00/1\
 ----------------------------------------------------------------------\
+
+
 Namespace(model_type='gpt-2', play_method='single', single_gamefile='tw_single_games/tw-coin_collector_level-241.z8', multiple_games_folder='tw-simple_games/', dqn=False)\
 Random Agent (do random action) --------------------------------------\
 game_files: ['tw_single_games/tw-coin_collector_level-241.z8']\

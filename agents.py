@@ -109,20 +109,25 @@ class GRUNetwork(torch.nn.Module):
         
     def forward(self, observations, commands):
         batch_size, num_commands = observations.shape[1], commands.shape[1]
+        
+        # Two GRUs to process observations
         embed_obs = self.embedding(observations)
         output_encoder, hidden_encoder = self.gru_input(embed_obs)
         output_state, self.hidden_state = self.gru_state(hidden_encoder, self.hidden_state)
         value = self.linear(output_state)
 
+        # One GRU to process commands
         embed_commands = self.embedding.forward(commands)
         output_commands, hidden_commands = self.gru_command.forward(embed_commands) 
+        
+        # Concatenate together
         input_commands = torch.stack([self.hidden_state] * num_commands, 2)
         hidden_commands = torch.stack([hidden_commands] * batch_size, 1) 
         input_commands = torch.cat([input_commands, hidden_commands], dim=-1)
 
         scores = F.relu(self.linear_command(input_commands)).squeeze(-1)  
         probs = F.softmax(scores, dim=2) 
-        index = probs[0].multinomial(num_samples=1).unsqueeze(0) 
+        index = probs[0].multinomial(num_samples=1).unsqueeze(0) # Sample action index from action probabilitites
         
         return scores, index, value
     
@@ -170,13 +175,14 @@ class GPTNetwork(torch.nn.Module):
 
         embed_commands = self.embedding.forward(commands)
         output_commands, hidden_commands = self.gru_command.forward(embed_commands) 
+        
         input_commands = torch.stack([gpt2_output] * num_commands, 2)
         hidden_commands = torch.stack([hidden_commands] * batch_size, 1)
         input_commands = torch.cat([input_commands, hidden_commands], dim=-1)
 
         scores = F.relu(self.linear_command(input_commands)).squeeze(-1)  
         probs = F.softmax(scores, dim=2) 
-        index = probs[0].multinomial(num_samples=1).unsqueeze(0)
+        index = probs[0].multinomial(num_samples=1).unsqueeze(0) 
         
         return scores, index, value
 
@@ -202,7 +208,7 @@ class BERT_GRU(torch.nn.Module):
         self.linear1_command = torch.nn.Linear(hidden_size * 4, 50)
         self.linear2_command = torch.nn.Linear(50, 1)
         
-        #freeze distilBERT parameters
+        # Freeze distilBERT parameters
         for param in self.distilBERT.parameters():
             param.requires_grad = False
         
@@ -211,8 +217,8 @@ class BERT_GRU(torch.nn.Module):
         
         batch_size, num_commands = observations['input_ids'].shape[0], commands['input_ids'].shape[0]
 
-        #generate encodings
-        #NOTE: passing only ['CLS'] token encoding to GRU modules
+        # Generate encodings
+        # NOTE: passing only ['CLS'] token encoding to GRU modules
         observations = self.distilBERT(input_ids=observations['input_ids'], attention_mask=observations['attention_mask'])[0][:,0,:]
         observations = self.observation_gru(observations)[0] #using output state not sure if should use hidden state
         
@@ -225,26 +231,26 @@ class BERT_GRU(torch.nn.Module):
         commands = self.distilBERT(input_ids=commands['input_ids'], attention_mask=commands['attention_mask'])[0][:,0,:]
         commands = self.commands_gru(commands)[0]
         
-        #concatenate observations, descriptions, and inventory into state encoding
+        # Concatenate observations, descriptions, and inventory into state encoding
         state_encoding = torch.cat((observations, descriptions, inventory), 1)
         
         #compute estimated state value
         value = self.linear_value(state_encoding)
         value = value.unsqueeze(0)
         
-        #concatenate state encoding and commands encoding
+        # Concatenate state encoding and commands encoding
         state_encoding_stack = torch.stack([state_encoding]*num_commands, dim=0)
         commands = commands.unsqueeze(1)
         state_action_encodings = torch.cat((state_encoding_stack, commands), dim=2)
         
-        #pass state_action_encodings through linear and relu layers to generate scores and action probabilities
+        # Pass state_action_encodings through linear and relu layers to generate scores and action probabilities
         scores = self.linear1_command(state_action_encodings)
         scores = F.relu(scores)
         scores = self.linear2_command(scores)
         scores = scores.squeeze().unsqueeze(0).unsqueeze(0)
         probs = F.softmax(scores, dim=2)
         
-        #sample action index from action probabilitites
+        # Sample action index from action probabilitites
         index = probs[0].multinomial(num_samples=1).unsqueeze(0)
         
         return scores, index, value
@@ -375,10 +381,11 @@ class NLPAgent:
     
     def action(self, observations, score, done, infos):
         """
+        Get action step
         Use Advantage Actor Critic (A2C) to update our model
         """
         
-        #If using GRU_BERT model, observations, descriptions, inventory, and commands are processed seperately
+        # If using GRU_BERT model, observations, descriptions, inventory, and commands are processed seperately
         if self.model_type == 'bert_gru':
             
             tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
@@ -405,7 +412,7 @@ class NLPAgent:
                                        truncation=True,
                                        max_length=512,
                                        padding='max_length').to(self.device)
-            #print('commands input: ', commands_input)
+
             output, index, value = self.agent_model(observations_input,
                                                     descriptions_input,
                                                     inventory_input,
@@ -486,6 +493,10 @@ class NLPAgent:
         return action_step
     
     def epsilon_greedy_action_selection(self, epsilon, agent_input_tensor, commands_tensor, infos, done):
+        """
+        Epsilon Greedy action selection to select action by model if random number is greater than epsilon, and random action if not
+        Only used for DQN
+        """
         
         if np.random.random() > epsilon or self.run_mode == "test":
             agent_input_tensor = agent_input_tensor.to(self.device)
@@ -503,6 +514,12 @@ class NLPAgent:
         return action_step, idx
     
     def replay(self, batch_size, gamma=0.5):
+        """
+        This function is used by DQN to update the model
+        Unfortunately, our networks (e.g. GRUNetwwork) currently cannot take more than one batch since different observation has different commands list.
+        The overall performance of DQN is not good
+        """
+        
         if len(self.memory) < batch_size: 
             return
         transitions = self.memory.sample(batch_size)
@@ -529,5 +546,8 @@ class NLPAgent:
         
     
     def update_model_handler(self, epoch, update_target_model):
+        """
+        This function is used by DQN to update the target mdoel
+        """
         if epoch > 0 and epoch % update_target_model == 0:
             self.target_model.load_state_dict(self.agent_model.state_dict())
