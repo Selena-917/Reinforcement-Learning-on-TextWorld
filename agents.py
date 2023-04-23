@@ -220,7 +220,7 @@ class BERT_GRU(torch.nn.Module):
         # Generate encodings
         # NOTE: passing only ['CLS'] token encoding to GRU modules
         observations = self.distilBERT(input_ids=observations['input_ids'], attention_mask=observations['attention_mask'])[0][:,0,:]
-        observations = self.observation_gru(observations)[0] #using output state not sure if should use hidden state
+        observations = self.observation_gru(observations)[0]
         
         descriptions = self.distilBERT(input_ids=descriptions['input_ids'], attention_mask=descriptions['attention_mask'])[0][:,0,:]
         descriptions = self.descriptions_gru(descriptions)[0]
