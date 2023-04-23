@@ -277,7 +277,7 @@ def test_model(model_path):
     '''
     nlp_agent_gru = torch.load(model_path)
     nlp_agent_gru.test()
-    play_game_dqn(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 
+    play_game(nlp_agent_gru, args.single_gamefile, 100, 10, 1) 
     
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser(description='Parameter Processing')
